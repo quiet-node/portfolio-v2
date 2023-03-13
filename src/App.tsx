@@ -4,8 +4,12 @@ import './App.css';
 import Intro from './components/intro/Intro';
 
 function App() {
+  useEffect(() => {
+    Aos.init({ duration: 10000 });
+  }, []);
   return (
     <>
+      <Intro />
     </>
   );
 }
