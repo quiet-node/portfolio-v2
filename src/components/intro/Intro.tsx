@@ -29,7 +29,7 @@ const Intro = () => {
                      sm:gap-12'
         >
           {/* Greetings */}
-          <div className='drop-shadow-lg'>
+          <div className='drop-shadow-xl'>
             <motion.h2
               initial={{ opacity: 0, y: -60 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ const Intro = () => {
             whileInView='shown'
             viewport={{ once: true }}
             variants={descriptionVariants}
-            className='text-lg sm:text-xl font-bold drop-shadow-lg'
+            className='text-lg sm:text-xl font-bold drop-shadow-xl'
           >
             <motion.div variants={descriptionVariants}>
               Full Stack Software Developer.
@@ -89,7 +89,7 @@ const Intro = () => {
 
         <div className='flex flex-col gap-1'>
           {/* Social Medias */}
-          <div className='text-5xl flex justify-center gap-16 py-3 text-teal-500'>
+          <div className='text-5xl flex justify-center gap-16 py-3 text-teal-600 drop-shadow-2xl'>
             <motion.a
               initial={{ opacity: 0, x: -21 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -145,7 +145,7 @@ const Intro = () => {
                         2xl:w-[21rem] 2xl:h-[21rem]`}
           >
             <img
-              className='absolute inset-0 w-full h-full object-center object-cover rounded-full'
+              className='absolute inset-0 w-full h-full object-center object-cover rounded-full select-none'
               src={'src/assets/profile_pic.png'}
               alt='nft cover image'
             />
