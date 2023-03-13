@@ -1,6 +1,11 @@
 import Aos from 'aos';
 import { useState, useEffect } from 'react';
 import {
+  QUIET_NODE_GITHUB_LINK,
+  QUIET_NODE_LINKEDIN_LINK,
+  QUIET_NODE_TWITTER_LINK,
+} from '../../utils/constants';
+import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
@@ -56,21 +61,21 @@ const Intro = () => {
           {/* Social Medias */}
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
             <a
-              href='https://github.com/quiet-node'
+              href={QUIET_NODE_GITHUB_LINK}
               target='_blank'
               className='transition hover:-translate-y-0.5 duration-200 cursor-pointer hover:text-black'
             >
               <AiFillGithub />
             </a>
             <a
-              href='https://linkedin.com/in/logann131'
+              href={QUIET_NODE_LINKEDIN_LINK}
               target='_blank'
               className='transition hover:-translate-y-0.5 duration-200 cursor-pointer hover:text-[#0A66C2]'
             >
               <AiFillLinkedin />
             </a>
             <a
-              href='https://twitter.com/quiet_node'
+              href={QUIET_NODE_TWITTER_LINK}
               target='_blank'
               className='transition hover:-translate-y-0.5 duration-200 cursor-pointer hover:text-[#1DA1F2]'
             >
