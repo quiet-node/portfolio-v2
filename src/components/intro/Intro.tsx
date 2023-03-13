@@ -18,7 +18,7 @@ const Intro = () => {
     <section
       className='h-screen overflow-x-hidden scrollbar-hidden
                 lg:min-h-[100vh] 
-                2xl:max-w-[100rem] 2xl:mx-auto 2xl:min-h-[90vh] '
+                2xl:max-w-[100rem] 2xl:mx-auto 2xl:min-h-[90vh]'
       id='intro'
     >
       <div className='h-full flex flex-col items-center justify-around relative'>
@@ -30,7 +30,7 @@ const Intro = () => {
         >
           {/* Greetings */}
           <div className='drop-shadow-xl'>
-            <motion.h2
+            <motion.h1
               initial={{ opacity: 0, y: -60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -54,8 +54,8 @@ const Intro = () => {
                 👋
               </motion.div>{' '}
               It's Logan ;)
-            </motion.h2>
-            <motion.h3
+            </motion.h1>
+            <motion.h2
               initial={{ opacity: 0, x: -90 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -64,7 +64,7 @@ const Intro = () => {
                     text-lg sm:text-xl'
             >
               (a.k.a. quiet-node)
-            </motion.h3>
+            </motion.h2>
           </div>
 
           {/* Description */}
