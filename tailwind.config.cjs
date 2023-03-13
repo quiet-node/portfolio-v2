@@ -9,6 +9,13 @@ module.exports = {
       textColor: {
         primary: '#2dd4bf',
       },
+      backgroundColor: {
+        primary: '#2dd4bf',
+      },
+      screens: {
+        xxsm: '340px',
+        xsm: '445px',
+      },
     },
   },
   plugins: [],
