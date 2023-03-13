@@ -1,10 +1,11 @@
 import './App.css';
-import Intro from './components/intro/Intro';
+import { About, Intro } from './components';
 
 function App() {
   return (
     <>
       <Intro />
+      <About />
     </>
   );
 }
