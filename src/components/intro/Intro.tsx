@@ -46,7 +46,7 @@ const Intro = () => {
                   transition: { duration: 0.5, repeat: 3 },
                 }}
                 whileHover={{
-                  rotate: [0, 20, -10, 15, 0],
+                  rotate: [0, 33, 0, 33, 0],
                   transition: { duration: 0.5, repeat: Infinity },
                 }}
                 className='cursor-pointer select-none'
