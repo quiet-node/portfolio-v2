@@ -1,15 +1,19 @@
-import {
-  QUIET_NODE_GITHUB_LINK,
-  QUIET_NODE_LINKEDIN_LINK,
-  QUIET_NODE_TWITTER_LINK,
-} from '../../utils/constants';
+import { motion } from 'framer-motion';
+import { VerticalCommonVariants } from '../../utils/framerVariants';
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
 } from 'react-icons/ai';
+import {
+  QUIET_NODE_GITHUB_LINK,
+  QUIET_NODE_LINKEDIN_LINK,
+  QUIET_NODE_TWITTER_LINK,
+} from '../../utils/constants';
 
 const Intro = () => {
+  const descriptionVariants = VerticalCommonVariants(21, 0.8);
+
   return (
     <section
       className='h-screen overflow-x-hidden scrollbar-hidden
@@ -17,7 +21,7 @@ const Intro = () => {
                 2xl:max-w-[100rem] 2xl:mx-auto 2xl:min-h-[90vh] '
       id='intro'
     >
-      <div className='h-full flex flex-col items-center justify-around'>
+      <div className='h-full flex flex-col items-center justify-around relative'>
         {/* headers */}
         <div
           className='flex flex-col text-center mt-28
@@ -26,68 +30,126 @@ const Intro = () => {
         >
           {/* Greetings */}
           <div className='drop-shadow-lg'>
-            <h2
-              className='text-primary font-extrabold
+            <motion.h2
+              initial={{ opacity: 0, y: -60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className='text-primary font-extrabold flex gap-1 justify-center
                     text-3xl
                     sm:text-4xl'
             >
-              Howdy, 👋 It's Logan ;)
-            </h2>
-            <h3
+              Howdy,
+              <motion.div
+                animate={{
+                  rotate: [0, 33, 0, 33, 0],
+                  transition: { duration: 0.5, repeat: 3 },
+                }}
+                whileHover={{
+                  rotate: [0, 20, -10, 15, 0],
+                  transition: { duration: 0.5, repeat: Infinity },
+                }}
+                className='cursor-pointer select-none'
+              >
+                👋
+              </motion.div>{' '}
+              It's Logan ;)
+            </motion.h2>
+            <motion.h3
+              initial={{ opacity: 0, x: -90 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               className='text-primary font-medium
                     text-lg sm:text-xl'
             >
               (a.k.a. quiet-node)
-            </h3>
+            </motion.h3>
           </div>
 
-          <div className='text-lg sm:text-xl font-bold drop-shadow-lg'>
-            <div>Full Stack Software Developer.</div>
-            <div>Blockchain and Web 3.0 Enthusiast.</div>
-            <div>Innovating technology for a brighter future.</div>
-          </div>
+          {/* Description */}
+          <motion.div
+            initial='hidden'
+            whileInView='shown'
+            viewport={{ once: true }}
+            variants={descriptionVariants}
+            className='text-lg sm:text-xl font-bold drop-shadow-lg'
+          >
+            <motion.div variants={descriptionVariants}>
+              Full Stack Software Developer.
+            </motion.div>
+            <motion.div variants={descriptionVariants}>
+              Blockchain and Web 3.0 Enthusiast.
+            </motion.div>
+            <motion.div variants={descriptionVariants}>
+              Innovating technology for a brighter future.
+            </motion.div>
+          </motion.div>
         </div>
 
-        <div>
+        <div className='flex flex-col gap-1'>
           {/* Social Medias */}
-          <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
-            <a
-              href={QUIET_NODE_GITHUB_LINK}
-              target='_blank'
-              className='transition hover:-translate-y-0.5 duration-200 cursor-pointer hover:text-black'
-            >
-              <AiFillGithub />
-            </a>
-            <a
+          <div className='text-5xl flex justify-center gap-16 py-3 text-teal-500'>
+            <motion.a
+              initial={{ opacity: 0, x: -21 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -0.5 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
               href={QUIET_NODE_LINKEDIN_LINK}
               target='_blank'
-              className='transition hover:-translate-y-0.5 duration-200 cursor-pointer hover:text-[#0A66C2]'
+              className='cursor-pointer hover:text-[#0A66C2]'
             >
               <AiFillLinkedin />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, y: 21 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -0.5 }}
+              transition={{ duration: 0.6, delay: 1.1 }}
+              href={QUIET_NODE_GITHUB_LINK}
+              target='_blank'
+              className='cursor-pointer hover:text-black '
+            >
+              <AiFillGithub />
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: 21 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -0.5 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
               href={QUIET_NODE_TWITTER_LINK}
               target='_blank'
-              className='transition hover:-translate-y-0.5 duration-200 cursor-pointer hover:text-[#1DA1F2]'
+              className='cursor-pointer hover:text-[#1DA1F2]'
             >
               <AiFillTwitterCircle />
-            </a>
+            </motion.a>
           </div>
 
           {/* Avatar */}
-          <div
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            whileInView={{
+              y: [0, 21, 0],
+              transition: { duration: 2, repeat: Infinity },
+            }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.2, delay: 1.4 }}
             className={`rounded-full relative
-                    w-72 h-72
-                    sm:w-[19rem] sm:h-[19rem]
-                    lg:w-80 lg:h-80
-                    2xl:w-[21rem] 2xl:h-[21rem]`}
+                        w-72 h-72
+                        sm:w-[19rem] sm:h-[19rem]
+                        lg:w-80 lg:h-80
+                        2xl:w-[21rem] 2xl:h-[21rem]`}
           >
             <img
               className='absolute inset-0 w-full h-full object-center object-cover rounded-full'
               src={'src/assets/profile_pic.png'}
               alt='nft cover image'
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
