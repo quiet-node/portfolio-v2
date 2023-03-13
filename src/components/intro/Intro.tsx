@@ -1,5 +1,3 @@
-import Aos from 'aos';
-import { useState, useEffect } from 'react';
 import {
   QUIET_NODE_GITHUB_LINK,
   QUIET_NODE_LINKEDIN_LINK,
@@ -12,13 +10,6 @@ import {
 } from 'react-icons/ai';
 
 const Intro = () => {
-  const [hover, setHover] = useState(false);
-  const onHover = () => {
-    setHover(!hover);
-  };
-  useEffect(() => {
-    Aos.init({ duration: 800 });
-  }, []);
   return (
     <section
       className='h-screen overflow-x-hidden scrollbar-hidden

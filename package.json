@@ -9,18 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "firebase": "^9.17.2",
-    "jquery": "^3.6.4",
+    "framer-motion": "^10.2.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.9.0",
-    "react-scroll": "^1.8.9",
-    "styled-components": "^5.3.8"
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",

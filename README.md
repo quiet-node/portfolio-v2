@@ -19,5 +19,3 @@ Techonologies:
 - Styled Component
 
 - Material UI
-
-- AOS library for animation
