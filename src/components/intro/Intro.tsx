@@ -42,11 +42,7 @@ const Intro = () => {
               Howdy,
               <motion.div
                 animate={{
-                  rotate: [0, 30, 0, 30, 0],
-                  transition: { duration: 1.4, repeat: 1.5 },
-                }}
-                whileHover={{
-                  rotate: [0, 30, 0, 30, 0],
+                  rotate: [0, 30, 0, 30, 0, 0, 0],
                   transition: { duration: 1.4, repeat: Infinity },
                 }}
                 className='cursor-pointer select-none'
