@@ -43,4 +43,28 @@
       width: 100%;
     }
   }
+
+  .proficient-bar-animation {
+    animation: proficient-bar 4s linear infinite;
+    background-size: 600% 100%;
+    background-image: linear-gradient(
+      90deg,
+      #5ad0ff,
+      #95cbef,
+      #85d28d,
+      #ffe95a,
+      #a8ef95,
+      #5ad0ff,
+      #95cbef
+    );
+  }
+
+  @keyframes proficient-bar {
+    0% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
 }
