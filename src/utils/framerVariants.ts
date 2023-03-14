@@ -10,7 +10,9 @@ import { Variants } from 'framer-motion';
  */
 export const HorizontalCommonVariants = (
   initX: number,
+  initDelay?: number,
   initDuration?: number,
+  initDelayChildren?: number,
   initStaggerChildren?: number
 ): Variants => {
   return {
@@ -22,6 +24,8 @@ export const HorizontalCommonVariants = (
       opacity: 1,
       x: 0,
       transition: {
+        delay: initDelay,
+        delayChildren: initDelayChildren,
         duration: initDuration ? initDuration : 0.3,
         staggerChildren: initStaggerChildren ? initStaggerChildren : 0.13,
         type: 'spring',
@@ -41,8 +45,8 @@ export const HorizontalCommonVariants = (
  */
 export const VerticalCommonVariants = (
   initY: number,
-  initDelayChildren?: number,
   initDuration?: number,
+  initDelayChildren?: number,
   initStaggerChildren?: number
 ): Variants => {
   return {
