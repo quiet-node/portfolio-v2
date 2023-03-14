@@ -1,23 +1,17 @@
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import {
-  HorizontalCommonVariants,
-  VerticalCommonVariants,
-} from '../../utils/framerVariants';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: '100% 0% -9% 0%' });
-  const descriptionVariants = HorizontalCommonVariants(90, 0.7);
   return (
-    <section className='h-[500px] overflow-x-hidden overflow-y-hidden scrollbar-hidden bg-primary'>
+    <section className='relative z-10 h-[500px] overflow-x-hidden overflow-y-hidden scrollbar-hidden bg-primary'>
       {/* container */}
       <div
         className='flex flex-col items-center text-white
-                //px-4 mt-6
+                mt-6
                 md:mt-9
-                //lg:px-72 
                 2xl:max-w-[100rem] 2xl:mx-auto'
       >
         {/* header */}
