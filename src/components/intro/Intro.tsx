@@ -162,8 +162,8 @@ const Intro = () => {
             >
               <img
                 className='absolute inset-0 w-full h-full object-center object-cover rounded-full select-none'
-                src={'src/assets/profile_pic.png'}
-                alt='nft cover image'
+                src={'src/assets/avatars/profile_pic.png'}
+                alt='quiet-node'
               />
             </motion.div>
           </div>
