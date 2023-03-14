@@ -11,7 +11,7 @@ const About = () => {
       <div
         className='flex flex-col items-center text-white
                 mt-6
-                md:mt-9
+                md:mt-12
                 2xl:max-w-[100rem] 2xl:mx-auto'
       >
         {/* header */}
