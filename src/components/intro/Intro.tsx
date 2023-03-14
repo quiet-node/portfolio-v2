@@ -22,7 +22,7 @@ const Intro = () => {
     <section
       className='h-screen overflow-hidden scrollbar-hidden
                 lg:min-h-[100vh]
-                2xl:max-w-[100rem] 2xl:mx-auto 2xl:min-h-[90vh]'
+                2xl:max-w-[100rem] 2xl:mx-auto'
       id='intro'
     >
       {/* container */}
