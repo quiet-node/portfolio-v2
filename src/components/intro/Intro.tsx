@@ -12,11 +12,11 @@ import {
 } from '../../utils/constants';
 
 const Intro = () => {
-  const descriptionVariants = VerticalCommonVariants(21, 0.8);
+  const descriptionVariants = VerticalCommonVariants(30, 9, 0.9);
 
   return (
     <section
-      className='h-screen overflow-x-hidden scrollbar-hidden
+      className='h-screen overflow-x-hidden overflow-y-hidden scrollbar-hidden
                 lg:min-h-[100vh] 
                 2xl:max-w-[100rem] 2xl:mx-auto 2xl:min-h-[90vh]'
       id='intro'
@@ -42,12 +42,12 @@ const Intro = () => {
               Howdy,
               <motion.div
                 animate={{
-                  rotate: [0, 33, 0, 33, 0],
-                  transition: { duration: 0.5, repeat: 3 },
+                  rotate: [0, 30, 0, 30, 0],
+                  transition: { duration: 1.4, repeat: 3 },
                 }}
                 whileHover={{
-                  rotate: [0, 33, 0, 33, 0],
-                  transition: { duration: 0.5, repeat: Infinity },
+                  rotate: [0, 30, 0, 30, 0],
+                  transition: { duration: 1.4, repeat: Infinity },
                 }}
                 className='cursor-pointer select-none'
               >
