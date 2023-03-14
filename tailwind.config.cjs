@@ -6,15 +6,15 @@ module.exports = {
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
       },
-      textColor: {
-        primary: '#2dd4bf',
-      },
-      backgroundColor: {
+      colors: {
         primary: '#2dd4bf',
       },
       screens: {
         xxsm: '340px',
         xsm: '445px',
+      },
+      borderWidth: {
+        1: '1px',
       },
     },
   },
