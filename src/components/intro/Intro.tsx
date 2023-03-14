@@ -20,11 +20,12 @@ const Intro = () => {
 
   return (
     <section
-      className='h-screen overflow-x-hidden overflow-y-hidden scrollbar-hidden
-                lg:min-h-[100vh] 
+      className='h-screen overflow-hidden scrollbar-hidden
+                lg:min-h-[100vh]
                 2xl:max-w-[100rem] 2xl:mx-auto 2xl:min-h-[90vh]'
       id='intro'
     >
+      {/* container */}
       <div className='h-full flex flex-col items-center justify-around relative'>
         {/* headers */}
         <div
@@ -87,9 +88,10 @@ const Intro = () => {
           </motion.div>
         </div>
 
-        <div className='flex flex-col gap-1'>
+        {/* Social & Avatar */}
+        <div className='flex flex-col mt-16'>
           {/* Social Medias */}
-          <div className='text-5xl flex justify-center gap-16 py-3 text-teal-600 drop-shadow-2xl'>
+          <div className='text-5xl flex justify-center gap-9 xxsm:gap-12 sm:gap-16 lg:gap-20 py-3 text-teal-600 drop-shadow-2xl'>
             <motion.a
               initial={{ opacity: 0, x: -21 }}
               whileInView={{ opacity: 1, x: 0 }}
