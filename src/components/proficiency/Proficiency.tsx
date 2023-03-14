@@ -9,14 +9,16 @@ const Stats = () => {
     >
       {/* container */}
       <div
-        className='relative flex flex-col gap-12 items-center border-2 border-[#e7edf7] bg-white
-                  w-full h-full -top-40 rounded-2xl mx-1
+        className='relative flex flex-col items-center border-2 border-[#e7edf7] bg-white
+                  //w-full //h-full w-fit //-top-40 rounded-2xl mx-1 gap-16
                   xxsm:mx-3
-                  xsm:-top-48 xsm:mx-6 xsm:rounded-3xl
+                  //xsm:-top-48 xsm:mx-6 xsm:rounded-3xl
                   sm:mx-9
-                  md:mx-16 md:-top-32
-                  lg:w-[850px] lg:h-[550px] lg:-top-44
-                  xl:w-[950px] xl:h-[600px] xl:-top-32
+                  md:mx-16 //md:-top-32
+                  //lg:w-[850px] //lg:h-[550px] //lg:-top-40
+                  //lg:-top-44
+                  //xl:w-[950px] //xl:h-[600px] xl:-top-20 xl:px-16
+                  2xl:px-20
                   '
       >
         {/* header */}
@@ -28,7 +30,7 @@ const Stats = () => {
             viewport={{ amount: 'some', margin: '100% 0% -8% 0%' }}
             className='text-4xl font-extrabold text-primary drop-shadow-2xl'
           >
-            Stats.
+            Proficiency.
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, x: -90 }}
@@ -37,7 +39,7 @@ const Stats = () => {
             viewport={{ amount: 'some', margin: '100% 0% -9% 0%' }}
             className='flex justify-center -mt-0.5'
           >
-            <hr className='bg-primary h-[0.2rem] w-16 rounded-xl drop-shadow-2xl' />
+            <hr className='bg-primary h-[0.2rem] w-32 rounded-xl drop-shadow-2xl' />
           </motion.div>
         </div>
 

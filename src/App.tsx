@@ -1,12 +1,12 @@
 import './App.css';
-import { About, Intro, Stats } from './components';
+import { About, Intro, Proficiency } from './components';
 
 function App() {
   return (
     <>
       <Intro />
       <About />
-      <Stats />
+      <Proficiency />
     </>
   );
 }
