@@ -42,8 +42,39 @@ const Stats = () => {
         </div>
 
         {/* body - skill proficient bars */}
-        <div className='flex flex-col gap-9'>
-          <SkillProficientBar value={85} logo='golang' />
+        <div className='flex gap-9 mb-6 sm:mb-9 md:mb-12 lg:mb-16'>
+          {/* left */}
+          <div className='flex flex-col gap-12'>
+            {/* golang */}
+            <SkillProficientBar value={85} logo='golang' left={true} />{' '}
+            {/* typescript */}
+            <SkillProficientBar value={92} logo='golang' left={true} />{' '}
+            {/* soldity */}
+            <SkillProficientBar value={75} logo='golang' left={true} />{' '}
+            {/* java */}
+            <SkillProficientBar value={88} logo='golang' left={true} />{' '}
+            {/* html */}
+            <SkillProficientBar value={95} logo='golang' left={true} />{' '}
+            {/* tailwindcss */}
+            <SkillProficientBar value={87} logo='golang' left={true} />{' '}
+          </div>
+
+          {/* right */}
+          <div className='flex flex-col gap-12'>
+            {/* React */}
+            <SkillProficientBar value={90} logo='golang' />
+            {/* NextJs */}
+            <SkillProficientBar value={85} logo='golang' />
+            {/* Hardhat */}
+            <SkillProficientBar value={70} logo='golang' />
+            {/* SpringBoot */}
+            <SkillProficientBar value={78} logo='golang' />
+            {/* NodeJS/ExpressJs */}
+            <SkillProficientBar value={87} logo='golang' />
+            {/* Docker */}
+            <SkillProficientBar value={72} logo='golang' />
+          </div>
+        </div>
       </div>
     </section>
   );
