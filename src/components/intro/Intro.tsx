@@ -43,7 +43,7 @@ const Intro = () => {
               <motion.div
                 animate={{
                   rotate: [0, 30, 0, 30, 0],
-                  transition: { duration: 1.4, repeat: 3 },
+                  transition: { duration: 1.4, repeat: 1.5 },
                 }}
                 whileHover={{
                   rotate: [0, 30, 0, 30, 0],
