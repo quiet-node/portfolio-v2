@@ -6,9 +6,11 @@ import { animate, motion } from 'framer-motion';
 const SkillProficientBar = ({
   value,
   logo,
+  left,
 }: {
   value: number;
   logo: string;
+  left?: boolean;
 }) => {
   const percentageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -27,13 +29,26 @@ const SkillProficientBar = ({
   }, [value]);
 
   return (
-    <div className='flex items-center gap-1 relative'>
-      <img
-        src={`src/assets/tech_logos/${logo}.svg`}
-        alt='golang-logo'
-        className='absolute -left-10'
-      />
-      <div className='w-[400px] h-[30px] flex justify-start items-stretch rounded-lg bg-[#454650] border-1 border-teal-200 overflow-hidden'>
+    <div
+      className={`flex items-center gap-1 relative ${
+        left ? ' flex-row-reverse' : ''
+      }`}
+    >
+      {/* Logo */}
+      <div className='flex items-center'>
+        <img
+          src={`src/assets/tech_logos/${logo}.svg`}
+          alt='golang-logo'
+          className={`absolute ${left ? '-right-3' : '-left-3'}`}
+        />
+      </div>
+
+      {/* progress bar */}
+      <div
+        className={`w-[350px] h-[15px] flex justify-start items-stretch rounded-lg bg-[#454650] border-1 border-teal-200 overflow-hidden ${
+          left ? ' flex-row-reverse' : ''
+        }`}
+      >
         <motion.div
           animate={{
             width: `${value}%`,
@@ -45,7 +60,9 @@ const SkillProficientBar = ({
           className={`w-0 proficient-bar-animation`}
         />
       </div>
-      <div className='w-12 flex justify-center gap-1 font-bold text-teal-500 text-lg'>
+
+      {/* percentage */}
+      <div className='w-12 flex justify-center font-extrabold text-teal-600 text-lg'>
         <p ref={percentageRef}>0</p>
         <p>%</p>
       </div>
