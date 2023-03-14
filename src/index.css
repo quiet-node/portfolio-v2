@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* @source: https://css-tricks.com/snippets/css/typewriter-effect/ */
+  .typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: typing 2.5s steps(80, end) forwards;
+  }
+
+  /* @source: https://css-tricks.com/snippets/css/typewriter-effect/ */
+  /* The typing effect */
+  @keyframes typing {
+    0% {
+      width: 0;
+      border-right-width: 2px;
+      border-color: white;
+    }
+    40% {
+      border-right-width: 2px;
+      border-color: white;
+    }
+    60% {
+      border-right-width: 2px;
+      border-color: white;
+    }
+    80% {
+      border-right-width: 2px;
+      border-color: white;
+    }
+    90% {
+      border-right-width: 2px;
+      border-color: white;
+    }
+    95% {
+      border-right-width: 2px;
+      border-color: white;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
