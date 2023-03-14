@@ -6,7 +6,7 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: '100% 0% -9% 0%' });
   return (
-    <section className='relative z-10 h-[500px] overflow-x-hidden overflow-y-hidden scrollbar-hidden bg-primary'>
+    <section className='h-[500px] overflow-x-hidden overflow-y-hidden scrollbar-hidden bg-primary'>
       {/* container */}
       <div
         className='flex flex-col items-center text-white

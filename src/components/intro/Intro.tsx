@@ -89,7 +89,7 @@ const Intro = () => {
         </div>
 
         {/* Social & Avatar */}
-        <div className='flex flex-col mt-16'>
+        <div className='flex flex-col'>
           {/* Social Medias */}
           <div className='text-5xl flex justify-center gap-9 xxsm:gap-12 sm:gap-16 lg:gap-20 py-3 text-teal-600 drop-shadow-2xl'>
             <motion.a
