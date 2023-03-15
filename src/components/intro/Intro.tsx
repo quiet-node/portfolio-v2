@@ -45,7 +45,7 @@ const Intro = () => {
                     sm:text-4xl'
             >
               Howdy,
-              <motion.div
+              <motion.span
                 animate={{
                   rotate: [0, 30, 0, 30, 0, 0, 0],
                   transition: { duration: 1.4, repeat: Infinity },
@@ -53,8 +53,8 @@ const Intro = () => {
                 className='cursor-pointer select-none'
               >
                 👋
-              </motion.div>{' '}
-              It's Logan ;)
+              </motion.span>{' '}
+              It's Logan <span className='hidden xxsm:inline'>;)</span>
             </motion.h1>
             <motion.h2
               initial={{ opacity: 0, x: -90 }}
@@ -91,7 +91,7 @@ const Intro = () => {
         {/* Social & Avatar */}
         <div className='flex flex-col'>
           {/* Social Medias */}
-          <div className='text-5xl flex justify-center gap-9 xxsm:gap-12 sm:gap-16 lg:gap-20 py-3 text-teal-600'>
+          <div className='text-5xl flex flex-wrap justify-center gap-9 xxsm:gap-12 sm:gap-16 lg:gap-20 py-3 text-teal-600'>
             <motion.a
               initial={{ opacity: 0, x: -21 }}
               whileInView={{ opacity: 1, x: 0 }}
