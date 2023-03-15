@@ -6,11 +6,16 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: '100% 0% -9% 0%' });
   return (
-    <section className='h-[500px] overflow-x-hidden overflow-y-hidden scrollbar-hidden bg-primary'>
+    <section
+      className='overflow-x-hidden overflow-y-hidden scrollbar-hidden bg-primary
+                h-[400px]
+                md:h-[500px]'
+    >
       {/* container */}
       <div
         className='flex flex-col items-center text-white
                 mt-6
+                sm:mt-9
                 md:mt-12
                 2xl:max-w-[100rem] 2xl:mx-auto'
       >
@@ -21,7 +26,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
             viewport={{ amount: 'some', margin: '100% 0% -8% 0%' }}
-            className='text-4xl font-extrabold'
+            className='text-3xl sm:text-4xl font-extrabold'
           >
             About.
           </motion.h1>
@@ -32,7 +37,7 @@ const About = () => {
             viewport={{ amount: 'some', margin: '100% 0% -9% 0%' }}
             className='flex justify-center -mt-0.5'
           >
-            <hr className='bg-white h-[0.2rem] w-16 rounded-xl' />
+            <hr className='bg-white h-[0.2rem] w-12 sm:w-16 rounded-xl' />
           </motion.div>
         </div>
 
