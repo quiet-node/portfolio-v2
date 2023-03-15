@@ -16,7 +16,8 @@ const Stats = () => {
   const shakingAnimation = useAnimation();
   const [isSmall, isMedium] = useScreenSizes();
   const [mounted, setMounted] = useState(false);
-  const verticalVarientSkills = VerticalCommonVariants(60, 6, 0, 0);
+  const verticalMainSkills = VerticalCommonVariants(60, 6, 0, 0);
+  const verticalMoreSkills = VerticalCommonVariants(60);
   const rightVarientSkills = HorizontalCommonVariants(40, 0, 0, 0.2);
   const leftVarientSkills = HorizontalCommonVariants(-40, 0, 0, 0.2);
   const [moreSkillsList, setMoreSkillsList] = useState(MORE_SKILLS_LISTS);
@@ -48,10 +49,12 @@ const Stats = () => {
   useEffect(() => {
     const intervalId = setInterval(async () => {
       await shakingAnimation.start({
-        rotate: [0, 90, -90, 60, -60, 30, -30, 0],
-        transition: { duration: 0.5 },
+        rotate: isMedium
+          ? [0, 90, -90, 60, -60, 30, -30, 0]
+          : [0, 190, -190, 160, -160, 130, -130, 0],
+        transition: { duration: 0.5, delay: 3 },
       });
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, [shakingAnimation]);
@@ -112,14 +115,14 @@ const Stats = () => {
                   amount: 'some',
                   margin: '100% 0% -9% 0%',
                 }}
-                variants={verticalVarientSkills}
+                variants={verticalMainSkills}
                 className='flex flex-col gap-12'
               >
                 {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
             use `isSmall` state as the value for `left` attribute*/}
                 {leftSkillsList.map((tech, key) => {
                   return (
-                    <motion.div variants={verticalVarientSkills} key={key}>
+                    <motion.div variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value}
                         logo={tech.techology}
@@ -133,7 +136,7 @@ const Stats = () => {
                 {/* bottom skills  */}
                 {rightSkillsList.map((tech, key) => {
                   return (
-                    <motion.div variants={verticalVarientSkills} key={key}>
+                    <motion.div variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value}
                         logo={tech.techology}
@@ -208,16 +211,26 @@ const Stats = () => {
           {/* more skills */}
           <div className='flex flex-col gap-3'>
             {/* @notice medium or larger screens */}
-            <div className='flex justify-between'>
+            <motion.div
+              initial='hidden'
+              whileInView='shown'
+              viewport={{
+                amount: 'some',
+                margin: '100% 0% -9% 0%',
+              }}
+              variants={verticalMoreSkills}
+              className='flex justify-between'
+            >
               {moreSkillsList
                 .slice(0, isMedium ? 12 : isSmall ? 6 : 4)
                 .map((tech, key) => {
                   return (
-                    <a
+                    <motion.a
                       key={key}
                       href={tech.techLink}
                       target='_blank'
                       title={tech.techology}
+                      variants={verticalMoreSkills}
                       className='flex items-center cursor-pointer'
                     >
                       <motion.img
@@ -231,57 +244,89 @@ const Stats = () => {
                         alt={`${tech.techology}-logo`}
                         className={`/hover:scale-125 /transition duration-300 select-none`}
                       />
-                    </a>
+                    </motion.a>
                   );
                 })}
-            </div>
+            </motion.div>
 
             {/* @notice small screens */}
             {!isMedium && (
-              <div className='flex justify-between'>
-                {MORE_SKILLS_LISTS.slice(isSmall ? 6 : 4, isSmall ? 12 : 8).map(
-                  (tech, key) => {
+              <motion.div
+                initial='hidden'
+                whileInView='shown'
+                viewport={{
+                  amount: 'some',
+                  margin: '100% 0% -9% 0%',
+                }}
+                variants={verticalMoreSkills}
+                className='flex justify-between'
+              >
+                {moreSkillsList
+                  .slice(isSmall ? 6 : 4, isSmall ? 12 : 8)
+                  .map((tech, key) => {
                     return (
-                      <a
+                      <motion.a
                         href={tech.techLink}
                         key={key}
                         target='_blank'
                         title={tech.techology}
+                        variants={verticalMoreSkills}
                         className='flex items-center cursor-pointer'
                       >
-                        <img
+                        <motion.img
+                          whileHover={{
+                            x: [0, -100, 110, -100, 90, -80, 0],
+                            y: [0, -100, 90, -80, 0],
+                            transition: { duration: 0.5 },
+                          }}
+                          animate={tech.shouldShake ? shakingAnimation : ''}
                           src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
                           alt={`${tech.techology}-logo`}
                           className={`hover:scale-125 scale transition duration-300 select-none`}
                         />
-                      </a>
+                      </motion.a>
                     );
-                  }
-                )}
-              </div>
+                  })}
+              </motion.div>
             )}
 
             {/* @notice mobile screens */}
             {!isSmall && (
-              <div className='flex justify-between'>
-                {MORE_SKILLS_LISTS.slice(8, 12).map((tech, key) => {
+              <motion.div
+                initial='hidden'
+                whileInView='shown'
+                viewport={{
+                  amount: 'some',
+                  margin: '100% 0% -9% 0%',
+                }}
+                variants={verticalMoreSkills}
+                className='flex justify-between'
+              >
+                {moreSkillsList.slice(8, 12).map((tech, key) => {
                   return (
-                    <a
+                    <motion.a
                       href={tech.techLink}
                       key={key}
                       target='_blank'
                       title={tech.techology}
+                      variants={verticalMoreSkills}
                       className='flex items-center cursor-pointer'
                     >
-                      <img
+                      <motion.img
+                        whileHover={{
+                          x: [0, -100, 110, -100, 90, -80, 0],
+                          y: [0, -100, 90, -80, 0],
+                          transition: { duration: 0.5 },
+                        }}
+                        animate={tech.shouldShake ? shakingAnimation : ''}
                         src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
                         alt={`${tech.techology}-logo`}
                         className={`hover:scale-125 transition duration-300 select-none`}
                       />
-                    </a>
+                    </motion.a>
                   );
                 })}
-              </div>
+              </motion.div>
             )}
           </div>
         </div>
