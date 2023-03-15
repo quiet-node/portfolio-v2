@@ -45,7 +45,7 @@ const SkillProficientBar = ({
       >
         <img
           src={`src/assets/tech_logos/${logo.toLowerCase()}.svg`}
-          alt='golang-logo'
+          alt={`${logo}-logo`}
           className={`absolute ${
             left ? '-right-3' : 'sm:-left-3'
           } hover:scale-110 transition duration-300 select-none`}
