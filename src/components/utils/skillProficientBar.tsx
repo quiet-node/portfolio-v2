@@ -35,9 +35,9 @@ const SkillProficientBar = ({
       }`}
     >
       {/* Logo */}
-      <div className='flex items-center'>
+      <div title={logo} className='flex items-center cursor-pointer'>
         <img
-          src={`src/assets/tech_logos/${logo}.svg`}
+          src={`src/assets/tech_logos/${logo.toLowerCase()}.svg`}
           alt='golang-logo'
           className={`absolute ${left ? '-right-3' : '-left-3'}`}
         />
