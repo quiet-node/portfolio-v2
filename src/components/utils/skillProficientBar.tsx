@@ -6,10 +6,12 @@ import { animate, motion } from 'framer-motion';
 const SkillProficientBar = ({
   value,
   logo,
+  techLink,
   left,
 }: {
   value: number;
   logo: string;
+  techLink: string;
   left?: boolean;
 }) => {
   const percentageRef = useRef<HTMLDivElement>(null);
@@ -35,13 +37,18 @@ const SkillProficientBar = ({
       }`}
     >
       {/* Logo */}
-      <div title={logo} className='flex items-center cursor-pointer'>
+      <a
+        href={techLink}
+        target='_blank'
+        title={logo}
+        className='flex items-center cursor-pointer'
+      >
         <img
           src={`src/assets/tech_logos/${logo.toLowerCase()}.svg`}
           alt='golang-logo'
           className={`absolute ${left ? '-right-3' : '-left-3'}`}
         />
-      </div>
+      </a>
 
       {/* progress bar */}
       <div

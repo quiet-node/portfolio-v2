@@ -48,19 +48,45 @@ const Stats = () => {
           {/* left */}
           <div className='flex flex-col gap-12'>
             {/* golang */}
-            <SkillProficientBar value={85} logo='Golang' left={true} />{' '}
+            <SkillProficientBar
+              value={85}
+              logo='Golang'
+              techLink='https://go.dev/'
+              left={true}
+            />{' '}
             {/* typescript */}
-            <SkillProficientBar value={92} logo='TypeScript' left={true} />{' '}
+            <SkillProficientBar
+              value={92}
+              logo='TypeScript'
+              techLink='https://typescriptlang.org/'
+              left={true}
+            />{' '}
             {/* soldity */}
-            <SkillProficientBar value={75} logo='Solidity' left={true} />{' '}
+            <SkillProficientBar
+              value={75}
+              logo='Solidity'
+              techLink='https://soliditylang.org/'
+              left={true}
+            />{' '}
             {/* java */}
-            <SkillProficientBar value={88} logo='Java' left={true} />{' '}
+            <SkillProficientBar
+              value={88}
+              logo='Java'
+              techLink='https://java.com/'
+              left={true}
+            />{' '}
             {/* html */}
-            <SkillProficientBar value={95} logo='HTML5' left={true} />{' '}
+            <SkillProficientBar
+              value={95}
+              logo='HTML5'
+              techLink='https://w3schools.com/html/default.asp'
+              left={true}
+            />{' '}
             {/* tailwindcss */}
             <SkillProficientBar
               value={87}
               logo='TailwindCSS'
+              techLink='https://tailwindcss.com/'
               left={true}
             />{' '}
           </div>
@@ -68,17 +94,41 @@ const Stats = () => {
           {/* right */}
           <div className='flex flex-col gap-12'>
             {/* ReactJS */}
-            <SkillProficientBar value={90} logo='ReactJS' />
+            <SkillProficientBar
+              value={90}
+              logo='ReactJS'
+              techLink='https://reactjs.org/'
+            />
             {/* NextJS */}
-            <SkillProficientBar value={88} logo='NextJS' />
+            <SkillProficientBar
+              value={88}
+              logo='NextJS'
+              techLink='https://nextjs.org/'
+            />
             {/* SpringBoot */}
-            <SkillProficientBar value={72} logo='SpringBoot' />
+            <SkillProficientBar
+              value={72}
+              logo='SpringBoot'
+              techLink='https://spring.io/'
+            />
             {/* Hardhat */}
-            <SkillProficientBar value={65} logo='Hardhat' />
+            <SkillProficientBar
+              value={65}
+              logo='Hardhat'
+              techLink='https://hardhat.org/'
+            />
             {/* NodeJS */}
-            <SkillProficientBar value={87} logo='NodeJS' />
+            <SkillProficientBar
+              value={87}
+              logo='NodeJS'
+              techLink='https://nodejs.org/'
+            />
             {/* Docker */}
-            <SkillProficientBar value={75} logo='Docker' />
+            <SkillProficientBar
+              value={75}
+              logo='Docker'
+              techLink='https://docker.com/'
+            />
           </div>
         </div>
       </div>
