@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
-import SkillProficientBar from '../utils/skillProficientBar';
 import useScreenSizes from '../../hooks/useWindowSize/';
+import SkillProficientBar from '../utils/skillProficientBar';
+import {
+  MAIN_LEFT_SKILLS_LISTS,
+  MAIN_RIGHT_SKILLS_LISTS,
+} from '../../utils/constants';
 
 const Stats = () => {
   const [isSmall] = useScreenSizes();
   return (
     <section
       className='scrollbar-hidden flex justify-center items-center
-            sm:h-[600px] 
             2xl:max-w-[100rem] 2xl:mx-auto'
     >
       {/* container */}
@@ -44,94 +47,41 @@ const Stats = () => {
         </div>
 
         {/* body - skill proficient bars */}
-        <div className='flex flex-col gap-12 sm:flex-row sm:gap-9 mb-6 sm:mb-9 md:mb-12 lg:mb-16'>
-          {/* left */}
-          <div className='flex flex-col gap-12'>
-            {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
+        <div>
+          {/* main skills */}
+          <div className='flex flex-col gap-12 sm:flex-row sm:gap-9 mb-6 sm:mb-9 md:mb-12 lg:mb-16'>
+            {/* left/top */}
+            <div className='flex flex-col gap-12'>
+              {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
             use `isSmall` state as the value for `left` attribute*/}
-            {/* golang */}
-            <SkillProficientBar
-              value={85}
-              logo='Golang'
-              techLink='https://go.dev/'
-              left={isSmall}
-            />{' '}
-            {/* typescript */}
-            <SkillProficientBar
-              value={92}
-              logo='TypeScript'
-              techLink='https://typescriptlang.org/'
-              left={isSmall}
-            />{' '}
-            {/* soldity */}
-            <SkillProficientBar
-              value={75}
-              logo='Solidity'
-              techLink='https://soliditylang.org/'
-              left={isSmall}
-            />{' '}
-            {/* java */}
-            <SkillProficientBar
-              value={88}
-              logo='Java'
-              techLink='https://java.com/'
-              left={isSmall}
-            />{' '}
-            {/* MongoDB */}
-            <SkillProficientBar
-              value={81}
-              logo='MongoDB'
-              techLink='https://mongodb.com/'
-              left={isSmall}
-            />{' '}
-            {/* tailwindcss */}
-            <SkillProficientBar
-              value={87}
-              logo='TailwindCSS'
-              techLink='https://tailwindcss.com/'
-              left={isSmall}
-            />{' '}
+              {MAIN_LEFT_SKILLS_LISTS.map((tech) => {
+                return (
+                  <SkillProficientBar
+                    value={tech.value}
+                    logo={tech.techology}
+                    techLink={tech.techLinks}
+                    left={isSmall}
+                  />
+                );
+              })}
+            </div>
+
+            {/* right/bottom */}
+            <div className='flex flex-col gap-12'>
+              {MAIN_RIGHT_SKILLS_LISTS.map((tech) => {
+                return (
+                  <SkillProficientBar
+                    value={tech.value}
+                    logo={tech.techology}
+                    techLink={tech.techLinks}
+                  />
+                );
+              })}
+            </div>
           </div>
 
-          {/* right */}
-          <div className='flex flex-col gap-12'>
-            {/* ReactJS */}
-            <SkillProficientBar
-              value={90}
-              logo='ReactJS'
-              techLink='https://reactjs.org/'
-            />
-            {/* NextJS */}
-            <SkillProficientBar
-              value={88}
-              logo='NextJS'
-              techLink='https://nextjs.org/'
-            />
-            {/* SpringBoot */}
-            <SkillProficientBar
-              value={72}
-              logo='SpringBoot'
-              techLink='https://spring.io/'
-            />
-            {/* Hardhat */}
-            <SkillProficientBar
-              value={65}
-              logo='Hardhat'
-              techLink='https://hardhat.org/'
-            />
-            {/* NodeJS */}
-            <SkillProficientBar
-              value={87}
-              logo='NodeJS'
-              techLink='https://nodejs.org/'
-            />
-            {/* Docker */}
-            <SkillProficientBar
-              value={75}
-              logo='Docker'
-              techLink='https://docker.com/'
-            />
-          </div>
+          {/* More skills */}
+          <div></div>
         </div>
       </div>
     </section>
