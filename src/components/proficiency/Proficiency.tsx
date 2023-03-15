@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { animate, motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import useScreenSizes from '../../hooks/useWindowSize/';
 import SkillProficientBar from '../utils/skillProficientBar';
@@ -13,11 +13,48 @@ import {
 } from '../../utils/framerVariants';
 
 const Stats = () => {
+  const shakingAnimation = useAnimation();
   const [isSmall, isMedium] = useScreenSizes();
   const [mounted, setMounted] = useState(false);
   const verticalVarientSkills = VerticalCommonVariants(60, 6, 0, 0);
-  const leftVarientSkills = HorizontalCommonVariants(-40, 0, 0, 0.2);
   const rightVarientSkills = HorizontalCommonVariants(40, 0, 0, 0.2);
+  const leftVarientSkills = HorizontalCommonVariants(-40, 0, 0, 0.2);
+  const [moreSkillsList, setMoreSkillsList] = useState(MORE_SKILLS_LISTS);
+  const [leftSkillsList, setLeftSkillsList] = useState(MAIN_LEFT_SKILLS_LISTS);
+  const [rightSkillsList, setRightSkillsList] = useState(
+    MAIN_RIGHT_SKILLS_LISTS
+  );
+
+  useEffect(() => {
+    const intervalId = setInterval(async () => {
+      const newMoreSkillList = moreSkillsList.map((tech) => {
+        return { ...tech, shouldShake: Math.random() < 0.5 };
+      });
+      const newLeftSkillList = leftSkillsList.map((tech) => {
+        return { ...tech, shouldShake: Math.random() < 0.5 };
+      });
+      const newRightSkillList = rightSkillsList.map((tech) => {
+        return { ...tech, shouldShake: Math.random() < 0.5 };
+      });
+
+      setMoreSkillsList(newMoreSkillList);
+      setLeftSkillsList(newLeftSkillList);
+      setRightSkillsList(newRightSkillList);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    const intervalId = setInterval(async () => {
+      await shakingAnimation.start({
+        rotate: [0, 90, -90, 60, -60, 30, -30, 0],
+        transition: { duration: 0.5 },
+      });
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [shakingAnimation]);
 
   useEffect(() => {
     setMounted(true);
@@ -80,26 +117,28 @@ const Stats = () => {
               >
                 {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
             use `isSmall` state as the value for `left` attribute*/}
-                {MAIN_LEFT_SKILLS_LISTS.map((tech) => {
+                {leftSkillsList.map((tech, key) => {
                   return (
-                    <motion.div variants={verticalVarientSkills}>
+                    <motion.div variants={verticalVarientSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value}
                         logo={tech.techology}
                         techLink={tech.techLink}
+                        shouldShake={tech.shouldShake}
                       />
                     </motion.div>
                   );
                 })}
 
                 {/* bottom skills  */}
-                {MAIN_RIGHT_SKILLS_LISTS.map((tech) => {
+                {rightSkillsList.map((tech, key) => {
                   return (
-                    <motion.div variants={verticalVarientSkills}>
+                    <motion.div variants={verticalVarientSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value}
                         logo={tech.techology}
                         techLink={tech.techLink}
+                        shouldShake={tech.shouldShake}
                       />
                     </motion.div>
                   );
@@ -123,13 +162,14 @@ const Stats = () => {
                 >
                   {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
             use `isSmall` state as the value for `left` attribute*/}
-                  {MAIN_LEFT_SKILLS_LISTS.map((tech) => {
+                  {leftSkillsList.map((tech, key) => {
                     return (
-                      <motion.div variants={leftVarientSkills}>
+                      <motion.div variants={leftVarientSkills} key={key}>
                         <SkillProficientBar
                           value={tech.value}
                           logo={tech.techology}
                           techLink={tech.techLink}
+                          shouldShake={tech.shouldShake}
                           left={true}
                         />
                       </motion.div>
@@ -149,13 +189,14 @@ const Stats = () => {
                 variants={rightVarientSkills}
                 className='flex flex-col gap-12'
               >
-                {MAIN_RIGHT_SKILLS_LISTS.map((tech) => {
+                {rightSkillsList.map((tech, key) => {
                   return (
-                    <motion.div variants={rightVarientSkills}>
+                    <motion.div key={key} variants={rightVarientSkills}>
                       <SkillProficientBar
                         value={tech.value}
                         logo={tech.techology}
                         techLink={tech.techLink}
+                        shouldShake={tech.shouldShake}
                       />
                     </motion.div>
                   );
@@ -166,34 +207,44 @@ const Stats = () => {
 
           {/* more skills */}
           <div className='flex flex-col gap-3'>
+            {/* @notice medium or larger screens */}
             <div className='flex justify-between'>
-              {MORE_SKILLS_LISTS.slice(0, isMedium ? 12 : isSmall ? 6 : 4).map(
-                (tech) => {
+              {moreSkillsList
+                .slice(0, isMedium ? 12 : isSmall ? 6 : 4)
+                .map((tech, key) => {
                   return (
                     <a
+                      key={key}
                       href={tech.techLink}
                       target='_blank'
                       title={tech.techology}
                       className='flex items-center cursor-pointer'
                     >
-                      <img
+                      <motion.img
+                        whileHover={{
+                          x: [0, -30, 40, -30, 20, -10, 0],
+                          y: [0, -30, 20, -10, 0],
+                          transition: { duration: 0.5 },
+                        }}
+                        animate={tech.shouldShake ? shakingAnimation : ''}
                         src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
                         alt={`${tech.techology}-logo`}
-                        className={`hover:scale-110 transition duration-300 select-none`}
+                        className={`/hover:scale-125 /transition duration-300 select-none`}
                       />
                     </a>
                   );
-                }
-              )}
+                })}
             </div>
 
+            {/* @notice small screens */}
             {!isMedium && (
               <div className='flex justify-between'>
                 {MORE_SKILLS_LISTS.slice(isSmall ? 6 : 4, isSmall ? 12 : 8).map(
-                  (tech) => {
+                  (tech, key) => {
                     return (
                       <a
                         href={tech.techLink}
+                        key={key}
                         target='_blank'
                         title={tech.techology}
                         className='flex items-center cursor-pointer'
@@ -201,7 +252,7 @@ const Stats = () => {
                         <img
                           src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
                           alt={`${tech.techology}-logo`}
-                          className={`hover:scale-110 transition duration-300 select-none`}
+                          className={`hover:scale-125 scale transition duration-300 select-none`}
                         />
                       </a>
                     );
@@ -210,12 +261,14 @@ const Stats = () => {
               </div>
             )}
 
+            {/* @notice mobile screens */}
             {!isSmall && (
               <div className='flex justify-between'>
-                {MORE_SKILLS_LISTS.slice(8, 12).map((tech) => {
+                {MORE_SKILLS_LISTS.slice(8, 12).map((tech, key) => {
                   return (
                     <a
                       href={tech.techLink}
+                      key={key}
                       target='_blank'
                       title={tech.techology}
                       className='flex items-center cursor-pointer'
@@ -223,7 +276,7 @@ const Stats = () => {
                       <img
                         src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
                         alt={`${tech.techology}-logo`}
-                        className={`hover:scale-110 transition duration-300 select-none`}
+                        className={`hover:scale-125 transition duration-300 select-none`}
                       />
                     </a>
                   );

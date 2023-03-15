@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { animate, motion } from 'framer-motion';
+import { animate, motion, useAnimation } from 'framer-motion';
 
 // @source: https://github.com/R4M5E5/Progress-bar-with-Framer-Motion-Tutorial
 const SkillProficientBar = ({
@@ -7,12 +7,15 @@ const SkillProficientBar = ({
   logo,
   techLink,
   left,
+  shouldShake,
 }: {
   value: number;
   logo: string;
   techLink: string;
+  shouldShake: boolean;
   left?: boolean;
 }) => {
+  const shakingAnimation = useAnimation();
   const percentageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const percentageText = percentageRef.current?.textContent;
@@ -29,6 +32,17 @@ const SkillProficientBar = ({
     }
   }, [value]);
 
+  useEffect(() => {
+    const intervalId = setInterval(async () => {
+      await shakingAnimation.start({
+        scale: [1, 1.08, 1],
+        transition: { duration: 0.8 },
+      });
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [shakingAnimation]);
+
   return (
     <div
       className={`flex items-center gap-1 relative ${
@@ -42,12 +56,16 @@ const SkillProficientBar = ({
         title={logo}
         className='flex items-center cursor-pointer'
       >
-        <img
+        <motion.img
+          animate={shouldShake ? shakingAnimation : ''}
+          whileHover={{
+            x: [0, -3, 4, -3, 2, -1, 0],
+            y: [0, -3, 2, -1, 0],
+            transition: { duration: 0.5 },
+          }}
           src={`src/assets/tech_logos/${logo.toLowerCase()}.svg`}
           alt={`${logo}-logo`}
-          className={`absolute ${
-            left ? '-right-3' : 'sm:-left-3'
-          } hover:scale-110 transition duration-300 select-none`}
+          className={`absolute ${left ? '-right-3' : 'sm:-left-3'} select-none`}
         />
       </a>
 
