@@ -48,33 +48,37 @@ const Stats = () => {
           {/* left */}
           <div className='flex flex-col gap-12'>
             {/* golang */}
-            <SkillProficientBar value={85} logo='golang' left={true} />{' '}
+            <SkillProficientBar value={85} logo='Golang' left={true} />{' '}
             {/* typescript */}
-            <SkillProficientBar value={92} logo='golang' left={true} />{' '}
+            <SkillProficientBar value={92} logo='TypeScript' left={true} />{' '}
             {/* soldity */}
-            <SkillProficientBar value={75} logo='golang' left={true} />{' '}
+            <SkillProficientBar value={75} logo='Solidity' left={true} />{' '}
             {/* java */}
-            <SkillProficientBar value={88} logo='golang' left={true} />{' '}
+            <SkillProficientBar value={88} logo='Java' left={true} />{' '}
             {/* html */}
-            <SkillProficientBar value={95} logo='golang' left={true} />{' '}
+            <SkillProficientBar value={95} logo='HTML5' left={true} />{' '}
             {/* tailwindcss */}
-            <SkillProficientBar value={87} logo='golang' left={true} />{' '}
+            <SkillProficientBar
+              value={87}
+              logo='TailwindCSS'
+              left={true}
+            />{' '}
           </div>
 
           {/* right */}
           <div className='flex flex-col gap-12'>
-            {/* React */}
-            <SkillProficientBar value={90} logo='golang' />
-            {/* NextJs */}
-            <SkillProficientBar value={85} logo='golang' />
-            {/* Hardhat */}
-            <SkillProficientBar value={70} logo='golang' />
+            {/* ReactJS */}
+            <SkillProficientBar value={90} logo='ReactJS' />
+            {/* NextJS */}
+            <SkillProficientBar value={88} logo='NextJS' />
             {/* SpringBoot */}
-            <SkillProficientBar value={78} logo='golang' />
-            {/* NodeJS/ExpressJs */}
-            <SkillProficientBar value={87} logo='golang' />
+            <SkillProficientBar value={72} logo='SpringBoot' />
+            {/* Hardhat */}
+            <SkillProficientBar value={65} logo='Hardhat' />
+            {/* NodeJS */}
+            <SkillProficientBar value={87} logo='NodeJS' />
             {/* Docker */}
-            <SkillProficientBar value={72} logo='golang' />
+            <SkillProficientBar value={75} logo='Docker' />
           </div>
         </div>
       </div>
