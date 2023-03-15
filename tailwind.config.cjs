@@ -12,6 +12,7 @@ module.exports = {
       screens: {
         xxsm: '340px',
         xsm: '444px',
+        xssm: '520px',
         xmd: '880px',
       },
       borderWidth: {
