@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { animate, motion } from 'framer-motion';
 
 // @source: https://github.com/R4M5E5/Progress-bar-with-Framer-Motion-Tutorial
-
 const SkillProficientBar = ({
   value,
   logo,
@@ -66,14 +65,15 @@ const SkillProficientBar = ({
         ${left ? ' flex-row-reverse' : ''}`}
       >
         <motion.div
-          animate={{
+          whileInView={{
             width: `${value}%`,
           }}
+          viewport={{ once: true }}
           transition={{
             duration: 3,
             ease: [0.42, 0, 0.001, 1],
           }}
-          className={`w-0 proficient-bar-animation`}
+          className={`w-0 proficient-bar-animation rounded`}
         />
       </div>
 
