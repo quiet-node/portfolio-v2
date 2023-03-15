@@ -1,14 +1,29 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import useScreenSizes from '../../hooks/useWindowSize/';
 import SkillProficientBar from '../utils/skillProficientBar';
 import {
+  MORE_SKILLS_LISTS,
   MAIN_LEFT_SKILLS_LISTS,
   MAIN_RIGHT_SKILLS_LISTS,
-  MORE_SKILLS_LISTS,
 } from '../../utils/constants';
+import {
+  HorizontalCommonVariants,
+  VerticalCommonVariants,
+} from '../../utils/framerVariants';
 
 const Stats = () => {
   const [isSmall, isMedium] = useScreenSizes();
+  const [mounted, setMounted] = useState(false);
+  const verticalVarientSkills = VerticalCommonVariants(60, 6, 0, 0);
+  const leftVarientSkills = HorizontalCommonVariants(-40, 0, 0, 0.2);
+  const rightVarientSkills = HorizontalCommonVariants(40, 0, 0, 0.2);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+
   return (
     <section
       className='scrollbar-hidden flex justify-center items-center
@@ -49,37 +64,105 @@ const Stats = () => {
 
         {/* body - skill proficient bars */}
         <div className='flex flex-col gap-12 mb-6 sm:mb-9 md:mb-12 lg:mb-12'>
-          {/* main skills */}
-          <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
-            {/* left/top */}
-            <div className='flex flex-col gap-12'>
-              {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
+          {/* @notice main skills for mobile screens */}
+          {!isSmall ? (
+            <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
+              {/* top skills */}
+              <motion.div
+                initial='hidden'
+                whileInView='shown'
+                viewport={{
+                  amount: 'some',
+                  margin: '100% 0% -9% 0%',
+                }}
+                variants={verticalVarientSkills}
+                className='flex flex-col gap-12'
+              >
+                {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
             use `isSmall` state as the value for `left` attribute*/}
-              {MAIN_LEFT_SKILLS_LISTS.map((tech) => {
-                return (
-                  <SkillProficientBar
-                    value={tech.value}
-                    logo={tech.techology}
-                    techLink={tech.techLink}
-                    left={true}
-                  />
-                );
-              })}
-            </div>
+                {MAIN_LEFT_SKILLS_LISTS.map((tech) => {
+                  return (
+                    <motion.div variants={verticalVarientSkills}>
+                      <SkillProficientBar
+                        value={tech.value}
+                        logo={tech.techology}
+                        techLink={tech.techLink}
+                      />
+                    </motion.div>
+                  );
+                })}
 
-            {/* right/bottom */}
-            <div className='flex flex-col gap-12'>
-              {MAIN_RIGHT_SKILLS_LISTS.map((tech) => {
-                return (
-                  <SkillProficientBar
-                    value={tech.value}
-                    logo={tech.techology}
-                    techLink={tech.techLink}
-                  />
-                );
-              })}
+                {/* bottom skills  */}
+                {MAIN_RIGHT_SKILLS_LISTS.map((tech) => {
+                  return (
+                    <motion.div variants={verticalVarientSkills}>
+                      <SkillProficientBar
+                        value={tech.value}
+                        logo={tech.techology}
+                        techLink={tech.techLink}
+                      />
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
             </div>
-          </div>
+          ) : (
+            // @notice main skills for small and bigger screens
+            <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
+              {/* left skills */}
+              <div>
+                <motion.div
+                  initial='hidden'
+                  whileInView='shown'
+                  viewport={{
+                    amount: 'some',
+                    margin: '100% 0% -9% 0%',
+                  }}
+                  variants={leftVarientSkills}
+                  className='flex flex-col gap-12'
+                >
+                  {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
+            use `isSmall` state as the value for `left` attribute*/}
+                  {MAIN_LEFT_SKILLS_LISTS.map((tech) => {
+                    return (
+                      <motion.div variants={leftVarientSkills}>
+                        <SkillProficientBar
+                          value={tech.value}
+                          logo={tech.techology}
+                          techLink={tech.techLink}
+                          left={true}
+                        />
+                      </motion.div>
+                    );
+                  })}
+                </motion.div>
+              </div>
+
+              {/* right skills */}
+              <motion.div
+                initial='hidden'
+                whileInView='shown'
+                viewport={{
+                  amount: 'some',
+                  margin: '100% 0% -9% 0%',
+                }}
+                variants={rightVarientSkills}
+                className='flex flex-col gap-12'
+              >
+                {MAIN_RIGHT_SKILLS_LISTS.map((tech) => {
+                  return (
+                    <motion.div variants={rightVarientSkills}>
+                      <SkillProficientBar
+                        value={tech.value}
+                        logo={tech.techology}
+                        techLink={tech.techLink}
+                      />
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+            </div>
+          )}
 
           {/* more skills */}
           <div className='flex flex-col gap-3'>
