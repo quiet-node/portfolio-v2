@@ -47,16 +47,23 @@ const SkillProficientBar = ({
           src={`src/assets/tech_logos/${logo.toLowerCase()}.svg`}
           alt='golang-logo'
           className={`absolute ${
-            left ? '-right-3' : '-left-3'
+            left ? '-right-3' : 'sm:-left-3'
           } hover:scale-110 transition duration-300 select-none`}
         />
       </a>
 
       {/* progress bar */}
       <div
-        className={`w-[350px] h-[15px] flex justify-start items-stretch rounded-lg bg-[#454650] border-1 border-teal-200 overflow-hidden ${
-          left ? ' flex-row-reverse' : ''
-        }`}
+        className={`flex justify-start items-stretch bg-[#454650] border-1 border-teal-200 overflow-hidden 
+                    w-[225px] h-[10px] rounded
+                    xxsm:w-[240px]
+                    xsm:w-[320px] xsm:h-[12px]
+                    xssm:w-[400px]
+                    sm:w-[200px] sm:rounded-md
+                    md:w-[250px] md:h-[12px]
+                    xmd:w-[300px] xmd:h-[14px]
+                    lg:w-[350px] lg:h-[15px]
+        ${left ? ' flex-row-reverse' : ''}`}
       >
         <motion.div
           animate={{
@@ -71,7 +78,11 @@ const SkillProficientBar = ({
       </div>
 
       {/* percentage */}
-      <div className='w-12 flex justify-center font-extrabold text-teal-600 text-lg'>
+      <div
+        className='flex justify-center text-teal-600
+                w-9 text-base font-bold
+                sm:w-12 sm:text-lg sm:font-extrabold'
+      >
         <p ref={percentageRef}>0</p>
         <p>%</p>
       </div>

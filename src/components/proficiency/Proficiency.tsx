@@ -1,23 +1,23 @@
 import { motion } from 'framer-motion';
 import SkillProficientBar from '../utils/skillProficientBar';
+import useScreenSizes from '../../hooks/useWindowSize/';
 
 const Stats = () => {
+  const [isSmall] = useScreenSizes();
   return (
     <section
-      className='h-[600px] scrollbar-hidden flex justify-center items-center
+      className='scrollbar-hidden flex justify-center items-center
+            sm:h-[600px] 
             2xl:max-w-[100rem] 2xl:mx-auto'
     >
       {/* container */}
       <div
-        className='relative flex flex-col items-center border-2 border-[#e7edf7] bg-white
-                  //w-full //h-full w-fit //-top-40 rounded-2xl mx-1 gap-16
-                  xxsm:mx-3
-                  //xsm:-top-48 xsm:mx-6 xsm:rounded-3xl
-                  sm:mx-9
-                  md:mx-16 //md:-top-32
-                  //lg:w-[850px] //lg:h-[550px] //lg:-top-40
-                  //lg:-top-44
-                  //xl:w-[950px] //xl:h-[600px] xl:-top-20 xl:px-16
+        className='relative flex flex-col items-center border-2 border-[#e7edf7] bg-white gap-16 rounded-2xl
+                  -top-20 px-3
+                  xsm:px-6 xsm:-top-24
+                  sm:px-6
+                  md:-top-20 md:px-9
+                  lg:-top-24 lg:px-16
                   2xl:px-20
                   '
       >
@@ -28,7 +28,7 @@ const Stats = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
             viewport={{ amount: 'some', margin: '100% 0% -8% 0%' }}
-            className='text-4xl font-extrabold text-primary drop-shadow-2xl'
+            className='text-3xl sm:text-4xl font-extrabold text-primary drop-shadow-2xl'
           >
             Proficiency.
           </motion.h1>
@@ -39,55 +39,57 @@ const Stats = () => {
             viewport={{ amount: 'some', margin: '100% 0% -9% 0%' }}
             className='flex justify-center -mt-0.5'
           >
-            <hr className='bg-primary h-[0.2rem] w-32 rounded-xl drop-shadow-2xl' />
+            <hr className='bg-primary h-[0.2rem] w-20 sm:w-32 rounded-xl drop-shadow-2xl' />
           </motion.div>
         </div>
 
         {/* body - skill proficient bars */}
-        <div className='flex gap-9 mb-6 sm:mb-9 md:mb-12 lg:mb-16'>
+        <div className='flex flex-col gap-12 sm:flex-row sm:gap-9 mb-6 sm:mb-9 md:mb-12 lg:mb-16'>
           {/* left */}
           <div className='flex flex-col gap-12'>
+            {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
+            use `isSmall` state as the value for `left` attribute*/}
             {/* golang */}
             <SkillProficientBar
               value={85}
               logo='Golang'
               techLink='https://go.dev/'
-              left={true}
+              left={isSmall}
             />{' '}
             {/* typescript */}
             <SkillProficientBar
               value={92}
               logo='TypeScript'
               techLink='https://typescriptlang.org/'
-              left={true}
+              left={isSmall}
             />{' '}
             {/* soldity */}
             <SkillProficientBar
               value={75}
               logo='Solidity'
               techLink='https://soliditylang.org/'
-              left={true}
+              left={isSmall}
             />{' '}
             {/* java */}
             <SkillProficientBar
               value={88}
               logo='Java'
               techLink='https://java.com/'
-              left={true}
+              left={isSmall}
             />{' '}
             {/* MongoDB */}
             <SkillProficientBar
               value={81}
               logo='MongoDB'
               techLink='https://mongodb.com/'
-              left={true}
+              left={isSmall}
             />{' '}
             {/* tailwindcss */}
             <SkillProficientBar
               value={87}
               logo='TailwindCSS'
               techLink='https://tailwindcss.com/'
-              left={true}
+              left={isSmall}
             />{' '}
           </div>
 
