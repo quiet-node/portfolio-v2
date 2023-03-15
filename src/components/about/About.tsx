@@ -9,7 +9,8 @@ const About = () => {
     <section
       className='overflow-x-hidden overflow-y-hidden scrollbar-hidden bg-primary
                 h-[400px]
-                md:h-[500px]'
+                md:h-[450px]
+                lg:h-[500px]'
     >
       {/* container */}
       <div
