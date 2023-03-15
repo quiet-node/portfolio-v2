@@ -101,6 +101,7 @@ const Intro = () => {
               href={QUIET_NODE_LINKEDIN_LINK}
               target='_blank'
               className='cursor-pointer hover:text-[#0A66C2]'
+              title='LinkedIn'
             >
               <AiFillLinkedin />
             </motion.a>
@@ -112,7 +113,8 @@ const Intro = () => {
               transition={{ duration: 0.6, delay: 1.1 }}
               href={QUIET_NODE_GITHUB_LINK}
               target='_blank'
-              className='cursor-pointer hover:text-black '
+              className='cursor-pointer hover:text-black'
+              title='GitHub'
             >
               <AiFillGithub />
             </motion.a>
@@ -126,6 +128,7 @@ const Intro = () => {
               href={QUIET_NODE_TWITTER_LINK}
               target='_blank'
               className='cursor-pointer hover:text-[#1DA1F2]'
+              title='Twitter'
             >
               <AiFillTwitterCircle />
             </motion.a>
@@ -138,6 +141,7 @@ const Intro = () => {
               href={QUIET_NODE_EMAIL_LINK}
               target='_blank'
               className='cursor-pointer hover:text-red-600 flex items-center'
+              title='Gmail'
             >
               <ImMail size={40} />
             </motion.a>
