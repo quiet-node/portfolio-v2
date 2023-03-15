@@ -10,32 +10,32 @@ export const MAIN_LEFT_SKILLS_LISTS = [
   {
     techology: 'Golang',
     value: 85,
-    techLinks: 'https://go.dev/',
+    techLink: 'https://go.dev/',
   },
   {
     techology: 'TypeScript',
     value: 92,
-    techLinks: 'https://typescriptlang.org/',
+    techLink: 'https://typescriptlang.org/',
   },
   {
     techology: 'Solidity',
     value: 75,
-    techLinks: 'https://soliditylang.org/',
+    techLink: 'https://soliditylang.org/',
   },
   {
     techology: 'Java',
     value: 88,
-    techLinks: 'https://java.com/',
+    techLink: 'https://java.com/',
   },
   {
     techology: 'MongoDB',
     value: 82,
-    techLinks: 'https://mongodb.com/',
+    techLink: 'https://mongodb.com/',
   },
   {
     techology: 'TailwindCSS',
     value: 87,
-    techLinks: 'https://tailwindcss.com/',
+    techLink: 'https://tailwindcss.com/',
   },
 ];
 
@@ -43,82 +43,82 @@ export const MAIN_RIGHT_SKILLS_LISTS = [
   {
     techology: 'ReactJS',
     value: 90,
-    techLinks: 'https://reactjs.org/',
+    techLink: 'https://reactjs.org/',
   },
   {
     techology: 'NextJS',
     value: 88,
-    techLinks: 'https://nextjs.org/',
+    techLink: 'https://nextjs.org/',
   },
   {
     techology: 'SpringBoot',
     value: 72,
-    techLinks: 'https://spring.io/',
+    techLink: 'https://spring.io/',
   },
   {
     techology: 'Hardhat',
     value: 72,
-    techLinks: 'https://hardhat.org/',
+    techLink: 'https://hardhat.org/',
   },
   {
     techology: 'NodeJS',
     value: 87,
-    techLinks: 'https://nodejs.org/',
+    techLink: 'https://nodejs.org/',
   },
   {
     techology: 'Docker',
     value: 75,
-    techLinks: 'https://docker.com/',
+    techLink: 'https://docker.com/',
   },
 ];
 
 export const MORE_SKILLS_LISTS = [
   {
     techology: 'HTML5',
-    techLinks: 'https://www.w3schools.com/html/',
+    techLink: 'https://www.w3schools.com/html/',
   },
   {
     techology: 'CSS3',
-    techLinks: 'https://www.w3schools.com/Css/',
+    techLink: 'https://www.w3schools.com/Css/',
   },
   {
     techology: 'Javascript',
-    techLinks: 'https://javascript.com/',
+    techLink: 'https://javascript.com/',
   },
   {
     techology: 'Ethereum',
-    techLinks: 'https://ethereum.org/en/',
+    techLink: 'https://ethereum.org/en/',
   },
   {
     techology: 'OpenZeppelin',
-    techLinks: 'https://www.openzeppelin.com/',
+    techLink: 'https://www.openzeppelin.com/',
   },
   {
     techology: 'MochaJS',
-    techLinks: 'https://mochajs.org/',
+    techLink: 'https://mochajs.org/',
   },
   {
     techology: 'MySQL',
-    techLinks: 'https://www.mysql.com/',
+    techLink: 'https://www.mysql.com/',
   },
   {
     techology: 'PostgresQL',
-    techLinks: 'https://www.postgresql.org/',
+    techLink: 'https://www.postgresql.org/',
   },
   {
     techology: 'aws',
-    techLinks: 'https://aws.amazon.com/',
+    techLink: 'https://aws.amazon.com/',
   },
   {
     techology: 'vercel',
-    techLinks: 'https://vercel.com/',
+    techLink: 'https://vercel.com/',
   },
   {
     techology: 'Netlify',
-    techLinks: 'https://www.netlify.com/',
+    techLink: 'https://www.netlify.com/',
   },
   {
     techology: 'Heroku',
-    techLinks: 'https://www.heroku.com/',
+    techLink: 'https://www.heroku.com/',
   },
 ];
