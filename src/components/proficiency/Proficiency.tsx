@@ -75,11 +75,11 @@ const Stats = () => {
               techLink='https://java.com/'
               left={true}
             />{' '}
-            {/* html */}
+            {/* MongoDB */}
             <SkillProficientBar
-              value={95}
-              logo='HTML5'
-              techLink='https://w3schools.com/html/default.asp'
+              value={81}
+              logo='MongoDB'
+              techLink='https://mongodb.com/'
               left={true}
             />{' '}
             {/* tailwindcss */}
