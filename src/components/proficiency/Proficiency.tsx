@@ -4,10 +4,11 @@ import SkillProficientBar from '../utils/skillProficientBar';
 import {
   MAIN_LEFT_SKILLS_LISTS,
   MAIN_RIGHT_SKILLS_LISTS,
+  MORE_SKILLS_LISTS,
 } from '../../utils/constants';
 
 const Stats = () => {
-  const [isSmall] = useScreenSizes();
+  const [isSmall, isMedium] = useScreenSizes();
   return (
     <section
       className='scrollbar-hidden flex justify-center items-center
@@ -47,9 +48,9 @@ const Stats = () => {
         </div>
 
         {/* body - skill proficient bars */}
-        <div>
+        <div className='flex flex-col gap-12 mb-6 sm:mb-9 md:mb-12 lg:mb-12'>
           {/* main skills */}
-          <div className='flex flex-col gap-12 sm:flex-row sm:gap-9 mb-6 sm:mb-9 md:mb-12 lg:mb-16'>
+          <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
             {/* left/top */}
             <div className='flex flex-col gap-12'>
               {/* @NOTICE: As `left` attributes on <SkillProficientBar> component can only be triggered from small screen size (i.e. 640px), 
@@ -59,8 +60,8 @@ const Stats = () => {
                   <SkillProficientBar
                     value={tech.value}
                     logo={tech.techology}
-                    techLink={tech.techLinks}
-                    left={isSmall}
+                    techLink={tech.techLink}
+                    left={true}
                   />
                 );
               })}
@@ -73,15 +74,80 @@ const Stats = () => {
                   <SkillProficientBar
                     value={tech.value}
                     logo={tech.techology}
-                    techLink={tech.techLinks}
+                    techLink={tech.techLink}
                   />
                 );
               })}
             </div>
           </div>
 
-          {/* More skills */}
-          <div></div>
+          {/* more skills */}
+          <div className='flex flex-col gap-3'>
+            <div className='flex justify-between'>
+              {MORE_SKILLS_LISTS.slice(0, isMedium ? 12 : isSmall ? 6 : 4).map(
+                (tech) => {
+                  return (
+                    <a
+                      href={tech.techLink}
+                      target='_blank'
+                      title={tech.techology}
+                      className='flex items-center cursor-pointer'
+                    >
+                      <img
+                        src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
+                        alt={`${tech.techology}-logo`}
+                        className={`hover:scale-110 transition duration-300 select-none`}
+                      />
+                    </a>
+                  );
+                }
+              )}
+            </div>
+
+            {!isMedium && (
+              <div className='flex justify-between'>
+                {MORE_SKILLS_LISTS.slice(isSmall ? 6 : 4, isSmall ? 12 : 8).map(
+                  (tech) => {
+                    return (
+                      <a
+                        href={tech.techLink}
+                        target='_blank'
+                        title={tech.techology}
+                        className='flex items-center cursor-pointer'
+                      >
+                        <img
+                          src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
+                          alt={`${tech.techology}-logo`}
+                          className={`hover:scale-110 transition duration-300 select-none`}
+                        />
+                      </a>
+                    );
+                  }
+                )}
+              </div>
+            )}
+
+            {!isSmall && (
+              <div className='flex justify-between'>
+                {MORE_SKILLS_LISTS.slice(8, 12).map((tech) => {
+                  return (
+                    <a
+                      href={tech.techLink}
+                      target='_blank'
+                      title={tech.techology}
+                      className='flex items-center cursor-pointer'
+                    >
+                      <img
+                        src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
+                        alt={`${tech.techology}-logo`}
+                        className={`hover:scale-110 transition duration-300 select-none`}
+                      />
+                    </a>
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
