@@ -154,7 +154,7 @@ export const PROJECTS_LISTS = [
     description:
       'A revolutionary music web 3.0 platform that combines NFTs, music-donation system, NFT marketplace, club membership, and social media features, empowering musicians and fans to connect, showcase, and promote their music, revolutionizing the music industry',
     repoLink: 'https://github.com/syns-platform',
-    thumbnail: '',
+    thumbnail: 'syns-platform/syns-platform-devices.svg',
   },
   {
     name: 'Hashtology',
@@ -162,7 +162,7 @@ export const PROJECTS_LISTS = [
     description:
       'A crypto-wallet that makes it easy to send and receive different types of digital currency across the globe, providing a secure and reliable way to manage your digital assets.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
-    thumbnail: '',
+    thumbnail: 'hashtology/hashtology.svg',
   },
   {
     name: 'NFTir',
