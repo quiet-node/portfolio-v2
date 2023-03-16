@@ -146,3 +146,102 @@ export const MORE_SKILLS_LISTS = [
     shouldShake: false,
   },
 ];
+
+export const PROJECTS_LISTS = [
+  {
+    name: 'Syns Platform',
+    stacks: ['Golang', 'TypeScript', 'NextJS', 'Solidity', 'Ethereum'],
+    description:
+      'A revolutionary music web 3.0 platform that combines NFTs, music-donation system, NFT marketplace, club membership, and social media features, empowering musicians and fans to connect, showcase, and promote their music, revolutionizing the music industry',
+    repoLink: 'https://github.com/syns-platform',
+    thumbnail: '',
+  },
+  {
+    name: 'Hashtology',
+    stacks: ['Solidity', 'Hardhat', 'TypeScript', 'ReactJS', 'Ethereum'],
+    description:
+      'A crypto-wallet that makes it easy to send and receive different types of digital currency across the globe, providing a secure and reliable way to manage your digital assets.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
+    thumbnail: '',
+  },
+  {
+    name: 'NFTir',
+    stacks: ['Golang', 'AWS', 'Docker', 'DynamoDB'],
+    description:
+      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
+    repoLink: `https://github.com/nftir`,
+    thumbnail: '',
+  },
+  {
+    name: 'Ethereum Dev Sandbox',
+    stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],
+    description:
+      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
+    repoLink: `https://github.com/nftir`,
+    thumbnail: '',
+  },
+  {
+    name: 'Calibrated Peer Review',
+    stacks: ['Java', 'OpenLiberty', 'Docker', 'ReactJS'],
+    description:
+      'A full-stack web application aimed at bringing automated calibrated peer review to classrooms at SUNY Oswego.',
+    repoLink: `https://github.com/nftir`,
+    thumbnail: '',
+  },
+  {
+    name: 'Meetup App',
+    stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
+    description:
+      'A platform for developers to connect. They can create their portfolio by adding their experience, education, skills, and other important information about their professional career.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
+    thumbnail: '',
+  },
+  {
+    name: 'Full Stack Yelp App',
+    stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
+    description:
+      'a full-stack web application that utilizes advanced data structures and algorithms to perform comprehensive analysis on a vast dataset of 100,000 businesses located throughout the United States.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/CSC-365-fullstack-app-III`,
+    thumbnail: '',
+  },
+  {
+    name: 'Landmark-App',
+    stacks: ['SwiftUI', 'iOS', 'xCode'],
+    description:
+      'An iOS application helps hikers and travelers to keep track and mark down favorite landmarks.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/landmark-app`,
+    thumbnail: '',
+  },
+  {
+    name: 'Crew Talk',
+    stacks: ['Kotlin', 'XML', 'Android', 'Firebase'],
+    description:
+      'An Android chat app that supports realtime chatting by integrating the Google Firebase database.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
+    thumbnail: '',
+  },
+  {
+    name: 'Omega Ecommerce',
+    stacks: ['SwiftUI', 'iOS', 'xCode'],
+    description:
+      'A dynamic e-commerce platform featuring a user-friendly, yet intricate animated interface for an elevated online shopping experience.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
+    thumbnail: '',
+  },
+  {
+    name: 'World Time App',
+    stacks: ['Dart', 'Flutter'],
+    description:
+      'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
+    thumbnail: '',
+  },
+  {
+    name: 'Tic Tac Toe',
+    stacks: ['TypeScript', 'NextJS', 'Vercel'],
+    description:
+      'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
+    thumbnail: '',
+  },
+];
