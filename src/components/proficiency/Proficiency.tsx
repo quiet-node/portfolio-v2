@@ -1,5 +1,5 @@
-import { animate, motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import useScreenSizes from '../../hooks/useWindowSize/';
 import SkillProficientBar from '../utils/skillProficientBar';
 import {
