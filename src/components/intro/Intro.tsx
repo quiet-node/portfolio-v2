@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion';
+import { ImMail } from 'react-icons/im';
 import { VerticalCommonVariants } from '../../utils/framerVariants';
 import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
   AiFillGithub,
-  AiFillMail,
+  AiFillLinkedin,
+  AiFillTwitterCircle,
 } from 'react-icons/ai';
-
-import { ImMail } from 'react-icons/im';
 import {
   QUIET_NODE_EMAIL_LINK,
   QUIET_NODE_GITHUB_LINK,
@@ -16,7 +14,7 @@ import {
 } from '../../utils/constants';
 
 const Intro = () => {
-  const descriptionVariants = VerticalCommonVariants(30, 9, 0.9);
+  const descriptionVariants = VerticalCommonVariants(60, 9, 0.9);
 
   return (
     <section

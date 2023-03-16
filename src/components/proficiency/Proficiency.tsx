@@ -71,7 +71,7 @@ const Stats = () => {
     >
       {/* container */}
       <div
-        className='relative flex flex-col items-center border-2 border-[#e7edf7] bg-white gap-16 rounded-2xl
+        className='relative flex flex-col overflow-hidden items-center border-2 border-[#e7edf7] bg-white gap-16 rounded-2xl
                   -top-20 px-3
                   xsm:px-6 xsm:-top-24
                   sm:px-6
