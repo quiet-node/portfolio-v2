@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import useScreenSizes from '../../hooks/useWindowSize/';
-import SkillProficientBar from '../utils/skillProficientBar';
+import { SkillProficientBar } from '../utils';
 import {
   MORE_SKILLS_LISTS,
   MAIN_LEFT_SKILLS_LISTS,
