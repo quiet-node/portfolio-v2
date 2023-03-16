@@ -76,7 +76,7 @@ const Stats = () => {
                   xsm:px-6 xsm:-top-24
                   sm:px-6
                   md:-top-20 md:px-9
-                  lg:-top-24 lg:px-16
+                  lg:-top-28 lg:px-16
                   2xl:px-20
                   '
       >
