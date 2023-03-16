@@ -1,6 +1,14 @@
 import { useEffect, useRef } from 'react';
 import { animate, motion, useAnimation } from 'framer-motion';
 
+interface PageProps {
+  value: number;
+  logo: string;
+  techLink: string;
+  shouldShake: boolean;
+  left?: boolean;
+}
+
 // @source: https://github.com/R4M5E5/Progress-bar-with-Framer-Motion-Tutorial
 const SkillProficientBar = ({
   value,
@@ -8,13 +16,7 @@ const SkillProficientBar = ({
   techLink,
   left,
   shouldShake,
-}: {
-  value: number;
-  logo: string;
-  techLink: string;
-  shouldShake: boolean;
-  left?: boolean;
-}) => {
+}: PageProps) => {
   const shakingAnimation = useAnimation();
   const percentageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
