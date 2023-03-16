@@ -7,7 +7,7 @@ const About = () => {
   const isInView = useInView(ref, { margin: '100% 0% -9% 0%' });
   return (
     <section
-      className='overflow-x-hidden overflow-hidden scrollbar-hidden bg-primary
+      className='overflow-hidden scrollbar-hidden bg-primary
                 h-[400px]
                 md:h-[450px]
                 lg:h-[500px]'
