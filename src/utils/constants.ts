@@ -170,23 +170,23 @@ export const PROJECTS_LISTS = [
     description:
       'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
     repoLink: `https://github.com/nftir`,
-    thumbnail: '',
+    thumbnail: 'nftir/nftir.svg',
   },
   {
     name: 'Ethereum Dev Sandbox',
     stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],
     description:
       'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-    repoLink: `https://github.com/nftir`,
-    thumbnail: '',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/ethereum-dev-sandbox`,
+    thumbnail: 'ethereum-dev-sandbox/ethereum-dev-sandbox.svg',
   },
   {
     name: 'Calibrated Peer Review',
     stacks: ['Java', 'OpenLiberty', 'Docker', 'ReactJS'],
     description:
       'A full-stack web application aimed at bringing automated calibrated peer review to classrooms at SUNY Oswego.',
-    repoLink: `https://github.com/nftir`,
-    thumbnail: '',
+    repoLink: `https://github.com/tenbergen/CSC480-22S`,
+    thumbnail: 'cpr/cpr.svg',
   },
   {
     name: 'Meetup App',
@@ -194,7 +194,7 @@ export const PROJECTS_LISTS = [
     description:
       'A platform for developers to connect. They can create their portfolio by adding their experience, education, skills, and other important information about their professional career.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
-    thumbnail: '',
+    thumbnail: 'meetup-app/meetup-app.svg',
   },
   {
     name: 'Full Stack Yelp App',
@@ -202,7 +202,7 @@ export const PROJECTS_LISTS = [
     description:
       'a full-stack web application that utilizes advanced data structures and algorithms to perform comprehensive analysis on a vast dataset of 100,000 businesses located throughout the United States.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/CSC-365-fullstack-app-III`,
-    thumbnail: '',
+    thumbnail: 'yelp-app/yelp-app.svg',
   },
   {
     name: 'Landmark-App',
@@ -210,7 +210,7 @@ export const PROJECTS_LISTS = [
     description:
       'An iOS application helps hikers and travelers to keep track and mark down favorite landmarks.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/landmark-app`,
-    thumbnail: '',
+    thumbnail: 'landmark/landmark.svg',
   },
   {
     name: 'Crew Talk',
@@ -218,7 +218,7 @@ export const PROJECTS_LISTS = [
     description:
       'An Android chat app that supports realtime chatting by integrating the Google Firebase database.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
-    thumbnail: '',
+    thumbnail: 'crew-talk/crew-talk.svg',
   },
   {
     name: 'Omega Ecommerce',
@@ -226,7 +226,7 @@ export const PROJECTS_LISTS = [
     description:
       'A dynamic e-commerce platform featuring a user-friendly, yet intricate animated interface for an elevated online shopping experience.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    thumbnail: '',
+    thumbnail: 'omega-ecommerce/omega-ecommerce.svg',
   },
   {
     name: 'World Time App',
@@ -234,7 +234,7 @@ export const PROJECTS_LISTS = [
     description:
       'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    thumbnail: '',
+    thumbnail: 'world-time-app/world-time-app.svg',
   },
   {
     name: 'Tic Tac Toe',
@@ -242,6 +242,6 @@ export const PROJECTS_LISTS = [
     description:
       'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
     repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    thumbnail: '',
+    thumbnail: 'tic-tac-toe/tic-tac-toe.svg',
   },
 ];
