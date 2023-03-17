@@ -29,7 +29,7 @@ const POSTGRES_LINK = 'https://www.postgresql.org/';
 const AWS_LINK = 'https://aws.amazon.com/';
 const VERCEL_LINK = 'https://vercel.com/';
 const NETLIFY_LINK = 'https://www.netlify.com/';
-const HEROKU_LINK = 'https://www.heroku.com/';
+const DYNAMO_LINK = 'https://aws.amazon.com/dynamodb/';
 
 export const MAIN_LEFT_SKILLS_LISTS: Technology[] = [
   {
@@ -166,15 +166,16 @@ export const MORE_SKILLS_LISTS: Technology[] = [
     shouldShake: false,
   },
   {
-    technology: 'Heroku',
-    techLink: HEROKU_LINK,
+    technology: 'DynamoDB',
+    techLink: DYNAMO_LINK,
     shouldShake: false,
   },
 ];
 
 export const PROJECTS_LISTS: Project[] = [
   {
-    name: 'Syns Platform',
+    id: 0,
+    title: 'Syns Platform',
     stacks: {
       FE: [
         {
@@ -235,11 +236,55 @@ export const PROJECTS_LISTS: Project[] = [
       ],
     },
     description:
-      'A revolutionary music web 3.0 platform that combines NFTs, music-donation system, NFT marketplace, club membership, and social media features, empowering musicians and fans to connect, showcase, and promote their music, revolutionizing the music industry',
+      'A revolutionary web 3.0 music platform that combines NFTs, music-donation system, NFT marketplace, club membership, and social media features, empowering musicians and fans to connect, showcase, and promote their music, revolutionizing the music industry',
     repoLink: 'https://github.com/syns-platform',
     liveLink: 'https://syns.vercel.app',
     thumbnail: 'syns-platform/syns-platform-devices.svg',
+    bgColor: '#EFD8C9',
+    textColor: '#553932',
+    descColor: '#83685F',
+    btnColor: '#A24353',
   },
+  {
+    id: 1,
+    title: 'NFTir',
+    stacks: {
+      FE: [],
+      BC: [],
+      BE: [
+        {
+          technology: 'Golang',
+          techLink: GO_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'AWS',
+          techLink: AWS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Docker',
+          techLink: DOCKER_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'DynamoDB',
+          techLink: DYNAMO_LINK,
+          shouldShake: false,
+        },
+      ],
+    },
+    description:
+      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
+    repoLink: `https://github.com/nftir`,
+    liveLink: '',
+    thumbnail: 'nftir/nftir.svg',
+    bgColor: '#FD8700',
+    textColor: '#4A3313',
+    descColor: '#4A3313',
+    btnColor: '#000',
+  },
+
   // {
   //   name: 'Hashtology',
   //   stacks: ['Solidity', 'Hardhat', 'TypeScript', 'ReactJS', 'Ethereum'],
@@ -250,14 +295,7 @@ export const PROJECTS_LISTS: Project[] = [
   //   thumbnail: 'hashtology/hashtology.svg',
   // },
   // {
-  //   name: 'NFTir',
-  //   stacks: ['Golang', 'AWS', 'Docker', 'DynamoDB'],
-  //   description:
-  //     'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-  //   repoLink: `https://github.com/nftir`,
-  //   liveLink: '',
-  //   thumbnail: 'nftir/nftir.svg',
-  // },
+
   // {
   //   name: 'Ethereum Dev Sandbox',
   //   stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],

@@ -1,5 +1,6 @@
 interface Project {
-  name: string;
+  id: number;
+  title: string;
   stacks: ProjectStack;
   description: string;
   repoLink: string;
