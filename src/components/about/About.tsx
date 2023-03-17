@@ -14,7 +14,7 @@ const About = () => {
     >
       {/* container */}
       <div
-        className='flex flex-col items-center text-white z-50
+        className='flex flex-col items-center text-white
                 mt-6
                 sm:mt-9
                 md:mt-12

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   return (
     <section
-      className='relative -z-10 overflow-hidden scrollbar-hidden bg-primary h-screen
+      className='relative z-10 overflow-hidden scrollbar-hidden bg-primary h-screen
                 -top-52'
     >
       {/* container */}
