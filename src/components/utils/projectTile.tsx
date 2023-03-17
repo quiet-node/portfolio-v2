@@ -76,8 +76,8 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                     >
                       <motion.img
                         whileHover={{
-                          x: [0, -100, 110, -100, 90, -80, 0],
-                          y: [0, -100, 90, -80, 0],
+                          x: [0, -80, 90, -80, 70, -60, 0],
+                          y: [0, -80, 70, -60, 0],
                           transition: { duration: 0.5 },
                         }}
                         src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
@@ -113,8 +113,8 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                     >
                       <motion.img
                         whileHover={{
-                          x: [0, -100, 110, -100, 90, -80, 0],
-                          y: [0, -100, 90, -80, 0],
+                          x: [0, -80, 90, -80, 70, -60, 0],
+                          y: [0, -80, 70, -60, 0],
                           transition: { duration: 0.5 },
                         }}
                         src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
@@ -151,8 +151,8 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                       >
                         <motion.img
                           whileHover={{
-                            x: [0, -100, 110, -100, 90, -80, 0],
-                            y: [0, -100, 90, -80, 0],
+                            x: [0, -80, 90, -80, 70, -60, 0],
+                            y: [0, -80, 70, -60, 0],
                             transition: { duration: 0.5 },
                           }}
                           src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
