@@ -37,8 +37,16 @@ const Projects = () => {
         </div>
 
         {/* body - projects */}
-        <div className='flex gap-3'>
-          <ProjectTile project={PROJECTS_LISTS[0]} flipped={false} />
+        <div className='flex flex-col w-full'>
+          {PROJECTS_LISTS.map((project) => {
+            return (
+              <ProjectTile
+                key={project.id}
+                project={project}
+                flipped={project.id % 2 !== 0}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
