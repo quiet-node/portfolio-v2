@@ -6,256 +6,339 @@ export const QUIET_NODE_EMAIL_LINK = 'mailto:lg.131.ng@gmail.com';
 export const QUIET_NODE_LINKEDIN_LINK = 'https://linkedin.com/in/logann131';
 export const QUIET_NODE_TWITTER_LINK = 'https://twitter.com/quiet_node';
 
-export const MAIN_LEFT_SKILLS_LISTS = [
+const GO_LINK = 'https://go.dev/';
+const TS_LINK = 'https://typescriptlang.org/';
+const SOL_LINK = 'https://soliditylang.org/';
+const JAVA_LINK = 'https://java.com/';
+const MONGO_LINK = 'https://mongodb.com/';
+const TAILWIND_LINK = 'https://tailwindcss.com/';
+const REACT_LINK = 'https://reactjs.org/';
+const NEXT_LINK = 'https://nextjs.org/';
+const SPRING_LINK = 'https://spring.io/';
+const HARDHAT_LINK = 'https://hardhat.org/';
+const NODE_LINK = 'https://nodejs.org/';
+const DOCKER_LINK = 'https://docker.com/';
+const HTML_LINK = 'https://www.w3schools.com/html/';
+const CSS_LINK = 'https://www.w3schools.com/css/';
+const JS_LINK = 'https://javascript.com/';
+const ETHEREUM_LINK = 'https://ethereum.org/en/';
+const OZ_LINK = 'https://www.openzeppelin.com/';
+const MOCHA_LINK = 'https://mochajs.org/';
+const MYSQL_LINK = 'https://www.mysql.com/';
+const POSTGRES_LINK = 'https://www.postgresql.org/';
+const AWS_LINK = 'https://aws.amazon.com/';
+const VERCEL_LINK = 'https://vercel.com/';
+const NETLIFY_LINK = 'https://www.netlify.com/';
+const HEROKU_LINK = 'https://www.heroku.com/';
+
+export const MAIN_LEFT_SKILLS_LISTS: Technology[] = [
   {
-    techology: 'Golang',
+    technology: 'Golang',
     value: 85,
-    techLink: 'https://go.dev/',
+    techLink: GO_LINK,
     shouldShake: false,
   },
   {
-    techology: 'TypeScript',
+    technology: 'TypeScript',
     value: 92,
-    techLink: 'https://typescriptlang.org/',
+    techLink: TS_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Solidity',
+    technology: 'Solidity',
     value: 75,
-    techLink: 'https://soliditylang.org/',
+    techLink: SOL_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Java',
+    technology: 'Java',
     value: 88,
-    techLink: 'https://java.com/',
+    techLink: JAVA_LINK,
     shouldShake: false,
   },
   {
-    techology: 'MongoDB',
+    technology: 'MongoDB',
     value: 82,
-    techLink: 'https://mongodb.com/',
+    techLink: MONGO_LINK,
     shouldShake: false,
   },
   {
-    techology: 'TailwindCSS',
+    technology: 'TailwindCSS',
     value: 87,
-    techLink: 'https://tailwindcss.com/',
+    techLink: TAILWIND_LINK,
     shouldShake: false,
   },
 ];
 
-export const MAIN_RIGHT_SKILLS_LISTS = [
+export const MAIN_RIGHT_SKILLS_LISTS: Technology[] = [
   {
-    techology: 'ReactJS',
+    technology: 'ReactJS',
     value: 90,
-    techLink: 'https://reactjs.org/',
+    techLink: REACT_LINK,
     shouldShake: false,
   },
   {
-    techology: 'NextJS',
+    technology: 'NextJS',
     value: 88,
-    techLink: 'https://nextjs.org/',
+    techLink: NEXT_LINK,
     shouldShake: false,
   },
   {
-    techology: 'SpringBoot',
+    technology: 'SpringBoot',
     value: 72,
-    techLink: 'https://spring.io/',
+    techLink: SPRING_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Hardhat',
+    technology: 'Hardhat',
     value: 72,
-    techLink: 'https://hardhat.org/',
+    techLink: HARDHAT_LINK,
     shouldShake: false,
   },
   {
-    techology: 'NodeJS',
+    technology: 'NodeJS',
     value: 87,
-    techLink: 'https://nodejs.org/',
+    techLink: NODE_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Docker',
+    technology: 'Docker',
     value: 75,
-    techLink: 'https://docker.com/',
+    techLink: DOCKER_LINK,
     shouldShake: false,
   },
 ];
 
-export const MORE_SKILLS_LISTS = [
+export const MORE_SKILLS_LISTS: Technology[] = [
   {
-    techology: 'HTML5',
-    techLink: 'https://www.w3schools.com/html/',
+    technology: 'HTML5',
+    techLink: HTML_LINK,
     shouldShake: false,
   },
   {
-    techology: 'CSS3',
-    techLink: 'https://www.w3schools.com/Css/',
+    technology: 'CSS3',
+    techLink: CSS_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Javascript',
-    techLink: 'https://javascript.com/',
+    technology: 'Javascript',
+    techLink: JS_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Ethereum',
-    techLink: 'https://ethereum.org/en/',
+    technology: 'Ethereum',
+    techLink: ETHEREUM_LINK,
     shouldShake: false,
   },
   {
-    techology: 'OpenZeppelin',
-    techLink: 'https://www.openzeppelin.com/',
+    technology: 'OpenZeppelin',
+    techLink: OZ_LINK,
     shouldShake: false,
   },
   {
-    techology: 'MochaJS',
-    techLink: 'https://mochajs.org/',
+    technology: 'MochaJS',
+    techLink: MOCHA_LINK,
     shouldShake: false,
   },
   {
-    techology: 'MySQL',
-    techLink: 'https://www.mysql.com/',
+    technology: 'MySQL',
+    techLink: MYSQL_LINK,
     shouldShake: false,
   },
   {
-    techology: 'PostgresQL',
-    techLink: 'https://www.postgresql.org/',
+    technology: 'PostgresQL',
+    techLink: POSTGRES_LINK,
     shouldShake: false,
   },
   {
-    techology: 'aws',
-    techLink: 'https://aws.amazon.com/',
+    technology: 'aws',
+    techLink: AWS_LINK,
     shouldShake: false,
   },
   {
-    techology: 'vercel',
-    techLink: 'https://vercel.com/',
+    technology: 'vercel',
+    techLink: VERCEL_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Netlify',
-    techLink: 'https://www.netlify.com/',
+    technology: 'Netlify',
+    techLink: NETLIFY_LINK,
     shouldShake: false,
   },
   {
-    techology: 'Heroku',
-    techLink: 'https://www.heroku.com/',
+    technology: 'Heroku',
+    techLink: HEROKU_LINK,
     shouldShake: false,
   },
 ];
 
-export const PROJECTS_LISTS = [
+export const PROJECTS_LISTS: Project[] = [
   {
     name: 'Syns Platform',
-    stacks: ['Golang', 'TypeScript', 'NextJS', 'Solidity', 'Ethereum'],
+    stacks: {
+      FE: [
+        {
+          technology: 'TypeScript',
+          techLink: TS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'NextJS',
+          techLink: NEXT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'ReactJS',
+          techLink: REACT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'TailwindCSS',
+          techLink: TAILWIND_LINK,
+          shouldShake: false,
+          layer: 'FE',
+        },
+      ],
+      BC: [
+        {
+          technology: 'Ethereum',
+          techLink: ETHEREUM_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Solidity',
+          techLink: SOL_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'OpenZeppelin',
+          techLink: OZ_LINK,
+          shouldShake: false,
+        },
+      ],
+      BE: [
+        {
+          technology: 'Golang',
+          techLink: GO_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'MongoDB',
+          techLink: MONGO_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Vercel',
+          techLink: VERCEL_LINK,
+          shouldShake: false,
+        },
+      ],
+    },
     description:
       'A revolutionary music web 3.0 platform that combines NFTs, music-donation system, NFT marketplace, club membership, and social media features, empowering musicians and fans to connect, showcase, and promote their music, revolutionizing the music industry',
     repoLink: 'https://github.com/syns-platform',
     liveLink: 'https://syns.vercel.app',
     thumbnail: 'syns-platform/syns-platform-devices.svg',
   },
-  {
-    name: 'Hashtology',
-    stacks: ['Solidity', 'Hardhat', 'TypeScript', 'ReactJS', 'Ethereum'],
-    description:
-      'A crypto-wallet that makes it easy to send and receive different types of digital currency across the globe, providing a secure and reliable way to manage your digital assets.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
-    liveLink: '',
-    thumbnail: 'hashtology/hashtology.svg',
-  },
-  {
-    name: 'NFTir',
-    stacks: ['Golang', 'AWS', 'Docker', 'DynamoDB'],
-    description:
-      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-    repoLink: `https://github.com/nftir`,
-    liveLink: '',
-    thumbnail: 'nftir/nftir.svg',
-  },
-  {
-    name: 'Ethereum Dev Sandbox',
-    stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],
-    description:
-      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/ethereum-dev-sandbox`,
-    liveLink: '',
-    thumbnail: 'ethereum-dev-sandbox/ethereum-dev-sandbox.svg',
-  },
-  {
-    name: 'Calibrated Peer Review',
-    stacks: ['Java', 'OpenLiberty', 'Docker', 'ReactJS'],
-    description:
-      'A full-stack web application aimed at bringing automated calibrated peer review to classrooms at SUNY Oswego.',
-    repoLink: `https://github.com/tenbergen/CSC480-22S`,
-    liveLink: '',
-    thumbnail: 'cpr/cpr.svg',
-  },
-  {
-    name: 'Meetup App',
-    stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
-    description:
-      'A platform for developers to connect. They can create their portfolio by adding their experience, education, skills, and other important information about their professional career.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
-    liveLink: '',
-    thumbnail: 'meetup-app/meetup-app.svg',
-  },
-  {
-    name: 'Full Stack Yelp App',
-    stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
-    description:
-      'a full-stack web application that utilizes advanced data structures and algorithms to perform comprehensive analysis on a vast dataset of 100,000 businesses located throughout the United States.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/CSC-365-fullstack-app-III`,
-    liveLink: '',
-    thumbnail: 'yelp-app/yelp-app.svg',
-  },
-  {
-    name: 'Tic Tac Toe',
-    stacks: ['TypeScript', 'NextJS', 'Vercel'],
-    description:
-      'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    liveLink: 'https://tictactoe2304.netlify.app/',
-    thumbnail: 'tic-tac-toe/tic-tac-toe.svg',
-  },
-  {
-    name: 'Landmark-App',
-    stacks: ['SwiftUI', 'iOS', 'xCode'],
-    description:
-      'An iOS application helps hikers and travelers to keep track and mark down favorite landmarks.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/landmark-app`,
-    liveLink: '',
-    thumbnail: 'landmark/landmark.svg',
-  },
-  {
-    name: 'Crew Talk',
-    stacks: ['Kotlin', 'XML', 'Android', 'Firebase'],
-    description:
-      'An Android chat app that supports realtime chatting by integrating the Google Firebase database.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
-    liveLink: '',
-    thumbnail: 'crew-talk/crew-talk.svg',
-  },
-  {
-    name: 'Omega Ecommerce',
-    stacks: ['SwiftUI', 'iOS', 'xCode'],
-    description:
-      'A dynamic e-commerce platform featuring a user-friendly, yet intricate animated interface for an elevated online shopping experience.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    liveLink: '',
-    thumbnail: 'omega-ecommerce/omega-ecommerce.svg',
-  },
-  {
-    name: 'World Time App',
-    stacks: ['Dart', 'Flutter'],
-    description:
-      'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    liveLink: '',
-    thumbnail: 'world-time-app/world-time-app.svg',
-  },
+  // {
+  //   name: 'Hashtology',
+  //   stacks: ['Solidity', 'Hardhat', 'TypeScript', 'ReactJS', 'Ethereum'],
+  //   description:
+  //     'A crypto-wallet that makes it easy to send and receive different types of digital currency across the globe, providing a secure and reliable way to manage your digital assets.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
+  //   liveLink: '',
+  //   thumbnail: 'hashtology/hashtology.svg',
+  // },
+  // {
+  //   name: 'NFTir',
+  //   stacks: ['Golang', 'AWS', 'Docker', 'DynamoDB'],
+  //   description:
+  //     'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
+  //   repoLink: `https://github.com/nftir`,
+  //   liveLink: '',
+  //   thumbnail: 'nftir/nftir.svg',
+  // },
+  // {
+  //   name: 'Ethereum Dev Sandbox',
+  //   stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],
+  //   description:
+  //     'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/ethereum-dev-sandbox`,
+  //   liveLink: '',
+  //   thumbnail: 'ethereum-dev-sandbox/ethereum-dev-sandbox.svg',
+  // },
+  // {
+  //   name: 'Calibrated Peer Review',
+  //   stacks: ['Java', 'OpenLiberty', 'Docker', 'ReactJS'],
+  //   description:
+  //     'A full-stack web application aimed at bringing automated calibrated peer review to classrooms at SUNY Oswego.',
+  //   repoLink: `https://github.com/tenbergen/CSC480-22S`,
+  //   liveLink: '',
+  //   thumbnail: 'cpr/cpr.svg',
+  // },
+  // {
+  //   name: 'Meetup App',
+  //   stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
+  //   description:
+  //     'A platform for developers to connect. They can create their portfolio by adding their experience, education, skills, and other important information about their professional career.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
+  //   liveLink: '',
+  //   thumbnail: 'meetup-app/meetup-app.svg',
+  // },
+  // {
+  //   name: 'Full Stack Yelp App',
+  //   stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
+  //   description:
+  //     'a full-stack web application that utilizes advanced data structures and algorithms to perform comprehensive analysis on a vast dataset of 100,000 businesses located throughout the United States.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/CSC-365-fullstack-app-III`,
+  //   liveLink: '',
+  //   thumbnail: 'yelp-app/yelp-app.svg',
+  // },
+  // {
+  //   name: 'Tic Tac Toe',
+  //   stacks: ['TypeScript', 'NextJS', 'Vercel'],
+  //   description:
+  //     'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
+  //   liveLink: 'https://tictactoe2304.netlify.app/',
+  //   thumbnail: 'tic-tac-toe/tic-tac-toe.svg',
+  // },
+  // {
+  //   name: 'Landmark-App',
+  //   stacks: ['SwiftUI', 'iOS', 'xCode'],
+  //   description:
+  //     'An iOS application helps hikers and travelers to keep track and mark down favorite landmarks.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/landmark-app`,
+  //   liveLink: '',
+  //   thumbnail: 'landmark/landmark.svg',
+  // },
+  // {
+  //   name: 'Crew Talk',
+  //   stacks: ['Kotlin', 'XML', 'Android', 'Firebase'],
+  //   description:
+  //     'An Android chat app that supports realtime chatting by integrating the Google Firebase database.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
+  //   liveLink: '',
+  //   thumbnail: 'crew-talk/crew-talk.svg',
+  // },
+  // {
+  //   name: 'Omega Ecommerce',
+  //   stacks: ['SwiftUI', 'iOS', 'xCode'],
+  //   description:
+  //     'A dynamic e-commerce platform featuring a user-friendly, yet intricate animated interface for an elevated online shopping experience.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
+  //   liveLink: '',
+  //   thumbnail: 'omega-ecommerce/omega-ecommerce.svg',
+  // },
+  // {
+  //   name: 'World Time App',
+  //   stacks: ['Dart', 'Flutter'],
+  //   description:
+  //     'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
+  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
+  //   liveLink: '',
+  //   thumbnail: 'world-time-app/world-time-app.svg',
+  // },
 ];
 
 export const PROJECTS_LISTS_6 = [
