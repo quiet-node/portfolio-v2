@@ -124,8 +124,8 @@ const Stats = () => {
                   return (
                     <motion.div variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
-                        value={tech.value}
-                        logo={tech.techology}
+                        value={tech.value as number}
+                        logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
@@ -138,8 +138,8 @@ const Stats = () => {
                   return (
                     <motion.div variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
-                        value={tech.value}
-                        logo={tech.techology}
+                        value={tech.value as number}
+                        logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
@@ -169,8 +169,8 @@ const Stats = () => {
                     return (
                       <motion.div variants={leftVarientSkills} key={key}>
                         <SkillProficientBar
-                          value={tech.value}
-                          logo={tech.techology}
+                          value={tech.value as number}
+                          logo={tech.technology}
                           techLink={tech.techLink}
                           shouldShake={tech.shouldShake}
                           left={true}
@@ -196,8 +196,8 @@ const Stats = () => {
                   return (
                     <motion.div key={key} variants={rightVarientSkills}>
                       <SkillProficientBar
-                        value={tech.value}
-                        logo={tech.techology}
+                        value={tech.value as number}
+                        logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
@@ -229,7 +229,7 @@ const Stats = () => {
                       key={key}
                       href={tech.techLink}
                       target='_blank'
-                      title={tech.techology}
+                      title={tech.technology}
                       variants={verticalMoreSkills}
                       className='flex items-center cursor-pointer'
                     >
@@ -240,8 +240,8 @@ const Stats = () => {
                           transition: { duration: 0.5 },
                         }}
                         animate={tech.shouldShake ? shakingAnimation : ''}
-                        src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
-                        alt={`${tech.techology}-logo`}
+                        src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                        alt={`${tech.technology}-logo`}
                         className={`/hover:scale-125 /transition duration-300 select-none`}
                       />
                     </motion.a>
@@ -269,7 +269,7 @@ const Stats = () => {
                         href={tech.techLink}
                         key={key}
                         target='_blank'
-                        title={tech.techology}
+                        title={tech.technology}
                         variants={verticalMoreSkills}
                         className='flex items-center cursor-pointer'
                       >
@@ -280,8 +280,8 @@ const Stats = () => {
                             transition: { duration: 0.5 },
                           }}
                           animate={tech.shouldShake ? shakingAnimation : ''}
-                          src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
-                          alt={`${tech.techology}-logo`}
+                          src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                          alt={`${tech.technology}-logo`}
                           className={`hover:scale-125 scale transition duration-300 select-none`}
                         />
                       </motion.a>
@@ -308,7 +308,7 @@ const Stats = () => {
                       href={tech.techLink}
                       key={key}
                       target='_blank'
-                      title={tech.techology}
+                      title={tech.technology}
                       variants={verticalMoreSkills}
                       className='flex items-center cursor-pointer'
                     >
@@ -319,8 +319,8 @@ const Stats = () => {
                           transition: { duration: 0.5 },
                         }}
                         animate={tech.shouldShake ? shakingAnimation : ''}
-                        src={`src/assets/tech_logos/${tech.techology.toLowerCase()}.svg`}
-                        alt={`${tech.techology}-logo`}
+                        src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                        alt={`${tech.technology}-logo`}
                         className={`hover:scale-125 transition duration-300 select-none`}
                       />
                     </motion.a>
