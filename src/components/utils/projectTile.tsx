@@ -17,9 +17,9 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
 
   return (
     <div
-      className='
-                mx-6
-                2xl:max-w-[80rem] 2xl:mx-auto'
+      className={`relative overflow-hidden flex items-center text-[${project.textColor}] bg-[${project.bgColor}]
+                h-[600px] px-24
+                2xl:max-w-[100rem] 2xl:mx-auto`}
     >
       {/* left wrapper*/}
       <motion.div
@@ -30,12 +30,12 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
           margin: '100% 0% -9% 0%',
         }}
         variants={verticalMoreSkills}
-        className='flex flex-col gap-3'
+        className='flex flex-col gap-4 w-1/2'
       >
         {/* title */}
         <motion.h3
           variants={verticalMoreSkills}
-          className='text-3xl font-semibold text-center '
+          className='text-4xl font-black'
         >
           {' '}
           {project.name}{' '}
@@ -44,7 +44,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
         {/* description */}
         <motion.p
           variants={verticalMoreSkills}
-          className='text-lg leading-tight tracking-tight font-medium'
+          className={`text-lg leading-tight tracking-tight font-semibold text-[${project.descColor}]`}
         >
           {' '}
           {project.description}{' '}
@@ -172,7 +172,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
         {/* buttons */}
         <motion.div
           variants={verticalMoreSkills}
-          className='flex justify-center flex-col'
+          className={`flex justify-center flex-col gap-2 text-[${project.btnColor}] text-xl font-semibold`}
         >
           {/* live */}
           {project.liveLink !== '' && (
@@ -189,12 +189,14 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
               }
             >
               <span className='flex flex-col items-center'>
-                <p className='text-lg font-semibold'>Landing Page</p>
+                <p className=''>Landing Page</p>
                 <motion.span
                   animate={{ scaleX: hovering.live ? 1 : 0 }}
                   transition={{ easings: true }}
                 >
-                  <hr className='bg-white h-[0.1rem] w-6 sm:w-20 -mt-1 rounded-xl' />
+                  <hr
+                    className={`bg-[${project.btnColor}] h-[0.2rem] w-6 sm:w-20 -mt-1 rounded-xl`}
+                  />
                 </motion.span>
               </span>
 
@@ -226,14 +228,14 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
             }
           >
             <span className='flex flex-col items-center'>
-              <p className='text-lg font-semibold'>
-                View source code on Github
-              </p>
+              <p className=''>View source code on Github</p>
               <motion.span
                 animate={{ scaleX: hovering.github ? 1 : 0 }}
                 transition={{ easings: true }}
               >
-                <hr className='bg-white h-[0.1rem] w-6 sm:w-48 -mt-1 rounded-xl' />
+                <hr
+                  className={`bg-[${project.btnColor}] h-[0.2rem] w-6 sm:w-48 -mt-1 rounded-xl`}
+                />
               </motion.span>
             </span>
 
@@ -253,6 +255,13 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
       </motion.div>
 
       {/* right */}
+      <div className='absolute right-3 border-29 border-black w-3/5 flex items-center h-full'>
+        <img
+          src={`src/assets/project_thumbnails/${project.thumbnail}`}
+          alt='syns-platform'
+          className=' border-22 border-black'
+        />
+      </div>
     </div>
   );
 };
