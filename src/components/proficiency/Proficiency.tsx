@@ -65,10 +65,7 @@ const Stats = () => {
   if (!mounted) return null;
 
   return (
-    <section
-      className='scrollbar-hidden flex justify-center items-center
-            2xl:max-w-[100rem] 2xl:mx-auto'
-    >
+    <section className='scrollbar-hidden flex justify-center items-center bg-[#EAFDF9]'>
       {/* container */}
       <div
         className='relative z-20 flex flex-col overflow-hidden items-center border-2 border-[#e7edf7] bg-white gap-16 rounded-2xl
