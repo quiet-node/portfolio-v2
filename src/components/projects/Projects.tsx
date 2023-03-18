@@ -75,12 +75,14 @@ const Projects = () => {
 
           {/* Show More button */}
 
-          <div className={`h-20 flex justify-center items-center bg-white`}>
+          <div
+            className={`relative h-16 flex justify-center items-center bg-white`}
+          >
             <div
               onClick={() => handleShowMoreClick()}
-              className={`relative z-20 ${
+              className={`absolute z-20 ${
                 showMore ? 'w-56 py-3 showmore-bg-2' : 'w-44 py-3 showmore-bg-1'
-              } -mt-20 text-white text-xl font-semibold rounded-full text-center cursor-pointer select-none 
+              } -mt-16 text-white text-xl font-semibold rounded-full text-center cursor-pointer select-none 
                             showmore-btn transition-all duration-300 ease-in-out focus:outline-none`}
             >
               <motion.div
