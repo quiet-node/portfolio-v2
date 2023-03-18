@@ -5,6 +5,7 @@ interface Project {
   description: string;
   repoLink: string;
   liveLink: string;
+  demoLink: string;
   thumbnail: string;
   cssWrapper: string;
   cssDesc: string;
