@@ -24,7 +24,6 @@ const JS_LINK = 'https://javascript.com/';
 const ETHEREUM_LINK = 'https://ethereum.org/en/';
 const OZ_LINK = 'https://www.openzeppelin.com/';
 const MOCHA_LINK = 'https://mochajs.org/';
-const MYSQL_LINK = 'https://www.mysql.com/';
 const POSTGRES_LINK = 'https://www.postgresql.org/';
 const AWS_LINK = 'https://aws.amazon.com/';
 const VERCEL_LINK = 'https://vercel.com/';
@@ -32,6 +31,16 @@ const NETLIFY_LINK = 'https://www.netlify.com/';
 const DYNAMO_LINK = 'https://aws.amazon.com/dynamodb/';
 const VITE_LINK = 'https://vitejs.dev/';
 const POLYGON_LINK = 'https://polygon.technology/';
+const OL_LINK = 'https://openliberty.io/';
+const REDUX_LINK = 'https://redux.js.org/';
+const KOT_LINK = 'https://kotlinlang.org/';
+const XML_LINK =
+  'https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction';
+const ANDROID_LINK = 'https://developer.android.com/';
+const FIRE_LINK = 'https://firebase.google.com/';
+const SWIFT_LINK = 'https://developer.apple.com/xcode/swiftui/';
+const MAC_LINK = 'https://support.apple.com/macos';
+const XCODE_LINK = 'https://developer.apple.com/xcode/';
 
 export const MAIN_LEFT_SKILLS_LISTS: Technology[] = [
   {
@@ -113,16 +122,6 @@ export const MAIN_RIGHT_SKILLS_LISTS: Technology[] = [
 
 export const MORE_SKILLS_LISTS: Technology[] = [
   {
-    technology: 'HTML5',
-    techLink: HTML_LINK,
-    shouldShake: false,
-  },
-  {
-    technology: 'CSS3',
-    techLink: CSS_LINK,
-    shouldShake: false,
-  },
-  {
     technology: 'Javascript',
     techLink: JS_LINK,
     shouldShake: false,
@@ -143,8 +142,8 @@ export const MORE_SKILLS_LISTS: Technology[] = [
     shouldShake: false,
   },
   {
-    technology: 'MySQL',
-    techLink: MYSQL_LINK,
+    technology: 'Redux',
+    techLink: REDUX_LINK,
     shouldShake: false,
   },
   {
@@ -170,6 +169,16 @@ export const MORE_SKILLS_LISTS: Technology[] = [
   {
     technology: 'DynamoDB',
     techLink: DYNAMO_LINK,
+    shouldShake: false,
+  },
+  {
+    technology: 'Kotlin',
+    techLink: KOT_LINK,
+    shouldShake: false,
+  },
+  {
+    technology: 'SwiftUI',
+    techLink: SWIFT_LINK,
     shouldShake: false,
   },
 ];
@@ -240,59 +249,20 @@ export const PROJECTS_LISTS: Project[] = [
           shouldShake: false,
         },
       ],
+      Mobile: [],
     },
     description:
       'A revolutionary web 3.0 music platform that combines NFTs, music-donation system, NFT marketplace, club membership, and social media features, empowering musicians and fans to connect, showcase, and promote their music, revolutionizing the music industry',
     repoLink: 'https://github.com/syns-platform',
     liveLink: 'https://syns.vercel.app',
     thumbnail: 'syns-platform/syns-platform-devices.svg',
-    bgColor: ['#EFD8C9', '#EFD8C9'],
+    bgColor: ['#EFD8C9', '#d28d5e'],
     textColor: '#553932',
     descColor: '#83685F',
-    btnColor: '#A24353',
+    btnColor: '#942d3e',
   },
   {
     id: 1,
-    title: 'NFTir',
-    stacks: {
-      FE: [],
-      BC: [],
-      BE: [
-        {
-          technology: 'Golang',
-          techLink: GO_LINK,
-          shouldShake: false,
-        },
-        {
-          technology: 'AWS',
-          techLink: AWS_LINK,
-          shouldShake: false,
-        },
-        {
-          technology: 'DynamoDB',
-          techLink: DYNAMO_LINK,
-          shouldShake: false,
-        },
-        {
-          technology: 'Docker',
-          techLink: DOCKER_LINK,
-          shouldShake: false,
-        },
-      ],
-    },
-    description:
-      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-    repoLink: `https://github.com/nftir`,
-    liveLink: '',
-    thumbnail: 'nftir/nftir.svg',
-    bgColor: ['#FD8700', '#BE6702'],
-    textColor: '#4A3313',
-    descColor: '#4A3313',
-    btnColor: '#000',
-  },
-
-  {
-    id: 2,
     title: 'Hashtology',
 
     stacks: {
@@ -346,6 +316,7 @@ export const PROJECTS_LISTS: Project[] = [
         },
       ],
       BE: [],
+      Mobile: [],
     },
 
     description:
@@ -358,9 +329,220 @@ export const PROJECTS_LISTS: Project[] = [
     descColor: '#cdcdcd',
     btnColor: '#fff',
   },
-  // {
+  {
+    id: 2,
+    title: 'NFTir',
+    stacks: {
+      FE: [],
+      BC: [],
+      BE: [
+        {
+          technology: 'Golang',
+          techLink: GO_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'AWS',
+          techLink: AWS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'DynamoDB',
+          techLink: DYNAMO_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Docker',
+          techLink: DOCKER_LINK,
+          shouldShake: false,
+        },
+      ],
+      Mobile: [],
+    },
+    description:
+      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
+    repoLink: `https://github.com/nftir`,
+    liveLink: '',
+    thumbnail: 'nftir/nftir.svg',
+    bgColor: ['#FD8700', '#af6715'],
+    textColor: '#4A3313',
+    descColor: '#4A3313',
+    btnColor: '#000',
+  },
 
-  // {
+  {
+    id: 3,
+    title: 'Calibrated Peer Review',
+    stacks: {
+      FE: [
+        {
+          technology: 'ReactJS',
+          techLink: REACT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'JavaScript',
+          techLink: JS_LINK,
+          shouldShake: false,
+        },
+      ],
+      BC: [],
+      BE: [
+        {
+          technology: 'Java',
+          techLink: JAVA_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'OpenLiberty',
+          techLink: OL_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Docker',
+          techLink: DOCKER_LINK,
+          shouldShake: false,
+        },
+      ],
+      Mobile: [],
+    },
+    description:
+      'A full-stack web application aimed at bringing automated calibrated peer review to classrooms at SUNY Oswego.',
+    repoLink: `https://github.com/tenbergen/CSC480-22S`,
+    liveLink: 'http://moxie.cs.oswego.edu:13125/',
+    thumbnail: 'cpr/cpr.svg',
+    bgColor: ['#7ECEC2', '#5780e7'],
+    textColor: '#142562',
+    descColor: '#394f9e',
+    btnColor: '#030713',
+  },
+  {
+    id: 4,
+    title: 'Meetup App',
+    stacks: {
+      FE: [
+        {
+          technology: 'ReactJS',
+          techLink: REACT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'JavaScript',
+          techLink: JS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Redux',
+          techLink: REDUX_LINK,
+          shouldShake: false,
+        },
+      ],
+      BC: [],
+      BE: [
+        {
+          technology: 'NodeJs',
+          techLink: NODE_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'JavaScript',
+          techLink: JS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'MongoDB',
+          techLink: MONGO_LINK,
+          shouldShake: false,
+        },
+      ],
+      Mobile: [],
+    },
+    description:
+      'A social platform enables them to connect and create a portfolio that showcases their professional career, including their experience, education, skills, and other pertinent information.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
+    liveLink: 'https://serene-retreat-94411.herokuapp.com/',
+    thumbnail: 'meetup-app/meetup-app.svg',
+    bgColor: ['#E7FF49', '#b3ca1d'],
+    textColor: '#195148',
+    descColor: '#2a5e55',
+    btnColor: '#1b4b43',
+  },
+  {
+    id: 5,
+    title: 'Crew Talk',
+    stacks: {
+      FE: [],
+      BC: [],
+      BE: [],
+      Mobile: [
+        {
+          technology: 'Kotlin',
+          techLink: KOT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'XML',
+          techLink: XML_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Android',
+          techLink: ANDROID_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Firebase',
+          techLink: FIRE_LINK,
+          shouldShake: false,
+        },
+      ],
+    },
+    description:
+      'An Android chat app that supports realtime chatting by integrating the Google Firebase database.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
+    liveLink: '',
+    thumbnail: 'crew-talk/crew-talk.svg',
+    bgColor: ['#D5A5F9', '#69b3d3'],
+    textColor: '#135296',
+    descColor: '#2a6cb2',
+    btnColor: '#113f70',
+  },
+  {
+    id: 6,
+    title: 'Omega Ecommerce',
+    stacks: {
+      FE: [],
+      BC: [],
+      BE: [],
+      Mobile: [
+        {
+          technology: 'SwiftUI',
+          techLink: SWIFT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'MacOS',
+          techLink: MAC_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'xCode',
+          techLink: XCODE_LINK,
+          shouldShake: false,
+        },
+      ],
+    },
+    description:
+      'A dynamic e-commerce platform featuring a user-friendly, yet intricate animated interface for an elevated online shopping experience.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
+    liveLink: '',
+    thumbnail: 'omega-ecommerce/omega-ecommerce.svg',
+    bgColor: ['#be7bf1', '#5A56E9'],
+    textColor: '#fff',
+    descColor: '#cdcdcd',
+    btnColor: '#fff',
+  },
+
   //   name: 'Ethereum Dev Sandbox',
   //   stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],
   //   description:
@@ -370,23 +552,6 @@ export const PROJECTS_LISTS: Project[] = [
   //   thumbnail: 'ethereum-dev-sandbox/ethereum-dev-sandbox.svg',
   // },
   // {
-  //   name: 'Calibrated Peer Review',
-  //   stacks: ['Java', 'OpenLiberty', 'Docker', 'ReactJS'],
-  //   description:
-  //     'A full-stack web application aimed at bringing automated calibrated peer review to classrooms at SUNY Oswego.',
-  //   repoLink: `https://github.com/tenbergen/CSC480-22S`,
-  //   liveLink: '',
-  //   thumbnail: 'cpr/cpr.svg',
-  // },
-  // {
-  //   name: 'Meetup App',
-  //   stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
-  //   description:
-  //     'A platform for developers to connect. They can create their portfolio by adding their experience, education, skills, and other important information about their professional career.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
-  //   liveLink: '',
-  //   thumbnail: 'meetup-app/meetup-app.svg',
-  // },
   // {
   //   name: 'Full Stack Yelp App',
   //   stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
@@ -415,23 +580,6 @@ export const PROJECTS_LISTS: Project[] = [
   //   thumbnail: 'landmark/landmark.svg',
   // },
   // {
-  //   name: 'Crew Talk',
-  //   stacks: ['Kotlin', 'XML', 'Android', 'Firebase'],
-  //   description:
-  //     'An Android chat app that supports realtime chatting by integrating the Google Firebase database.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
-  //   liveLink: '',
-  //   thumbnail: 'crew-talk/crew-talk.svg',
-  // },
-  // {
-  //   name: 'Omega Ecommerce',
-  //   stacks: ['SwiftUI', 'iOS', 'xCode'],
-  //   description:
-  //     'A dynamic e-commerce platform featuring a user-friendly, yet intricate animated interface for an elevated online shopping experience.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-  //   liveLink: '',
-  //   thumbnail: 'omega-ecommerce/omega-ecommerce.svg',
-  // },
   // {
   //   name: 'World Time App',
   //   stacks: ['Dart', 'Flutter'],
