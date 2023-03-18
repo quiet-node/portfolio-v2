@@ -15,13 +15,19 @@ const Projects = () => {
   return (
     <section
       className='relative z-10 overflow-hidden scrollbar-hidden bg-gradient-to-l from-[#EFD8C9] to-[#f8ad7b]
-                -top-52'
+                -top-40
+                xsm:-top-48
+                md:-top-40
+                lg:-top-52'
     >
       {/* container */}
       <div
         className='flex flex-col items-center
-                gap-9
-                md:mt-32'
+                mt-28
+                xsm:mt-32
+                md:mt-28
+                xmmd:gap-0
+                lg:mt-36'
       >
         {/* header */}
         <div>
@@ -74,7 +80,6 @@ const Projects = () => {
           )}
 
           {/* Show More button */}
-
           <div
             className={`relative h-16 flex justify-center items-center bg-white`}
           >
