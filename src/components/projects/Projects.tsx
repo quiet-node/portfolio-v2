@@ -5,7 +5,7 @@ import { PROJECTS_LISTS } from '../../utils/constants';
 const Projects = () => {
   return (
     <section
-      className='relative z-10 overflow-hidden scrollbar-hidden bg-[#EFD8C9]
+      className='relative z-10 overflow-hidden scrollbar-hidden bg-gradient-to-b from-[#EFD8C9] to-[#9C6540]
                 -top-52'
     >
       {/* container */}
