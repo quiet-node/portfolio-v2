@@ -14,14 +14,22 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
     github: false,
     live: false,
   });
+  const {
+    id,
+    title,
+    stacks,
+    description,
+    repoLink,
+    liveLink,
+    thumbnail,
+    cssWrapper,
+    cssDesc,
+    cssBtn,
+    cssUnderline,
+  } = project;
 
   return (
-    <div
-      className={`overflow-hidden
-         text-[${project.textColor}] ${
-        flipped ? 'bg-gradient-to-r' : 'bg-gradient-to-l'
-      } from-[${project.bgColor[0]}] to-[${project.bgColor[1]}]`}
-    >
+    <div className={`overflow-hidden ${cssWrapper}`}>
       <div
         className={`relative flex items-center h-[650px] px-24 2xl:max-w-[100rem] 2xl:mx-auto 2xl:h-[650px] ${
           flipped && 'flex-row-reverse'
@@ -44,16 +52,16 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
             className='text-4xl font-black'
           >
             {' '}
-            {project.title}{' '}
+            {title}{' '}
           </motion.h3>
 
           {/* description */}
           <motion.p
             variants={verticalMoreSkills}
-            className={`text-lg leading-tight tracking-tight font-semibold text-[${project.descColor}]`}
+            className={`text-lg leading-tight tracking-tight font-semibold ${cssDesc}`}
           >
             {' '}
-            {project.description}{' '}
+            {description}{' '}
           </motion.p>
 
           {/* tech stacks */}
@@ -62,7 +70,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
             className='flex flex-col gap-3'
           >
             {/* blockchain */}
-            {project.stacks.BC.length > 0 && (
+            {stacks.BC.length > 0 && (
               <motion.div
                 variants={verticalMoreSkills}
                 key={'blockchain'}
@@ -70,7 +78,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
               >
                 <p className='text-lg font-bold w-24'>Blockchain: </p>
                 <div className='flex gap-1'>
-                  {project.stacks.BC.map((tech, key) => {
+                  {stacks.BC.map((tech, key) => {
                     return (
                       <motion.a
                         href={tech.techLink}
@@ -99,7 +107,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
             )}
 
             {/* back-end */}
-            {project.stacks.BE.length > 0 && (
+            {stacks.BE.length > 0 && (
               <motion.div
                 variants={verticalMoreSkills}
                 key={'backend'}
@@ -107,7 +115,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
               >
                 <p className='text-lg font-bold w-24'>Back-end: </p>
                 <div className='flex gap-1'>
-                  {project.stacks.BE.map((tech, key) => {
+                  {stacks.BE.map((tech, key) => {
                     return (
                       <motion.a
                         href={tech.techLink}
@@ -137,7 +145,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
 
             {/* front-end */}
             {[
-              project.stacks.FE.length > 0 && (
+              stacks.FE.length > 0 && (
                 <motion.div
                   variants={verticalMoreSkills}
                   key={'front-end'}
@@ -145,7 +153,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                 >
                   <p className='text-lg font-bold w-24'>Front-end: </p>
                   <div className='flex gap-1'>
-                    {project.stacks.FE.map((tech, key) => {
+                    {stacks.FE.map((tech, key) => {
                       return (
                         <motion.a
                           href={tech.techLink}
@@ -176,7 +184,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
 
             {/* front-end */}
             {[
-              project.stacks.Mobile.length > 0 && (
+              stacks.Mobile.length > 0 && (
                 <motion.div
                   variants={verticalMoreSkills}
                   key={'front-end'}
@@ -184,7 +192,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                 >
                   <p className='text-lg font-bold w-16'>Mobile: </p>
                   <div className='flex gap-1'>
-                    {project.stacks.Mobile.map((tech, key) => {
+                    {stacks.Mobile.map((tech, key) => {
                       return (
                         <motion.a
                           href={tech.techLink}
@@ -217,13 +225,13 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
           {/* buttons */}
           <motion.div
             variants={verticalMoreSkills}
-            className={`flex justify-center flex-col gap-2 text-[${project.btnColor}] text-xl font-semibold`}
+            className={`flex justify-center flex-col gap-2 ${cssBtn} text-xl font-semibold`}
           >
             {/* live */}
-            {project.liveLink !== '' && (
+            {liveLink !== '' && (
               <motion.a
                 variants={verticalMoreSkills}
-                href={project.liveLink}
+                href={liveLink}
                 target='_blank'
                 className='cursor-pointer flex items-center w-fit'
                 onMouseEnter={() =>
@@ -240,7 +248,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                     transition={{ easings: true }}
                   >
                     <hr
-                      className={`bg-[${project.btnColor}] border-none h-[0.2rem] w-6 sm:w-20 -mt-1 rounded-xl`}
+                      className={`${cssUnderline} border-none h-[0.2rem] w-6 sm:w-20 -mt-1 rounded-xl`}
                     />
                   </motion.span>
                 </span>
@@ -262,7 +270,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
             {/* github */}
             <motion.a
               variants={verticalMoreSkills}
-              href={project.repoLink}
+              href={repoLink}
               target='_blank'
               className='cursor-pointer flex items-center w-fit'
               onMouseEnter={() =>
@@ -279,8 +287,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                   transition={{ easings: true }}
                 >
                   <hr
-                    // className={`bg-[#000000] h-[0.2rem] w-6 sm:w-48 -mt-1 rounded-xl`}
-                    className={`bg-[${project.btnColor}] border-none h-[0.2rem] w-6 sm:w-48 -mt-1 rounded-xl`}
+                    className={`${cssUnderline} border-none h-[0.2rem] w-6 sm:w-48 -mt-1 rounded-xl`}
                   />
                 </motion.span>
               </span>
@@ -302,7 +309,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
 
         {/* right */}
         <motion.div
-          initial={{ opacity: 0, x: project.id % 2 === 0 ? 90 : -90 }}
+          initial={{ opacity: 0, x: id % 2 === 0 ? 90 : -90 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{
             amount: 'some',
@@ -312,11 +319,11 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
           className={`absolute ${
             flipped ? 'left-0' : 'right-3'
           } border-22 border-black ${
-            project.id === 0 ? 'w-3/5' : 'w-[700px]'
+            id === 0 ? 'w-3/5' : 'w-[700px]'
           } flex items-center justify-center`}
         >
           <img
-            src={`src/assets/project_thumbnails/${project.thumbnail}`}
+            src={`src/assets/project_thumbnails/${thumbnail}`}
             alt='syns-platform'
             className=' border-22 border-black'
           />
