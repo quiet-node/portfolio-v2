@@ -6,10 +6,10 @@ interface Project {
   repoLink: string;
   liveLink: string;
   thumbnail: string;
-  bgColor: string[];
-  textColor: string;
-  descColor: string;
-  btnColor: string;
+  cssWrapper: string;
+  cssDesc: string;
+  cssBtn: string;
+  cssUnderline: string;
 }
 
 interface ProjectStack {
