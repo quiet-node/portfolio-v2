@@ -30,6 +30,8 @@ const AWS_LINK = 'https://aws.amazon.com/';
 const VERCEL_LINK = 'https://vercel.com/';
 const NETLIFY_LINK = 'https://www.netlify.com/';
 const DYNAMO_LINK = 'https://aws.amazon.com/dynamodb/';
+const VITE_LINK = 'https://vitejs.dev/';
+const POLYGON_LINK = 'https://polygon.technology/';
 
 export const MAIN_LEFT_SKILLS_LISTS: Technology[] = [
   {
@@ -197,13 +199,17 @@ export const PROJECTS_LISTS: Project[] = [
           technology: 'TailwindCSS',
           techLink: TAILWIND_LINK,
           shouldShake: false,
-          layer: 'FE',
         },
       ],
       BC: [
         {
           technology: 'Ethereum',
           techLink: ETHEREUM_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Polygon',
+          techLink: POLYGON_LINK,
           shouldShake: false,
         },
         {
@@ -240,7 +246,7 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: 'https://github.com/syns-platform',
     liveLink: 'https://syns.vercel.app',
     thumbnail: 'syns-platform/syns-platform-devices.svg',
-    bgColor: '#EFD8C9',
+    bgColor: ['#EFD8C9', '#EFD8C9'],
     textColor: '#553932',
     descColor: '#83685F',
     btnColor: '#A24353',
@@ -263,13 +269,13 @@ export const PROJECTS_LISTS: Project[] = [
           shouldShake: false,
         },
         {
-          technology: 'Docker',
-          techLink: DOCKER_LINK,
+          technology: 'DynamoDB',
+          techLink: DYNAMO_LINK,
           shouldShake: false,
         },
         {
-          technology: 'DynamoDB',
-          techLink: DYNAMO_LINK,
+          technology: 'Docker',
+          techLink: DOCKER_LINK,
           shouldShake: false,
         },
       ],
@@ -279,21 +285,79 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `https://github.com/nftir`,
     liveLink: '',
     thumbnail: 'nftir/nftir.svg',
-    bgColor: '#FD8700',
+    bgColor: ['#FD8700', '#BE6702'],
     textColor: '#4A3313',
     descColor: '#4A3313',
     btnColor: '#000',
   },
 
-  // {
-  //   name: 'Hashtology',
-  //   stacks: ['Solidity', 'Hardhat', 'TypeScript', 'ReactJS', 'Ethereum'],
-  //   description:
-  //     'A crypto-wallet that makes it easy to send and receive different types of digital currency across the globe, providing a secure and reliable way to manage your digital assets.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
-  //   liveLink: '',
-  //   thumbnail: 'hashtology/hashtology.svg',
-  // },
+  {
+    id: 2,
+    title: 'Hashtology',
+
+    stacks: {
+      FE: [
+        {
+          technology: 'TypeScript',
+          techLink: TS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'ReactJS',
+          techLink: REACT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'ViteJS',
+          techLink: VITE_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'TailwindCSS',
+          techLink: TAILWIND_LINK,
+          shouldShake: false,
+        },
+      ],
+      BC: [
+        {
+          technology: 'Ethereum',
+          techLink: ETHEREUM_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Polygon',
+          techLink: POLYGON_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Solidity',
+          techLink: SOL_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Hardhat',
+          techLink: HARDHAT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'MochaJS',
+          techLink: MOCHA_LINK,
+          shouldShake: false,
+        },
+      ],
+      BE: [],
+    },
+
+    description:
+      'A crypto-wallet that simplifies the process of sending and receiving various digital currencies across the globe, provides a secure and reliable way to manage your digital assets.',
+    repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
+    liveLink: '',
+    thumbnail: 'hashtology/hashtology.svg',
+    bgColor: ['#CB1EDC', '#5D088F'],
+    textColor: '#fff',
+    descColor: '#cdcdcd',
+    btnColor: '#fff',
+  },
   // {
 
   // {
