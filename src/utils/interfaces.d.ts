@@ -6,7 +6,7 @@ interface Project {
   repoLink: string;
   liveLink: string;
   thumbnail: string;
-  bgColor: string;
+  bgColor: string[];
   textColor: string;
   descColor: string;
   btnColor: string;
