@@ -16,6 +16,7 @@ interface ProjectStack {
   FE: ProjectTechs[];
   BC: ProjectTechs[];
   BE: ProjectTechs[];
+  Mobile: ProjectTechs[];
 }
 
 interface Technology {
