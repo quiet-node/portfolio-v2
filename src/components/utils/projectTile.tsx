@@ -261,7 +261,14 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
         </motion.div>
 
         {/* right */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: project.id % 2 === 0 ? 90 : -90 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{
+            amount: 'some',
+            margin: '100% 0% -9% 0%',
+          }}
+          transition={{ duration: 0.6, delay: 0.36 }}
           className={`absolute ${
             flipped ? 'left-0' : 'right-3'
           } border-22 border-black ${
@@ -273,7 +280,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
             alt='syns-platform'
             className=' border-22 border-black'
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
