@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { VerticalCommonVariants } from '../../utils/framerVariants';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
+import useScreenSizes from '../../hooks/useWindowSize';
 
 interface PapgeProps {
   project: Project;
@@ -9,6 +10,7 @@ interface PapgeProps {
 }
 
 const ProjectTile = ({ project, flipped }: PapgeProps) => {
+  const [, , isMdMedium] = useScreenSizes();
   const verticalMoreSkills = VerticalCommonVariants(60);
   const [hovering, setHovering] = useState({
     live: false,
@@ -31,7 +33,11 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
   } = project;
 
   return (
-    <div className={`overflow-hidden ${cssWrapper}`}>
+    <div
+      className={`overflow-hidden ${
+        isMdMedium ? cssWrapper : project.cssWrapperSm
+      }`}
+    >
       <div
         className={`relative flex ${flipped && 'xmmd:flex-row-reverse'}
                   flex-col

@@ -14,7 +14,7 @@ const Projects = () => {
   };
   return (
     <section
-      className='relative z-10 overflow-hidden scrollbar-hidden bg-gradient-to-l from-[#EFD8C9] to-[#f8ad7b]
+      className='relative z-10 overflow-hidden scrollbar-hidden bg-gradient-to-t xmmd:bg-gradient-to-l from-[#EFD8C9] to-[#f8ad7b]
                 -top-40
                 xsm:-top-48
                 md:-top-40
