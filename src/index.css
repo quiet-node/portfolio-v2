@@ -72,6 +72,10 @@
     background-image: linear-gradient(to left, #efd8c9, #f8ad7b);
     color: #553932;
   }
+  .syns-platform-sm {
+    background-image: linear-gradient(to top, #efd8c9, #f8ad7b);
+    color: #553932;
+  }
   .syns-platform-desc {
     color: #7b5649;
   }
@@ -85,6 +89,10 @@
 
   .hashtology {
     background-image: linear-gradient(to right, #cb1edc, #5d088f);
+    color: #fff;
+  }
+  .hashtology-sm {
+    background-image: linear-gradient(to top, #cb1edc, #5d088f);
     color: #fff;
   }
   .hashtology-desc {
@@ -101,6 +109,10 @@
     background-image: linear-gradient(to left, #f5be80, #fd8700);
     color: #4a3313;
   }
+  .nftir-sm {
+    background-image: linear-gradient(to top, #f5be80, #fd8700);
+    color: #4a3313;
+  }
   .nftir-desc {
     color: #4a3313;
   }
@@ -113,6 +125,10 @@
 
   .cpr {
     background-image: linear-gradient(to right, #7ecec2, #5780e7);
+    color: #142562;
+  }
+  .cpr-sm {
+    background-image: linear-gradient(to top, #7ecec2, #5780e7);
     color: #142562;
   }
   .cpr-desc {
@@ -129,6 +145,10 @@
     background-image: linear-gradient(to left, #e7ff49, #b3ca1d);
     color: #195148;
   }
+  .meetup-sm {
+    background-image: linear-gradient(to top, #e7ff49, #b3ca1d);
+    color: #195148;
+  }
   .meetup-desc {
     color: #2a5e55;
   }
@@ -143,6 +163,10 @@
     background-image: linear-gradient(to right, #d5a5f9, #69b3d3);
     color: #135296;
   }
+  .crew-talk-sm {
+    background-image: linear-gradient(to top, #d5a5f9, #69b3d3);
+    color: #135296;
+  }
   .crew-talk-desc {
     color: #2a6cb2;
   }
@@ -155,6 +179,10 @@
 
   .omega {
     background-image: linear-gradient(to left, #be7bf1, #5a56e9);
+    color: #fff;
+  }
+  .omega-sm {
+    background-image: linear-gradient(to top, #be7bf1, #5a56e9);
     color: #fff;
   }
   .omega-desc {
