@@ -14,6 +14,7 @@ module.exports = {
         xsm: '444px',
         xssm: '520px',
         xmd: '880px',
+        xmmd: '976px',
       },
       borderWidth: {
         1: '1px',
