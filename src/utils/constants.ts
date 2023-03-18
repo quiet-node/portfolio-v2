@@ -18,8 +18,6 @@ const SPRING_LINK = 'https://spring.io/';
 const HARDHAT_LINK = 'https://hardhat.org/';
 const NODE_LINK = 'https://nodejs.org/';
 const DOCKER_LINK = 'https://docker.com/';
-const HTML_LINK = 'https://www.w3schools.com/html/';
-const CSS_LINK = 'https://www.w3schools.com/css/';
 const JS_LINK = 'https://javascript.com/';
 const ETHEREUM_LINK = 'https://ethereum.org/en/';
 const OZ_LINK = 'https://www.openzeppelin.com/';
@@ -256,15 +254,14 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: 'https://github.com/syns-platform',
     liveLink: 'https://syns.vercel.app',
     thumbnail: 'syns-platform/syns-platform-devices.svg',
-    bgColor: ['#EFD8C9', '#d28d5e'],
-    textColor: '#553932',
-    descColor: '#83685F',
-    btnColor: '#942d3e',
+    cssWrapper: 'syns-platform',
+    cssDesc: 'syns-platform-desc',
+    cssBtn: 'syns-platform-btn',
+    cssUnderline: 'syns-platform-underline',
   },
   {
     id: 1,
     title: 'Hashtology',
-
     stacks: {
       FE: [
         {
@@ -324,10 +321,10 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
     liveLink: '',
     thumbnail: 'hashtology/hashtology.svg',
-    bgColor: ['#CB1EDC', '#5D088F'],
-    textColor: '#fff',
-    descColor: '#cdcdcd',
-    btnColor: '#fff',
+    cssWrapper: 'hashtology',
+    cssDesc: 'hashtology-desc',
+    cssBtn: 'hashtology-btn',
+    cssUnderline: 'hashtology-underline',
   },
   {
     id: 2,
@@ -364,10 +361,10 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `https://github.com/nftir`,
     liveLink: '',
     thumbnail: 'nftir/nftir.svg',
-    bgColor: ['#FD8700', '#af6715'],
-    textColor: '#4A3313',
-    descColor: '#4A3313',
-    btnColor: '#000',
+    cssWrapper: 'nftir',
+    cssDesc: 'nftir-desc',
+    cssBtn: 'nftir-btn',
+    cssUnderline: 'nftir-underline',
   },
 
   {
@@ -411,10 +408,10 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `https://github.com/tenbergen/CSC480-22S`,
     liveLink: 'http://moxie.cs.oswego.edu:13125/',
     thumbnail: 'cpr/cpr.svg',
-    bgColor: ['#7ECEC2', '#5780e7'],
-    textColor: '#142562',
-    descColor: '#394f9e',
-    btnColor: '#030713',
+    cssWrapper: 'cpr',
+    cssDesc: 'cpr-desc',
+    cssBtn: 'cpr-btn',
+    cssUnderline: 'cpr-underline',
   },
   {
     id: 4,
@@ -462,10 +459,10 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
     liveLink: 'https://serene-retreat-94411.herokuapp.com/',
     thumbnail: 'meetup-app/meetup-app.svg',
-    bgColor: ['#E7FF49', '#b3ca1d'],
-    textColor: '#195148',
-    descColor: '#2a5e55',
-    btnColor: '#1b4b43',
+    cssWrapper: 'meetup',
+    cssDesc: 'meetup-desc',
+    cssBtn: 'meetup-btn',
+    cssUnderline: 'meetup-underline',
   },
   {
     id: 5,
@@ -502,10 +499,10 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
     liveLink: '',
     thumbnail: 'crew-talk/crew-talk.svg',
-    bgColor: ['#D5A5F9', '#69b3d3'],
-    textColor: '#135296',
-    descColor: '#2a6cb2',
-    btnColor: '#113f70',
+    cssWrapper: 'crew-talk',
+    cssDesc: 'crew-talk-desc',
+    cssBtn: 'crew-talk-btn',
+    cssUnderline: 'crew-talk-underline',
   },
   {
     id: 6,
@@ -537,10 +534,10 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
     liveLink: '',
     thumbnail: 'omega-ecommerce/omega-ecommerce.svg',
-    bgColor: ['#be7bf1', '#5A56E9'],
-    textColor: '#fff',
-    descColor: '#cdcdcd',
-    btnColor: '#fff',
+    cssWrapper: 'omega',
+    cssDesc: 'omega-desc',
+    cssBtn: 'omega-btn',
+    cssUnderline: 'omega-underline',
   },
 
   //   name: 'Ethereum Dev Sandbox',
@@ -587,121 +584,6 @@ export const PROJECTS_LISTS: Project[] = [
   //     'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
   //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
   //   liveLink: '',
-  //   thumbnail: 'world-time-app/world-time-app.svg',
-  // },
-];
-
-export const PROJECTS_LISTS_6 = [
-  {
-    name: 'Syns Platform',
-    stacks: ['Golang', 'TypeScript', 'NextJS', 'Solidity', 'Ethereum'],
-    description:
-      'A revolutionary music web 3.0 platform that combines NFTs, music-donation system, NFT marketplace, club membership, and social media features, empowering musicians and fans to connect, showcase, and promote their music, revolutionizing the music industry',
-    repoLink: 'https://github.com/syns-platform',
-    liveLink: '',
-    thumbnail: 'syns-platform/syns-platform-devices.svg',
-  },
-  {
-    name: 'Hashtology',
-    stacks: ['Solidity', 'Hardhat', 'TypeScript', 'ReactJS', 'Ethereum'],
-    description:
-      'A crypto-wallet that makes it easy to send and receive different types of digital currency across the globe, providing a secure and reliable way to manage your digital assets.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/hashtology-dapp`,
-    liveLink: '',
-    thumbnail: 'hashtology/hashtology.svg',
-  },
-  {
-    name: 'NFTir',
-    stacks: ['Golang', 'AWS', 'Docker', 'DynamoDB'],
-    description:
-      'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-    repoLink: `https://github.com/nftir`,
-    liveLink: '',
-    thumbnail: 'nftir/nftir.svg',
-  },
-
-  // {
-  //   name: 'Ethereum Dev Sandbox',
-  //   stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],
-  //   description:
-  //     'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/ethereum-dev-sandbox`,
-  // liveLink:'',
-  //   thumbnail: 'ethereum-dev-sandbox/ethereum-dev-sandbox.svg',
-  // },
-  {
-    name: 'Calibrated Peer Review',
-    stacks: ['Java', 'OpenLiberty', 'Docker', 'ReactJS'],
-    description:
-      'A full-stack web application aimed at bringing automated calibrated peer review to classrooms at SUNY Oswego.',
-    repoLink: `https://github.com/tenbergen/CSC480-22S`,
-    liveLink: '',
-    thumbnail: 'cpr/cpr.svg',
-  },
-
-  // {
-  //   name: 'Meetup App',
-  //   stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
-  //   description:
-  //     'A platform for developers to connect. They can create their portfolio by adding their experience, education, skills, and other important information about their professional career.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/meetup-app`,
-  // liveLink:'',
-  //   thumbnail: 'meetup-app/meetup-app.svg',
-  // },
-  {
-    name: 'Full Stack Yelp App',
-    stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
-    description:
-      'A full-stack web application that utilizes advanced data structures and algorithms to perform comprehensive analysis on a vast dataset of 100,000 businesses located throughout the United States.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/CSC-365-fullstack-app-III`,
-    liveLink: '',
-    thumbnail: 'yelp-app/yelp-app.svg',
-  },
-
-  {
-    name: 'Tic Tac Toe',
-    stacks: ['TypeScript', 'NextJS', 'Vercel'],
-    description:
-      'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    liveLink: '',
-    thumbnail: 'tic-tac-toe/tic-tac-toe.svg',
-  },
-
-  // {
-  //   name: 'Landmark-App',
-  //   stacks: ['SwiftUI', 'iOS', 'xCode'],
-  //   description:
-  //     'An iOS application helps hikers and travelers to keep track and mark down favorite landmarks.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/landmark-app`,
-  // liveLink:'',
-  //   thumbnail: 'landmark/landmark.svg',
-  // },
-  {
-    name: 'Crew Talk',
-    stacks: ['Kotlin', 'XML', 'Android', 'Firebase'],
-    description:
-      'An Android chat app that supports realtime chatting by integrating the Google Firebase database.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/crew-talk`,
-    liveLink: '',
-    thumbnail: 'crew-talk/crew-talk.svg',
-  },
-  {
-    name: 'Omega Ecommerce',
-    stacks: ['SwiftUI', 'iOS', 'xCode'],
-    description:
-      'A dynamic e-commerce platform featuring a user-friendly, yet intricate animated interface for an elevated online shopping experience.',
-    repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-    liveLink: '',
-    thumbnail: 'omega-ecommerce/omega-ecommerce.svg',
-  },
-  // {
-  //   name: 'World Time App',
-  //   stacks: ['Dart', 'Flutter'],
-  //   description:
-  //     'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-  // liveLink:'',
   //   thumbnail: 'world-time-app/world-time-app.svg',
   // },
 ];
