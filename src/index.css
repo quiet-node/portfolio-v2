@@ -67,4 +67,103 @@
       background-position: 0% 0%;
     }
   }
+
+  .syns-platform {
+    background-image: linear-gradient(to left, #efd8c9, #f8ad7b);
+    color: #553932;
+  }
+  .syns-platform-desc {
+    color: #7b5649;
+  }
+  .syns-platform-btn {
+    color: #942d3e;
+  }
+  .syns-platform-underline {
+    background-color: #942d3e;
+    border: none;
+  }
+
+  .hashtology {
+    background-image: linear-gradient(to right, #cb1edc, #5d088f);
+    color: #fff;
+  }
+  .hashtology-desc {
+    color: #cdcdcd;
+  }
+  .hashtology-btn {
+    color: #fff;
+  }
+  .hashtology-underline {
+    background-color: #fff;
+  }
+
+  .nftir {
+    background-image: linear-gradient(to left, #f5be80, #fd8700);
+    color: #4a3313;
+  }
+  .nftir-desc {
+    color: #4a3313;
+  }
+  .nftir-btn {
+    color: #000;
+  }
+  .nftir-underline {
+    background-color: #000;
+  }
+
+  .cpr {
+    background-image: linear-gradient(to right, #7ecec2, #5780e7);
+    color: #142562;
+  }
+  .cpr-desc {
+    color: #394f9e;
+  }
+  .cpr-btn {
+    color: #030713;
+  }
+  .cpr-underline {
+    background-color: #030713;
+  }
+
+  .meetup {
+    background-image: linear-gradient(to left, #e7ff49, #b3ca1d);
+    color: #195148;
+  }
+  .meetup-desc {
+    color: #2a5e55;
+  }
+  .meetup-btn {
+    color: #1b4b43;
+  }
+  .meetup-underline {
+    background-color: #1b4b43;
+  }
+
+  .crew-talk {
+    background-image: linear-gradient(to right, #d5a5f9, #69b3d3);
+    color: #135296;
+  }
+  .crew-talk-desc {
+    color: #2a6cb2;
+  }
+  .crew-talk-btn {
+    color: #113f70;
+  }
+  .crew-talk-underline {
+    background-color: #113f70;
+  }
+
+  .omega {
+    background-image: linear-gradient(to left, #be7bf1, #5a56e9);
+    color: #fff;
+  }
+  .omega-desc {
+    color: #cdcdcd;
+  }
+  .omega-btn {
+    color: #fff;
+  }
+  .omega-underline {
+    background-color: #fff;
+  }
 }
