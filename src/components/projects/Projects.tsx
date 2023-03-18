@@ -1,8 +1,17 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ProjectTile } from '../utils';
-import { PROJECTS_LISTS } from '../../utils/constants';
+import { MdOpenInNew } from 'react-icons/md';
+import { PROJECTS_LISTS, QUIET_NODE_GITHUB_LINK } from '../../utils/constants';
 
 const Projects = () => {
+  const [showMore, setShowMore] = useState(false);
+  const handleShowMoreClick = () => {
+    setShowMore(true);
+    if (showMore) {
+      window.open(QUIET_NODE_GITHUB_LINK, '_blank', 'noreferrer');
+    }
+  };
   return (
     <section
       className='relative z-10 overflow-hidden scrollbar-hidden bg-gradient-to-l from-[#EFD8C9] to-[#f8ad7b]
@@ -38,7 +47,8 @@ const Projects = () => {
 
         {/* body - projects */}
         <div className='flex flex-col w-full'>
-          {PROJECTS_LISTS.map((project) => {
+          {/* First 4 projects */}
+          {PROJECTS_LISTS.slice(0, 4).map((project) => {
             return (
               <ProjectTile
                 key={project.id}
@@ -47,6 +57,49 @@ const Projects = () => {
               />
             );
           })}
+
+          {showMore && (
+            <>
+              {/* rest projects */}
+              {PROJECTS_LISTS.slice(4).map((project) => {
+                return (
+                  <ProjectTile
+                    key={project.id}
+                    project={project}
+                    flipped={project.id % 2 !== 0}
+                  />
+                );
+              })}
+            </>
+          )}
+
+          {/* Show More button */}
+
+          <div className={`h-20 flex justify-center items-center bg-white`}>
+            <div
+              onClick={() => handleShowMoreClick()}
+              className={`relative z-20 ${
+                showMore ? 'w-56 py-3 showmore-bg-2' : 'w-44 py-3 showmore-bg-1'
+              } -mt-20 text-white text-xl font-semibold rounded-full text-center cursor-pointer select-none 
+                            showmore-btn transition-all duration-300 ease-in-out focus:outline-none`}
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
+                className='flex justify-center'
+              >
+                {showMore ? (
+                  <div className='flex gap-1 items-center'>
+                    More On Github?
+                    <MdOpenInNew />
+                  </div>
+                ) : (
+                  'Show More'
+                )}
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
