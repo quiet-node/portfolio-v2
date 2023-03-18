@@ -17,11 +17,13 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
 
   return (
     <div
-      // className={`overflow-hidden text-[${project.textColor}] bg-[#FD8700]`}
-      className={`overflow-hidden text-[${project.textColor}] bg-[${project.bgColor}]`}
+      className={`overflow-hidden
+         text-[${project.textColor}] ${
+        flipped ? 'bg-gradient-to-r' : 'bg-gradient-to-l'
+      } from-[${project.bgColor[0]}] to-[${project.bgColor[1]}]`}
     >
       <div
-        className={`relative flex items-center h-[600px] px-24 2xl:max-w-[100rem] 2xl:mx-auto 2xl:h-[650px] ${
+        className={`relative flex items-center h-[650px] px-24 2xl:max-w-[100rem] 2xl:mx-auto 2xl:h-[650px] ${
           flipped && 'flex-row-reverse'
         }`}
       >
@@ -171,6 +173,45 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                 </motion.div>
               ),
             ]}
+
+            {/* front-end */}
+            {[
+              project.stacks.Mobile.length > 0 && (
+                <motion.div
+                  variants={verticalMoreSkills}
+                  key={'front-end'}
+                  className='flex gap-1 items-center'
+                >
+                  <p className='text-lg font-bold w-16'>Mobile: </p>
+                  <div className='flex gap-1'>
+                    {project.stacks.Mobile.map((tech, key) => {
+                      return (
+                        <motion.a
+                          href={tech.techLink}
+                          key={key}
+                          target='_blank'
+                          title={tech.technology}
+                          variants={verticalMoreSkills}
+                          className='flex items-center cursor-pointer'
+                        >
+                          <motion.img
+                            whileHover={{
+                              x: [0, -80, 90, -80, 70, -60, 0],
+                              y: [0, -80, 70, -60, 0],
+                              transition: { duration: 0.5 },
+                            }}
+                            src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                            alt={`${tech}-logo`}
+                            width={43}
+                            className={`hover:scale-125 scale transition duration-300 select-none`}
+                          />
+                        </motion.a>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              ),
+            ]}
           </motion.div>
 
           {/* buttons */}
@@ -199,7 +240,6 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                     transition={{ easings: true }}
                   >
                     <hr
-                      // className={`bg-[#000000] h-[0.2rem] w-6 sm:w-48 -mt-1 rounded-xl`}
                       className={`bg-[${project.btnColor}] border-none h-[0.2rem] w-6 sm:w-20 -mt-1 rounded-xl`}
                     />
                   </motion.span>

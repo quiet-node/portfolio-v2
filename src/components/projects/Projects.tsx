@@ -5,7 +5,7 @@ import { PROJECTS_LISTS } from '../../utils/constants';
 const Projects = () => {
   return (
     <section
-      className='relative z-10 overflow-hidden scrollbar-hidden bg-gradient-to-b from-[#EFD8C9] to-[#9C6540]
+      className='relative z-10 overflow-hidden scrollbar-hidden bg-gradient-to-l from-[#EFD8C9] to-[#d28d5e]
                 -top-52'
     >
       {/* container */}
@@ -21,7 +21,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
             viewport={{ amount: 'some', margin: '100% 0% -8% 0%' }}
-            className='text-3xl sm:text-4xl font-black text-[#A87163]'
+            className='text-3xl sm:text-4xl font-black text-[#9d5746]'
           >
             Projects.
           </motion.h1>
@@ -32,7 +32,7 @@ const Projects = () => {
             viewport={{ amount: 'some', margin: '100% 0% -9% 0%' }}
             className='flex justify-center -mt-0.5'
           >
-            <hr className='bg-[#A87163] h-[0.2rem] w-20 sm:w-20 rounded-xl' />
+            <hr className='bg-[#9d5746] border-none h-[0.2rem] w-20 sm:w-20 rounded-xl' />
           </motion.div>
         </div>
 
