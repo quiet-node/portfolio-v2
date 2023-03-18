@@ -11,16 +11,18 @@ interface PapgeProps {
 const ProjectTile = ({ project, flipped }: PapgeProps) => {
   const verticalMoreSkills = VerticalCommonVariants(60);
   const [hovering, setHovering] = useState({
-    github: false,
     live: false,
+    demo: false,
+    github: false,
   });
   const {
     id,
     title,
     stacks,
     description,
-    repoLink,
     liveLink,
+    demoLink,
+    repoLink,
     thumbnail,
     cssWrapper,
     cssDesc,
@@ -235,10 +237,20 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                 target='_blank'
                 className='cursor-pointer flex items-center w-fit'
                 onMouseEnter={() =>
-                  setHovering({ ...hovering, live: true, github: false })
+                  setHovering({
+                    ...hovering,
+                    live: true,
+                    github: false,
+                    demo: false,
+                  })
                 }
                 onMouseLeave={() =>
-                  setHovering({ ...hovering, live: false, github: false })
+                  setHovering({
+                    ...hovering,
+                    live: false,
+                    github: false,
+                    demo: false,
+                  })
                 }
               >
                 <span className='flex flex-col items-center'>
@@ -267,6 +279,56 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
               </motion.a>
             )}
 
+            {/* demo */}
+            {demoLink !== '' && (
+              <motion.a
+                variants={verticalMoreSkills}
+                href={demoLink}
+                target='_blank'
+                className='cursor-pointer flex items-center w-fit'
+                onMouseEnter={() =>
+                  setHovering({
+                    ...hovering,
+                    demo: true,
+                    github: false,
+                    live: false,
+                  })
+                }
+                onMouseLeave={() =>
+                  setHovering({
+                    ...hovering,
+                    demo: false,
+                    github: false,
+                    live: false,
+                  })
+                }
+              >
+                <span className='flex flex-col items-center'>
+                  <p className=''>Watch a demo video</p>
+                  <motion.span
+                    animate={{ scaleX: hovering.demo ? 1 : 0 }}
+                    transition={{ easings: true }}
+                  >
+                    <hr
+                      className={`${cssUnderline} border-none h-[0.2rem] w-6 sm:w-32 -mt-1 rounded-xl`}
+                    />
+                  </motion.span>
+                </span>
+
+                <motion.span
+                  animate={{ translateX: hovering.demo ? 6 : 0 }}
+                  transition={{ easings: true }}
+                  className='whitespace-nowrap'
+                >
+                  {hovering.demo ? (
+                    <MdArrowForward size={24} />
+                  ) : (
+                    <MdKeyboardArrowRight size={24} />
+                  )}
+                </motion.span>
+              </motion.a>
+            )}
+
             {/* github */}
             <motion.a
               variants={verticalMoreSkills}
@@ -274,10 +336,20 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
               target='_blank'
               className='cursor-pointer flex items-center w-fit'
               onMouseEnter={() =>
-                setHovering({ ...hovering, github: true, live: false })
+                setHovering({
+                  ...hovering,
+                  github: true,
+                  live: false,
+                  demo: false,
+                })
               }
               onMouseLeave={() =>
-                setHovering({ ...hovering, github: false, live: false })
+                setHovering({
+                  ...hovering,
+                  github: false,
+                  live: false,
+                  demo: false,
+                })
               }
             >
               <span className='flex flex-col items-center'>
