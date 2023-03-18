@@ -8,6 +8,7 @@ interface Project {
   demoLink: string;
   thumbnail: string;
   cssWrapper: string;
+  cssWrapperSm: string;
   cssDesc: string;
   cssBtn: string;
   cssUnderline: string;
