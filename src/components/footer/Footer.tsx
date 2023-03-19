@@ -115,7 +115,7 @@ const Footer = () => {
           {/* social medias */}
           <motion.div
             variants={horizontalVariants}
-            className='flex flex-col gap-6'
+            className='flex flex-col gap-3'
           >
             {SOCIAL_FOOTER.map((social) => {
               return (
