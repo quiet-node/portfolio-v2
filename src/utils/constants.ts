@@ -419,7 +419,7 @@ export const PROJECTS_LISTS: Project[] = [
     repoLink: `https://github.com/tenbergen/CSC480-22S`,
     liveLink: 'http://moxie.cs.oswego.edu:13125/',
     demoLink: '',
-    thumbnail: 'cpr/cpr.svg',
+    thumbnail: 'cproswego/cpr.svg',
     cssWrapper: 'cpr',
     cssWrapperSm: 'cpr-sm',
     cssDesc: 'cpr-desc',
