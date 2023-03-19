@@ -23,10 +23,6 @@ const Footer = () => {
         <motion.div
           initial='hidden'
           whileInView='shown'
-          viewport={{
-            amount: 'some',
-            margin: '100% 0% -9% 0%',
-          }}
           variants={verticalVariants}
           className='bg-black text-white flex justify-center flex-col items-center tracking-tight font-semibold text-center
                     px-3 py-3
