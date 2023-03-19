@@ -584,7 +584,7 @@ export const SOCIAL_FOOTER = [
   {
     id: 3,
     title: 'Twitter',
-    desc: 'Only up for the news. Well you know still follow me!',
+    desc: 'Only up for the news. Well you know still follow me.',
     link: QUIET_NODE_TWITTER_LINK,
     bgClass: 'bg-twitter',
   },
@@ -604,8 +604,8 @@ export const SOCIAL_FOOTER = [
   },
   {
     id: 6,
-    title: 'Tiktok',
-    desc: 'Follow me on Tiktok where I post my dancing videos like a 5th grade little boy.',
+    title: 'TikTok',
+    desc: 'Follow me on TikTok where I post my dancing videos like a 5th grade little boy.',
     link: 'sike',
     bgClass: 'bg-tiktok',
   },
