@@ -1,11 +1,26 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { SOCIAL_FOOTER } from '../../utils/constants';
+import {
+  FRAMER_LINK,
+  QUIET_NODE_PORTFOLIO_V2_GITHUB_LINK,
+  REACT_LINK,
+  SOCIAL_FOOTER,
+  TAILWIND_LINK,
+  TS_LINK,
+  VERCEL_LINK,
+  VITE_LINK,
+} from '../../utils/constants';
 import SocialMedia from '../utils/socialMedia';
-import { HorizontalCommonVariants } from '../../utils/framerVariants';
+import {
+  HorizontalCommonVariants,
+  VerticalCommonVariants,
+} from '../../utils/framerVariants';
+import { BsGithub } from 'react-icons/bs';
 
 const Footer = () => {
   const ref = useRef(null);
+  const currentYear = new Date().getFullYear();
+  const verticalVariants = VerticalCommonVariants(30);
   const horizontalVariants = HorizontalCommonVariants(90);
   const isInView = useInView(ref, { margin: '100% 0% -9% 0%' });
   return (
@@ -128,6 +143,104 @@ const Footer = () => {
                 </motion.div>
               );
             })}
+          </motion.div>
+        </motion.div>
+
+        {/* Last */}
+        <motion.div
+          initial='hidden'
+          whileInView='shown'
+          viewport={{
+            amount: 'some',
+            margin: '100% 0% -9% 0%',
+          }}
+          variants={verticalVariants}
+          className='bg-black text-white flex justify-center flex-col items-center px-3 py-3 text-lg font-semibold tracking-tight'
+        >
+          {/* technologies */}
+          <motion.div variants={verticalVariants} className=''>
+            Built with{' '}
+            <span className='inline-flex gap-1'>
+              <motion.a
+                whileHover={{ y: -2 }}
+                className='hover:underline'
+                href={TS_LINK}
+                target='_blank'
+              >
+                TypeScript,
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -2 }}
+                className='hover:underline'
+                href={REACT_LINK}
+                target='_blank'
+              >
+                React.js,
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -2 }}
+                className='hover:underline'
+                href={VITE_LINK}
+                target='_blank'
+              >
+                Vite.js,
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -2 }}
+                className='hover:underline'
+                href={TAILWIND_LINK}
+                target='_blank'
+              >
+                TailwindCSS,
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -2 }}
+                className='hover:underline'
+                href={FRAMER_LINK}
+                target='_blank'
+              >
+                Framer Motion,
+              </motion.a>{' '}
+              and{' '}
+              <motion.a
+                whileHover={{ y: -2 }}
+                className='hover:underline'
+                href={VERCEL_LINK}
+                target='_blank'
+              >
+                Vercel.
+              </motion.a>
+            </span>
+          </motion.div>
+          {/* Star this project */}
+          <motion.div variants={verticalVariants}>
+            <motion.a
+              href={QUIET_NODE_PORTFOLIO_V2_GITHUB_LINK}
+              target='_blank'
+            >
+              <div className='flex items-center gap-1'>
+                Star this project on Github
+                <BsGithub />
+              </div>
+            </motion.a>
+          </motion.div>
+
+          {/* Copyright */}
+          <motion.div
+            variants={verticalVariants}
+            className='flex items-cent
+          '
+          >
+            &#169; Quiet Node {currentYear}
+          </motion.div>
+
+          {/* Vietnamese */}
+          <motion.div
+            variants={verticalVariants}
+            className='flex items-cent
+          '
+          >
+            🇻🇳 Vietnamese 🇻🇳
           </motion.div>
         </motion.div>
       </div>
