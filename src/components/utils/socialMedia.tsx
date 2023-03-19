@@ -19,7 +19,7 @@ const SocialMedia = ({ social }: PageProps) => {
     <motion.div
       onClick={() => {
         if (id === 6) {
-          alert('SIKEE!!! You wish!!! LOOOOL');
+          alert('SIKE!! You wish!! LOOL');
         } else {
           window.open(link, '_target');
         }
