@@ -2,13 +2,15 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { SOCIAL_FOOTER } from '../../utils/constants';
 import SocialMedia from '../utils/socialMedia';
+import { HorizontalCommonVariants } from '../../utils/framerVariants';
 
 const Footer = () => {
   const ref = useRef(null);
+  const horizontalVariants = HorizontalCommonVariants(90);
   const isInView = useInView(ref, { margin: '100% 0% -9% 0%' });
   return (
     <div
-      className='-mt-40 h-fit
+      className='overflow-hidden -mt-40 h-fit
                 lg:-mt-52'
     >
       {/* wrapper */}
@@ -72,28 +74,57 @@ const Footer = () => {
         </div>
 
         {/* Social */}
-        <div className='flex flex-col gap-6 mt-16 px-24 2xl:px-[14rem] mb-20'>
+        <motion.div
+          initial='hidden'
+          whileInView='shown'
+          viewport={{
+            amount: 'some',
+            margin: '100% 0% -9% 0%',
+          }}
+          variants={horizontalVariants}
+          className='flex flex-col gap-6 mt-16 px-24 2xl:px-[14rem] mb-20'
+        >
           {/* greetings */}
           <div>
-            <div className='text-4xl font-bold'>Follow me on the internet</div>
-            <div className='text-xl font-bold'>Let's be friend!</div>
-            <div className='text-sm tracking-tight font-semibold -mt-1'>
+            <motion.div
+              variants={horizontalVariants}
+              className='text-4xl font-bold'
+            >
+              Follow me on the internet
+            </motion.div>
+            <motion.div
+              variants={horizontalVariants}
+              className='text-xl font-bold'
+            >
+              Let's be friend!
+            </motion.div>
+            <motion.div
+              variants={horizontalVariants}
+              className='text-sm tracking-tight font-semibold -mt-1'
+            >
               Or let's just...you know...follow and never say anything to each
               other! LOL
-            </div>
+            </motion.div>
           </div>
 
           {/* social medias */}
-          <div className='flex flex-col gap-6'>
+          <motion.div
+            variants={horizontalVariants}
+            className='flex flex-col gap-6'
+          >
             {SOCIAL_FOOTER.map((social) => {
               return (
-                <div key={social.id}>
+                <motion.div
+                  key={social.id}
+                  variants={horizontalVariants}
+                  whileHover={{ y: -3 }}
+                >
                   <SocialMedia social={social} />
-                </div>
+                </motion.div>
               );
             })}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

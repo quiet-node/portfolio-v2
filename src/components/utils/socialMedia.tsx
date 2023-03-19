@@ -17,11 +17,11 @@ const SocialMedia = ({ social }: PageProps) => {
   const { id, title, desc, link, bgClass } = social;
   return (
     <motion.div
-      initial={{ opacity: 0, x: -21 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ y: -0.5 }}
-      transition={{ duration: 0.6, delay: 1.2 }}
+      //   initial={{ opacity: 0, x: -21 }}
+      //   whileInView={{ opacity: 1, x: 0 }}
+      //   viewport={{ once: true }}
+      //   whileHover={{ y: -0.5 }}
+      //   transition={{ duration: 0.6, delay: 1.2 }}
       onClick={() => {
         if (id === 6) {
           alert('SIKE! You wish!! LOOL');
@@ -35,7 +35,6 @@ const SocialMedia = ({ social }: PageProps) => {
       <div className='text-5xl'>
         {id === 0 && (
           <div className='text-[#181717]'>
-            {' '}
             <BsGithub />{' '}
           </div>
         )}
@@ -83,7 +82,9 @@ const SocialMedia = ({ social }: PageProps) => {
         <div className='text-xl font-bold'>{title}</div>
 
         {/* desc */}
-        <div className='text-lg tracking-tight'>{desc}</div>
+        <div className='text-lg tracking-tight font-semibold text-gray-500'>
+          {desc}
+        </div>
       </div>
     </motion.div>
   );
