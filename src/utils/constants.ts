@@ -553,51 +553,35 @@ export const PROJECTS_LISTS: Project[] = [
     cssBtn: 'omega-btn',
     cssUnderline: 'omega-underline',
   },
-
-  //   name: 'Ethereum Dev Sandbox',
-  //   stacks: ['Solidity', 'Hardhat', 'MochaJS', 'Ethereum'],
-  //   description:
-  //     'A Golang-based application server, boasts a plethora of RESTful endpoints that facilitate the efficient processing and management of metadata and information pertaining to specific NFTs through the utilization of the NFTGo API.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/ethereum-dev-sandbox`,
-  //   liveLink: '',
-  //   thumbnail: 'ethereum-dev-sandbox/ethereum-dev-sandbox.svg',
-  // },
-  // {
-  // {
-  //   name: 'Full Stack Yelp App',
-  //   stacks: ['ES6', 'ReactJS', 'ExpressJS', 'NodeJs', 'MongoDB', 'Redux'],
-  //   description:
-  //     'a full-stack web application that utilizes advanced data structures and algorithms to perform comprehensive analysis on a vast dataset of 100,000 businesses located throughout the United States.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/CSC-365-fullstack-app-III`,
-  //   liveLink: '',
-  //   thumbnail: 'yelp-app/yelp-app.svg',
-  // },
-  // {
-  //   name: 'Tic Tac Toe',
-  //   stacks: ['TypeScript', 'NextJS', 'Vercel'],
-  //   description:
-  //     'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-  //   liveLink: 'https://tictactoe2304.netlify.app/',
-  //   thumbnail: 'tic-tac-toe/tic-tac-toe.svg',
-  // },
-  // {
-  //   name: 'Landmark-App',
-  //   stacks: ['SwiftUI', 'iOS', 'xCode'],
-  //   description:
-  //     'An iOS application helps hikers and travelers to keep track and mark down favorite landmarks.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/landmark-app`,
-  //   liveLink: '',
-  //   thumbnail: 'landmark/landmark.svg',
-  // },
-  // {
-  // {
-  //   name: 'World Time App',
-  //   stacks: ['Dart', 'Flutter'],
-  //   description:
-  //     'A cross-platform mobile application that delivers a sleek and user-friendly experience for tracking time across various locations worldwide.',
-  //   repoLink: `${QUIET_NODE_GITHUB_LINK}/omega-ecommerce`,
-  //   liveLink: '',
-  //   thumbnail: 'world-time-app/world-time-app.svg',
-  // },
 ];
+
+export const SOCIAL_FOOTER = {
+  github: {
+    title: 'Github',
+    desc: "Most favorite place. I know it's not like a social media place but love pushing code to it daily. NERD!",
+  },
+  reddit: {
+    title: 'Reddit',
+    desc: "Second favorite place. Just became a redditor for a year now but can't stop reading reading random posts.",
+  },
+  linkedIn: {
+    title: 'LinkedIn',
+    desc: 'Professional social media. Been using it professionaly for 2 years. Connect with me!',
+  },
+  twitter: {
+    title: 'twitter',
+    desc: 'Only up for the news. Well you know still follow me!',
+  },
+  gmail: {
+    title: 'gmail',
+    desc: "Main communicating media. Shoot me an email I'm on it everyday!",
+  },
+  discord: {
+    title: 'discord',
+    desc: "You just can't 'not' have a discord these days. C'mon.",
+  },
+  tiktok: {
+    title: 'Tiktok',
+    desc: 'Place where I post my dancing videos like a 5th grade little boy.',
+  },
+};
