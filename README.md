@@ -8,10 +8,11 @@
 
 <div align="center">
 
+![](https://img.shields.io/badge/TypeScript-4.9.3-blue?style=flat-square&logo=typescript)
 ![](https://img.shields.io/badge/React.js-18.2.0-blue?style=flat-square&logo=react)
 ![](https://img.shields.io/badge/Vite.js-4.1.0-blue?style=flat-square&logo=vite)
-![](https://img.shields.io/badge/TypeScript-4.9.3-blue?style=flat-square&logo=typescript)
 ![](https://img.shields.io/badge/Tailwindcss-3.2.7-blue?style=flat-square&logo=tailwindcss)
+![](https://img.shields.io/badge/FramerMotion-10.2.5-blue?style=flat-square&logo=framer)
 
 </div>
 
