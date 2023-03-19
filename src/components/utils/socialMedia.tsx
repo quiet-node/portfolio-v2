@@ -24,7 +24,7 @@ const SocialMedia = ({ social }: PageProps) => {
           window.open(link, '_target');
         }
       }}
-      className={`cursor-pointer flex items-center w-fit py-1 rounded-lg ${bgClass} border-r-22 border-r-black
+      className={`cursor-pointer flex items-center w-fit py-1 rounded-lg ${bgClass}
                 w-full gap-3
                 sm:pl-6 sm:gap-6
                 xmmd:w-[90%]
