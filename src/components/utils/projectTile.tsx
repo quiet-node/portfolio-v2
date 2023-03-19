@@ -42,7 +42,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
         className={`relative flex ${flipped && 'xmmd:flex-row-reverse'}
                   flex-col
                   xmmd:flex-row xmmd:h-[650px] xmmd:items-center xmmd:px-24
-                  2xl:max-w-[100rem] 2xl:mx-auto 2xl:h-[650px] border-22 border-black`}
+                  2xl:max-w-[100rem] 2xl:mx-auto 2xl:h-[650px]`}
       >
         {/* left wrapper*/}
         <motion.div
@@ -55,9 +55,9 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
           variants={verticalMoreSkills}
           className={`flex flex-col gap-4 mt-16
                     px-3
-                    xxsm:px-6 xmmd:mt-0
+                    xxsm:px-6
                     sm:px-9
-                    xmmd:w-1/2 xmmd:px-0 border-22 border-black`}
+                    xmmd:w-1/2 xmmd:px-0 xmmd:mt-0`}
         >
           {/* title */}
           <motion.h3
