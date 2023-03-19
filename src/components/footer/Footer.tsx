@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { SOCIAL_FOOTER } from '../../utils/constants';
+import SocialMedia from '../utils/socialMedia';
 
 const Footer = () => {
   const ref = useRef(null);
@@ -69,7 +71,29 @@ const Footer = () => {
           </div>
         </div>
 
-        {/*  */}
+        {/* Social */}
+        <div className='flex flex-col gap-6 mt-16 px-24 2xl:px-[14rem] mb-20'>
+          {/* greetings */}
+          <div>
+            <div className='text-4xl font-bold'>Follow me on the internet</div>
+            <div className='text-xl font-bold'>Let's be friend!</div>
+            <div className='text-sm tracking-tight font-semibold -mt-1'>
+              Or let's just...you know...follow and never say anything to each
+              other! LOL
+            </div>
+          </div>
+
+          {/* social medias */}
+          <div className='flex flex-col gap-6'>
+            {SOCIAL_FOOTER.map((social) => {
+              return (
+                <div key={social.id}>
+                  <SocialMedia social={social} />
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
