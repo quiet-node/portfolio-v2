@@ -222,4 +222,26 @@
     );
     box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
   }
+
+  .bg-github:hover {
+    background-color: #d2d2d244;
+  }
+  .bg-reddit:hover {
+    background-color: #ff871717;
+  }
+  .bg-linkedin:hover {
+    background-color: #e1f0f75b;
+  }
+  .bg-twitter:hover {
+    background-color: #a2d9f727;
+  }
+  .bg-gmail:hover {
+    background-color: #ffc4b22c;
+  }
+  .bg-discord:hover {
+    background-color: #8ea1e12a;
+  }
+  .bg-tiktok:hover {
+    background-color: #bfecec4f;
+  }
 }
