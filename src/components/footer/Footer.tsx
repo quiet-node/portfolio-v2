@@ -105,10 +105,10 @@ const Footer = () => {
             </motion.div>
             <motion.div
               variants={horizontalVariants}
-              className='text-sm tracking-tight font-semibold -mt-1'
+              className='text-sm tracking-tight font-bold -mt-1 text-gray-500'
             >
               Or let's just...you know...follow and never say anything to each
-              other! LOL
+              other! SMH...
             </motion.div>
           </div>
 
