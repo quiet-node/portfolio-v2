@@ -113,7 +113,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                               y: [0, -80, 70, -60, 0],
                               transition: { duration: 0.5 },
                             }}
-                            src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                            src={`assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
                             alt={`${tech}-logo`}
                             width={43}
                             className={`hover:scale-125 scale transition duration-300 select-none`}
@@ -152,7 +152,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                               y: [0, -80, 70, -60, 0],
                               transition: { duration: 0.5 },
                             }}
-                            src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                            src={`assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
                             alt={`${tech}-logo`}
                             width={43}
                             className={`hover:scale-125 scale transition duration-300 select-none`}
@@ -192,7 +192,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                                 y: [0, -80, 70, -60, 0],
                                 transition: { duration: 0.5 },
                               }}
-                              src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                              src={`assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
                               alt={`${tech}-logo`}
                               width={43}
                               className={`hover:scale-125 scale transition duration-300 select-none`}
@@ -231,7 +231,7 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
                                 y: [0, -80, 70, -60, 0],
                                 transition: { duration: 0.5 },
                               }}
-                              src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                              src={`assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
                               alt={`${tech}-logo`}
                               width={43}
                               className={`hover:scale-125 scale transition duration-300 select-none`}
@@ -429,8 +429,8 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
           ${(id === 5 || id === 6) && 'mt-9 mb-16 xmmd:mb-0'}`}
         >
           <img
-            src={`src/assets/project_thumbnails/${thumbnail}`}
-            alt='syns-platform'
+            src={`assets/project_thumbnails/${thumbnail}`}
+            alt={title}
             className='border-22 border-black'
           />
         </motion.div>

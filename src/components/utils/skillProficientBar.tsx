@@ -65,7 +65,7 @@ const SkillProficientBar = ({
             y: [0, -3, 2, -1, 0],
             transition: { duration: 0.5 },
           }}
-          src={`src/assets/tech_logos/${logo.toLowerCase()}.svg`}
+          src={`assets/tech_logos/${logo.toLowerCase()}.svg`}
           alt={`${logo}-logo`}
           className={`absolute ${left ? '-right-3' : 'sm:-left-3'} select-none`}
         />

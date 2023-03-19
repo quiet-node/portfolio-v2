@@ -237,7 +237,7 @@ const Stats = () => {
                           transition: { duration: 0.5 },
                         }}
                         animate={tech.shouldShake ? shakingAnimation : ''}
-                        src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                        src={`assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
                         alt={`${tech.technology}-logo`}
                         className={`/hover:scale-125 /transition duration-300 select-none`}
                       />
@@ -277,7 +277,7 @@ const Stats = () => {
                             transition: { duration: 0.5 },
                           }}
                           animate={tech.shouldShake ? shakingAnimation : ''}
-                          src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                          src={`assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
                           alt={`${tech.technology}-logo`}
                           className={`hover:scale-125 scale transition duration-300 select-none`}
                         />
@@ -316,7 +316,7 @@ const Stats = () => {
                           transition: { duration: 0.5 },
                         }}
                         animate={tech.shouldShake ? shakingAnimation : ''}
-                        src={`src/assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
+                        src={`assets/tech_logos/${tech.technology.toLowerCase()}.svg`}
                         alt={`${tech.technology}-logo`}
                         className={`hover:scale-125 transition duration-300 select-none`}
                       />

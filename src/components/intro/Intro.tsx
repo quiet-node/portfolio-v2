@@ -164,7 +164,7 @@ const Intro = () => {
             >
               <img
                 className='absolute inset-0 w-full h-full object-center object-cover rounded-full select-none'
-                src={'src/assets/avatars/profile_pic.png'}
+                src={'assets/avatars/profile_pic.png'}
                 alt='quiet-node'
               />
             </motion.div>
