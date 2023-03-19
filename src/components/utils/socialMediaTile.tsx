@@ -13,7 +13,7 @@ interface PageProps {
   };
 }
 
-const SocialMedia = ({ social }: PageProps) => {
+const SocialMediaTile = ({ social }: PageProps) => {
   const { id, title, desc, link, bgClass } = social;
   return (
     <motion.div
@@ -89,4 +89,4 @@ const SocialMedia = ({ social }: PageProps) => {
   );
 };
 
-export default SocialMedia;
+export default SocialMediaTile;
