@@ -2,9 +2,13 @@
  * @notice constants for social media links
  */
 export const QUIET_NODE_GITHUB_LINK = 'https://github.com/quiet-node';
+export const QUIET_NODE_REDDIT_LINK =
+  'https://www.reddit.com/user/Quiet-Computer-3495';
 export const QUIET_NODE_EMAIL_LINK = 'mailto:lg.131.ng@gmail.com';
 export const QUIET_NODE_LINKEDIN_LINK = 'https://linkedin.com/in/logann131';
 export const QUIET_NODE_TWITTER_LINK = 'https://twitter.com/quiet_node';
+export const QUIET_NODE_DISCORD_LINK =
+  'https://discordapp.com/users/401650245202739201';
 
 const GO_LINK = 'https://go.dev/';
 const TS_LINK = 'https://typescriptlang.org/';
@@ -555,33 +559,54 @@ export const PROJECTS_LISTS: Project[] = [
   },
 ];
 
-export const SOCIAL_FOOTER = {
-  github: {
+export const SOCIAL_FOOTER = [
+  {
+    id: 0,
     title: 'Github',
     desc: "Most favorite place. I know it's not like a social media place but love pushing code to it daily. NERD!",
+    link: QUIET_NODE_GITHUB_LINK,
+    bgClass: 'bg-github',
   },
-  reddit: {
+  {
+    id: 1,
     title: 'Reddit',
-    desc: "Second favorite place. Just became a redditor for a year now but can't stop reading reading random posts.",
+    desc: "Second favorite place. Just became a redditor for a year now but can't stop reading random posts.",
+    link: QUIET_NODE_REDDIT_LINK,
+    bgClass: 'bg-reddit',
   },
-  linkedIn: {
+  {
+    id: 2,
     title: 'LinkedIn',
     desc: 'Professional social media. Been using it professionaly for 2 years. Connect with me!',
+    link: QUIET_NODE_LINKEDIN_LINK,
+    bgClass: 'bg-linkedin',
   },
-  twitter: {
-    title: 'twitter',
+  {
+    id: 3,
+    title: 'Twitter',
     desc: 'Only up for the news. Well you know still follow me!',
+    link: QUIET_NODE_TWITTER_LINK,
+    bgClass: 'bg-twitter',
   },
-  gmail: {
-    title: 'gmail',
-    desc: "Main communicating media. Shoot me an email I'm on it everyday!",
+  {
+    id: 4,
+    title: 'Gmail',
+    desc: 'Main communicating media. Shoot me an email!',
+    link: QUIET_NODE_EMAIL_LINK,
+    bgClass: 'bg-gmail',
   },
-  discord: {
-    title: 'discord',
-    desc: "You just can't 'not' have a discord these days. C'mon.",
+  {
+    id: 5,
+    title: 'Discord',
+    desc: "C'mon you just can't 'not' have a discord these days! No? nvm.",
+    link: QUIET_NODE_DISCORD_LINK,
+    bgClass: 'bg-discord',
   },
-  tiktok: {
+  {
+    id: 6,
     title: 'Tiktok',
-    desc: 'Place where I post my dancing videos like a 5th grade little boy.',
+    desc: 'Follow me on Tiktok where I post my dancing videos like a 5th grade little boy.',
+    link: 'sike',
+    bgClass: 'bg-tiktok',
   },
-};
+];
