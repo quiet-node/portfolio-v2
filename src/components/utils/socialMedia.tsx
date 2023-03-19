@@ -28,7 +28,7 @@ const SocialMedia = ({ social }: PageProps) => {
                 w-full gap-3
                 sm:pl-6 sm:gap-6
                 xmmd:w-[90%]
-                xl:w-[84%]`}
+                xl:w-3/4`}
     >
       {/* icons */}
       <div className='text-5xl'>
