@@ -82,7 +82,12 @@ const Footer = () => {
             margin: '100% 0% -9% 0%',
           }}
           variants={horizontalVariants}
-          className='flex flex-col gap-6 mt-16 px-24 2xl:px-[14rem] mb-20'
+          className='flex flex-col gap-6 mt-16 mb-12
+                    px-3
+                    xxsm:px-6
+                    sm:px-9
+                    xmmd:px-24 
+                    2xl:px-[14rem]'
         >
           {/* greetings */}
           <div>

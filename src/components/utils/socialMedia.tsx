@@ -17,19 +17,18 @@ const SocialMedia = ({ social }: PageProps) => {
   const { id, title, desc, link, bgClass } = social;
   return (
     <motion.div
-      //   initial={{ opacity: 0, x: -21 }}
-      //   whileInView={{ opacity: 1, x: 0 }}
-      //   viewport={{ once: true }}
-      //   whileHover={{ y: -0.5 }}
-      //   transition={{ duration: 0.6, delay: 1.2 }}
       onClick={() => {
         if (id === 6) {
-          alert('SIKE! You wish!! LOOL');
+          alert('SIKEE!!! You wish!!! LOOOOL');
         } else {
           window.open(link, '_target');
         }
       }}
-      className={`cursor-pointer flex gap-6 items-center w-fit py-1 px-6 rounded-xl ${bgClass} w-3/4`}
+      className={`cursor-pointer flex items-center w-fit py-1 rounded-lg ${bgClass} border-r-22 border-r-black
+                w-full gap-3
+                sm:pl-6 sm:gap-6
+                xmmd:w-[90%]
+                xl:w-[84%]`}
     >
       {/* icons */}
       <div className='text-5xl'>
@@ -79,10 +78,10 @@ const SocialMedia = ({ social }: PageProps) => {
       {/* title/desc */}
       <div className='flex flex-col'>
         {/* title */}
-        <div className='text-xl font-bold'>{title}</div>
+        <div className='text-lg sm:text-xl font-bold'>{title}</div>
 
         {/* desc */}
-        <div className='text-lg tracking-tight font-semibold text-gray-500'>
+        <div className='text-base sm:text-lg tracking-tight font-semibold text-gray-500'>
           {desc}
         </div>
       </div>
