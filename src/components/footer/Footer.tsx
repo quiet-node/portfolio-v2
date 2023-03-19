@@ -16,7 +16,7 @@ const Footer = () => {
   const verticalVariants = VerticalCommonVariants(30);
 
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       {/* wrapper */}
       <div>
         {/* Last */}
@@ -28,56 +28,59 @@ const Footer = () => {
             margin: '100% 0% -9% 0%',
           }}
           variants={verticalVariants}
-          className='bg-black text-white flex justify-center flex-col items-center px-3 py-3 text-lg font-semibold tracking-tight'
+          className='bg-black text-white flex justify-center flex-col items-center tracking-tight font-semibold text-center
+                    px-3 py-3
+                    xmmd:text-lg'
         >
           {/* technologies */}
           <motion.div variants={verticalVariants} className=''>
-            Built with{' '}
-            <span className='inline-flex gap-1'>
+            Built with <br className='hidden xssm:block sm:hidden' />
+            <span className='gap-1'>
               <motion.a
                 whileHover={{ y: -2 }}
-                className='hover:underline'
+                className='inline hover:underline'
                 href={TS_LINK}
                 target='_blank'
               >
-                TypeScript,
+                TypeScript,{' '}
               </motion.a>
               <motion.a
                 whileHover={{ y: -2 }}
-                className='hover:underline'
+                className='inline hover:underline'
                 href={REACT_LINK}
                 target='_blank'
               >
-                React.js,
+                React.js,{' '}
               </motion.a>
               <motion.a
                 whileHover={{ y: -2 }}
-                className='hover:underline'
+                className='inline hover:underline'
                 href={VITE_LINK}
                 target='_blank'
               >
-                Vite.js,
+                Vite.js,{' '}
               </motion.a>
+              <br className='xssm:hidden' />
               <motion.a
                 whileHover={{ y: -2 }}
-                className='hover:underline'
+                className='inline hover:underline'
                 href={TAILWIND_LINK}
                 target='_blank'
               >
-                TailwindCSS,
+                TailwindCSS,{' '}
               </motion.a>
               <motion.a
                 whileHover={{ y: -2 }}
-                className='hover:underline'
+                className='inline hover:underline'
                 href={FRAMER_LINK}
                 target='_blank'
               >
-                Framer Motion,
+                Framer Motion,{' '}
               </motion.a>{' '}
               and{' '}
               <motion.a
                 whileHover={{ y: -2 }}
-                className='hover:underline'
+                className='inline hover:underline'
                 href={VERCEL_LINK}
                 target='_blank'
               >
