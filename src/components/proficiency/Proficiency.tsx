@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
+import { SkillProficientBar } from '../utils';
 import { motion, useAnimation } from 'framer-motion';
 import useScreenSizes from '../../hooks/useWindowSize/';
-import { SkillProficientBar } from '../utils';
+import {
+  HorizontalCommonVariants,
+  VerticalCommonVariants,
+} from '../../utils/framerVariants';
 import {
   MORE_SKILLS_LISTS,
   MAIN_LEFT_SKILLS_LISTS,
   MAIN_RIGHT_SKILLS_LISTS,
 } from '../../utils/constants';
-import {
-  HorizontalCommonVariants,
-  VerticalCommonVariants,
-} from '../../utils/framerVariants';
 
 const Stats = () => {
   const shakingAnimation = useAnimation();

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import useScreenSizes from '../../hooks/useWindowSize';
 import { VerticalCommonVariants } from '../../utils/framerVariants';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
-import useScreenSizes from '../../hooks/useWindowSize';
 
 interface PapgeProps {
   project: Project;

@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
 import { ImMail } from 'react-icons/im';
 import { SiDiscord, SiTiktok } from 'react-icons/si';
 import { BsGithub, BsTwitter, BsReddit, BsLinkedin } from 'react-icons/bs';
-import { motion } from 'framer-motion';
 
 interface PageProps {
   social: {

@@ -1,8 +1,8 @@
 import Intro from './intro/Intro';
 import About from './about/About';
-import Proficiency from './proficiency/Proficiency';
+import Footer from './footer/Footer';
 import Projects from './projects/Projects';
 import SocialMedia from './social/SocialMedia';
-import Footer from './footer/Footer';
+import Proficiency from './proficiency/Proficiency';
 
 export { Intro, About, Proficiency, Projects, Footer, SocialMedia };
