@@ -16,7 +16,8 @@ function App() {
 
   useEffect(() => {
     ReactGA.initialize(googleMeasurementId);
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview(window.location.pathname);
+    console.log(window.location.pathname);
   }, []);
 
   return (
