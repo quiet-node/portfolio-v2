@@ -10,9 +10,11 @@
 
 ![](https://img.shields.io/badge/TypeScript-4.9.3-blue?style=flat-square&logo=typescript)
 ![](https://img.shields.io/badge/React.js-18.2.0-blue?style=flat-square&logo=react)
-![](https://img.shields.io/badge/Vite.js-4.1.0-blue?style=flat-square&logo=vite)
+![](https://img.shields.io/badge/Vite.js-4.1.0-blue?style=flat-square&logo=vite) <br />
 ![](https://img.shields.io/badge/Tailwindcss-3.2.7-blue?style=flat-square&logo=tailwindcss)
 ![](https://img.shields.io/badge/FramerMotion-10.2.5-blue?style=flat-square&logo=framer)
+![](https://img.shields.io/badge/Figma-116.7.103-blue?style=flat-square&logo=figma)
+![](https://img.shields.io/badge/Vercel-28.15.3-blue?style=flat-square&logo=vercel)
 
 </div>
 
