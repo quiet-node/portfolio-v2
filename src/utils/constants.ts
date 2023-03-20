@@ -44,6 +44,7 @@ export const FIRE_LINK = 'https://firebase.google.com/';
 export const SWIFT_LINK = 'https://developer.apple.com/xcode/swiftui/';
 export const MAC_LINK = 'https://support.apple.com/macos';
 export const XCODE_LINK = 'https://developer.apple.com/xcode/';
+export const FIGMA_LINK = 'https://www.figma.com/';
 
 export const MAIN_LEFT_SKILLS_LISTS: Technology[] = [
   {
