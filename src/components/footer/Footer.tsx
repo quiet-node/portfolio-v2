@@ -9,6 +9,7 @@ import {
   VERCEL_LINK,
   TAILWIND_LINK,
   QUIET_NODE_PORTFOLIO_V2_GITHUB_LINK,
+  FIGMA_LINK,
 } from '../../utils/constants';
 
 const Footer = () => {
@@ -29,7 +30,7 @@ const Footer = () => {
                     xmmd:text-lg'
         >
           {/* technologies */}
-          <motion.div variants={verticalVariants} className=''>
+          <motion.div variants={verticalVariants}>
             Built with <br className='hidden xssm:block sm:hidden' />
             <span className='gap-1'>
               <motion.a
@@ -72,6 +73,14 @@ const Footer = () => {
                 target='_blank'
               >
                 Framer Motion,{' '}
+              </motion.a>{' '}
+              <motion.a
+                whileHover={{ y: -2 }}
+                className='inline hover:underline'
+                href={FIGMA_LINK}
+                target='_blank'
+              >
+                Figma,{' '}
               </motion.a>{' '}
               and{' '}
               <motion.a
