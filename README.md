@@ -1,10 +1,10 @@
 <p align="center">
 <br />
-<a href="https://quiet-node.site"><img src="https://github.com/quiet-node/portfolio-v2/blob/main/public/quiet-node.ico?raw=true" width="150" alt=""/></a>
+<a href="https://quiet-node.dev"><img src="https://github.com/quiet-node/portfolio-v2/blob/main/public/quiet-node.ico?raw=true" width="150" alt=""/></a>
 <h1 align="center">Quiet Node | Portfolio </h1>
 </p>
 
-<h3 align="center"> 🏵️ Live at: https://quiet-node.site </h3>
+<h3 align="center"> 🏵️ Live at: https://quiet-node.dev </h3>
 
 <div align="center">
 
