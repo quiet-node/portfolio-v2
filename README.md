@@ -1,10 +1,10 @@
 <p align="center">
 <br />
-<a href="https://quiet-node.vercel.app"><img src="https://github.com/quiet-node/portfolio-v2/blob/main/public/quiet-node.ico?raw=true" width="150" alt=""/></a>
+<a href="https://quiet-node.site"><img src="https://github.com/quiet-node/portfolio-v2/blob/main/public/quiet-node.ico?raw=true" width="150" alt=""/></a>
 <h1 align="center">Quiet Node | Portfolio </h1>
 </p>
 
-<h3 align="center"> 🏵️ Live at: https://quiet-node.vercel.app </h3>
+<h3 align="center"> 🏵️ Live at: https://quiet-node.site </h3>
 
 <div align="center">
 
@@ -18,7 +18,7 @@
 
 </div>
 
-Howdy, 👋 it's Logan ;) Welcome to my Portfolio! 
+Howdy, 👋 it's Logan ;) Welcome to my Portfolio!
 
 I'm a full-stack web 3.0 software developer and a blockchain & smart contract enthusiast.
 
@@ -28,9 +28,4 @@ Cheers!
 
 ## Here is a quick demo:
 
-
 https://user-images.githubusercontent.com/66233296/226212618-bb2b6f8c-ace6-4649-957d-df7f66e1907f.mp4
-
-
-
-
