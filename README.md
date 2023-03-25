@@ -14,6 +14,7 @@
 ![](https://img.shields.io/badge/Tailwindcss-3.2.7-blue?style=flat-square&logo=tailwindcss)
 ![](https://img.shields.io/badge/FramerMotion-10.2.5-blue?style=flat-square&logo=framer)
 ![](https://img.shields.io/badge/Figma-116.7.103-blue?style=flat-square&logo=figma)
+![](https://img.shields.io/badge/Vercel-28.15.3-blue?style=flat-square&logo=vercel)
 
 </div>
 
