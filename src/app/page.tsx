@@ -1,24 +1,21 @@
-import './App.css';
 import {
   About,
-  Footer,
   Intro,
-  Proficiency,
+  Stats,
+  Footer,
   Projects,
   SocialMedia,
-} from './components';
+} from '@/components';
 
-function App() {
+export default function Home() {
   return (
     <>
       <Intro />
       <About />
-      <Proficiency />
+      <Stats />
       <Projects />
       <SocialMedia />
       <Footer />
     </>
   );
 }
-
-export default App;

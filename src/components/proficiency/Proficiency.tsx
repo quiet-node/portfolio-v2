@@ -1,16 +1,19 @@
-import { useEffect, useState } from 'react';
-import { SkillProficientBar } from '../utils';
-import { motion, useAnimation } from 'framer-motion';
-import useScreenSizes from '../../hooks/useWindowSize/';
-import {
-  HorizontalCommonVariants,
-  VerticalCommonVariants,
-} from '../../utils/framerVariants';
+'use client';
+
+import { useState, useEffect } from 'react';
+import useScreenSizes from '@/hooks/useWindowSize';
+import { useAnimation, motion } from 'framer-motion';
+import SkillProficientBar from './utils/SkillProficientBar';
+import { SmotionDiv, SmotionHeader } from '@/libs/framer-motion';
 import {
   MORE_SKILLS_LISTS,
   MAIN_LEFT_SKILLS_LISTS,
   MAIN_RIGHT_SKILLS_LISTS,
-} from '../../utils/constants';
+} from '@/utils/constants';
+import {
+  VerticalCommonVariants,
+  HorizontalCommonVariants,
+} from '@/utils/framerVariants';
 
 const Stats = () => {
   const shakingAnimation = useAnimation();
@@ -44,7 +47,7 @@ const Stats = () => {
     }, 2000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [leftSkillsList, moreSkillsList, rightSkillsList]);
 
   useEffect(() => {
     const intervalId = setInterval(async () => {
@@ -57,7 +60,7 @@ const Stats = () => {
     }, 5000);
 
     return () => clearInterval(intervalId);
-  }, [shakingAnimation]);
+  }, [shakingAnimation, isMedium]);
 
   useEffect(() => {
     setMounted(true);
@@ -79,7 +82,8 @@ const Stats = () => {
       >
         {/* header */}
         <div className='mt-3 sm:mt-6 md:mt-9 lg:mt-12'>
-          <motion.h1
+          <SmotionHeader
+            elementType='h2'
             initial={{ opacity: 0, x: 90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
@@ -87,8 +91,8 @@ const Stats = () => {
             className='text-3xl sm:text-4xl font-extrabold text-primary drop-shadow-2xl'
           >
             Proficiency.
-          </motion.h1>
-          <motion.div
+          </SmotionHeader>
+          <SmotionDiv
             initial={{ opacity: 0, x: -90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.38 }}
@@ -96,7 +100,7 @@ const Stats = () => {
             className='flex justify-center -mt-0.5'
           >
             <hr className='bg-primary h-[0.2rem] w-20 sm:w-32 rounded-xl drop-shadow-2xl' />
-          </motion.div>
+          </SmotionDiv>
         </div>
 
         {/* body - skill proficient bars */}
@@ -105,7 +109,7 @@ const Stats = () => {
           {!isSmall ? (
             <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
               {/* top skills */}
-              <motion.div
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -119,38 +123,38 @@ const Stats = () => {
             use `isSmall` state as the value for `left` attribute*/}
                 {leftSkillsList.map((tech, key) => {
                   return (
-                    <motion.div variants={verticalMainSkills} key={key}>
+                    <SmotionDiv variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value as number}
                         logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
-                    </motion.div>
+                    </SmotionDiv>
                   );
                 })}
 
                 {/* bottom skills  */}
                 {rightSkillsList.map((tech, key) => {
                   return (
-                    <motion.div variants={verticalMainSkills} key={key}>
+                    <SmotionDiv variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value as number}
                         logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
-                    </motion.div>
+                    </SmotionDiv>
                   );
                 })}
-              </motion.div>
+              </SmotionDiv>
             </div>
           ) : (
             // @notice main skills for small and bigger screens
             <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
               {/* left skills */}
               <div>
-                <motion.div
+                <SmotionDiv
                   initial='hidden'
                   whileInView='shown'
                   viewport={{
@@ -164,7 +168,7 @@ const Stats = () => {
             use `isSmall` state as the value for `left` attribute*/}
                   {leftSkillsList.map((tech, key) => {
                     return (
-                      <motion.div variants={leftVarientSkills} key={key}>
+                      <SmotionDiv variants={leftVarientSkills} key={key}>
                         <SkillProficientBar
                           value={tech.value as number}
                           logo={tech.technology}
@@ -172,14 +176,14 @@ const Stats = () => {
                           shouldShake={tech.shouldShake}
                           left={true}
                         />
-                      </motion.div>
+                      </SmotionDiv>
                     );
                   })}
-                </motion.div>
+                </SmotionDiv>
               </div>
 
               {/* right skills */}
-              <motion.div
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -191,24 +195,24 @@ const Stats = () => {
               >
                 {rightSkillsList.map((tech, key) => {
                   return (
-                    <motion.div key={key} variants={rightVarientSkills}>
+                    <SmotionDiv key={key} variants={rightVarientSkills}>
                       <SkillProficientBar
                         value={tech.value as number}
                         logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
-                    </motion.div>
+                    </SmotionDiv>
                   );
                 })}
-              </motion.div>
+              </SmotionDiv>
             </div>
           )}
 
           {/* more skills */}
           <div className='flex flex-col gap-3'>
             {/* @notice medium or larger screens */}
-            <motion.div
+            <SmotionDiv
               initial='hidden'
               whileInView='shown'
               viewport={{
@@ -244,11 +248,11 @@ const Stats = () => {
                     </motion.a>
                   );
                 })}
-            </motion.div>
+            </SmotionDiv>
 
             {/* @notice small screens */}
             {!isMedium && (
-              <motion.div
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -284,12 +288,12 @@ const Stats = () => {
                       </motion.a>
                     );
                   })}
-              </motion.div>
+              </SmotionDiv>
             )}
 
             {/* @notice mobile screens */}
             {!isSmall && (
-              <motion.div
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -323,7 +327,7 @@ const Stats = () => {
                     </motion.a>
                   );
                 })}
-              </motion.div>
+              </SmotionDiv>
             )}
           </div>
         </div>

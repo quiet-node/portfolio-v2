@@ -1,10 +1,7 @@
-import { useRef } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import PS from './client/PS';
+import { SmotionDiv, SmotionHeader } from '@/libs/framer-motion';
 
 const About = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { margin: '100% 0% -9% 0%' });
   return (
     <section
       className='overflow-hidden scrollbar-hidden bg-primary
@@ -22,7 +19,8 @@ const About = () => {
       >
         {/* header */}
         <div>
-          <motion.h1
+          <SmotionHeader
+            elementType='h2'
             initial={{ opacity: 0, x: -90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
@@ -30,8 +28,8 @@ const About = () => {
             className='text-3xl sm:text-4xl font-extrabold'
           >
             About.
-          </motion.h1>
-          <motion.div
+          </SmotionHeader>
+          <SmotionDiv
             initial={{ opacity: 0, x: 90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.38 }}
@@ -39,11 +37,11 @@ const About = () => {
             className='flex justify-center -mt-0.5'
           >
             <hr className='bg-white h-[0.2rem] w-12 sm:w-16 rounded-xl' />
-          </motion.div>
+          </SmotionDiv>
         </div>
 
         {/* body */}
-        <motion.div
+        <SmotionDiv
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.5 }}
@@ -54,7 +52,7 @@ const About = () => {
                 lg:px-9'
         >
           {/* first sentence */}
-          <motion.div>
+          <SmotionDiv>
             <p>
               An avid technology believer{' '}
               <br className='hidden xxsm:block xsm:hidden' /> who is{' '}
@@ -66,10 +64,10 @@ const About = () => {
               blockchain <br className='hidden xxsm:block xsm:hidden' /> and AI
               can revolutionize the future.
             </p>
-          </motion.div>
+          </SmotionDiv>
 
           {/* @medium-device: second sentence */}
-          <motion.div className='hidden sm:block'>
+          <SmotionDiv className='hidden sm:block'>
             <p>
               Through commitment to professionalism,{' '}
               <span className='sm:hidden md:inline'>and </span>
@@ -91,45 +89,13 @@ const About = () => {
                 all aspects of human life
               </span>
             </p>
-          </motion.div>
+          </SmotionDiv>
 
           {/* third sentence */}
           <div className='mt-6 flex justify-center'>
-            <div ref={ref} className=' w-fit'>
-              {isInView ? (
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ amount: 'some', margin: '100% 0% -9% 0%' }}
-                  className='hidden sm:block before:content-[open-quote] after:content-[close-quote] justify-center sm:typewriter 
-                        before:text-2xl after:text-2xl
-                        sm:before:text-3xl sm:after:text-3xl'
-                >
-                  Leveraging technology to drive{' '}
-                  <span className='hidden sm:inline-block'>positive</span>{' '}
-                  changes and <br className='hidden xsm:block sm:hidden' />{' '}
-                  improve the world.
-                </motion.p>
-              ) : (
-                <></>
-              )}
-
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.6 }}
-                viewport={{ amount: 'some', margin: '100% 0% -9% 0%' }}
-                className='sm:hidden before:content-[open-quote] after:content-[close-quote] justify-center
-                        before:text-2xl after:text-2xl'
-              >
-                Leveraging technology to drive{' '}
-                <span className='hidden sm:inline-block'>positive</span> changes
-                and <br className='hidden xsm:block sm:hidden' /> improve the
-                world.
-              </motion.p>
-            </div>
+            <PS />
           </div>
-        </motion.div>
+        </SmotionDiv>
       </div>
     </section>
   );

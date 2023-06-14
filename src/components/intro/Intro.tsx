@@ -1,21 +1,26 @@
-import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ImMail } from 'react-icons/im';
-import { VerticalCommonVariants } from '../../utils/framerVariants';
+import { VerticalCommonVariants } from '@/utils/framerVariants';
+import {
+  SmotionDiv,
+  SmotionLink,
+  SmotionHeader,
+  SmotionSpan,
+} from '@/libs/framer-motion';
+import {
+  QUIET_NODE_LINKEDIN_LINK,
+  QUIET_NODE_GITHUB_LINK,
+  QUIET_NODE_TWITTER_LINK,
+  QUIET_NODE_EMAIL_LINK,
+} from '@/utils/constants';
 import {
   AiFillGithub,
   AiFillLinkedin,
   AiFillTwitterCircle,
 } from 'react-icons/ai';
-import {
-  QUIET_NODE_EMAIL_LINK,
-  QUIET_NODE_GITHUB_LINK,
-  QUIET_NODE_LINKEDIN_LINK,
-  QUIET_NODE_TWITTER_LINK,
-} from '../../utils/constants';
 
 const Intro = () => {
   const descriptionVariants = VerticalCommonVariants(60, 9, 0.9);
-
   return (
     <section
       className='h-screen overflow-hidden scrollbar-hidden
@@ -33,7 +38,8 @@ const Intro = () => {
         >
           {/* Greetings */}
           <div className='drop-shadow-xl'>
-            <motion.h1
+            <SmotionHeader
+              elementType='h1'
               initial={{ opacity: 0, y: -60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -43,7 +49,7 @@ const Intro = () => {
                     sm:text-4xl'
             >
               Howdy,
-              <motion.span
+              <SmotionSpan
                 animate={{
                   rotate: [0, 30, 0, 30, 0, 0, 0],
                   transition: { duration: 1.4, repeat: Infinity },
@@ -51,10 +57,11 @@ const Intro = () => {
                 className='cursor-pointer select-none'
               >
                 👋
-              </motion.span>{' '}
-              It's Logan <span className='hidden xxsm:inline'>;)</span>
-            </motion.h1>
-            <motion.h2
+              </SmotionSpan>{' '}
+              It&apos;s Logan <span className='hidden xxsm:inline'>;)</span>
+            </SmotionHeader>
+            <SmotionHeader
+              elementType='h2'
               initial={{ opacity: 0, x: -90 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -63,47 +70,47 @@ const Intro = () => {
                     text-lg sm:text-xl'
             >
               (a.k.a. quiet-node)
-            </motion.h2>
+            </SmotionHeader>
           </div>
 
           {/* Description */}
-          <motion.div
+          <SmotionDiv
             initial='hidden'
             whileInView='shown'
             viewport={{ once: true }}
             variants={descriptionVariants}
             className='text-lg sm:text-xl font-bold drop-shadow-xl'
           >
-            <motion.div variants={descriptionVariants}>
+            <SmotionDiv variants={descriptionVariants}>
               Full Stack Software Developer.
-            </motion.div>
-            <motion.div variants={descriptionVariants}>
+            </SmotionDiv>
+            <SmotionDiv variants={descriptionVariants}>
               Blockchain and Web 3.0 Enthusiast.
-            </motion.div>
-            <motion.div variants={descriptionVariants}>
+            </SmotionDiv>
+            <SmotionDiv variants={descriptionVariants}>
               Innovating technology for a brighter future.
-            </motion.div>
-          </motion.div>
+            </SmotionDiv>
+          </SmotionDiv>
         </div>
 
         {/* Social & Avatar */}
         <div className='flex flex-col'>
           {/* Social Medias */}
           <div className='text-5xl flex flex-wrap justify-center gap-9 xxsm:gap-12 sm:gap-16 lg:gap-20 py-3 text-teal-600'>
-            <motion.a
+            <SmotionLink
               initial={{ opacity: 0, x: -21 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -0.5 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              href={QUIET_NODE_LINKEDIN_LINK}
+              href={QUIET_NODE_LINKEDIN_LINK as string}
               target='_blank'
               className='cursor-pointer hover:text-[#0A66C2]'
               title='LinkedIn'
             >
               <AiFillLinkedin />
-            </motion.a>
-            <motion.a
+            </SmotionLink>
+            <SmotionLink
               initial={{ opacity: 0, y: 21 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -115,9 +122,9 @@ const Intro = () => {
               title='GitHub'
             >
               <AiFillGithub />
-            </motion.a>
+            </SmotionLink>
 
-            <motion.a
+            <SmotionLink
               initial={{ opacity: 0, y: 21 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -129,8 +136,8 @@ const Intro = () => {
               title='Twitter'
             >
               <AiFillTwitterCircle />
-            </motion.a>
-            <motion.a
+            </SmotionLink>
+            <SmotionLink
               initial={{ opacity: 0, x: 21 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -142,12 +149,12 @@ const Intro = () => {
               title='Gmail'
             >
               <ImMail size={40} />
-            </motion.a>
+            </SmotionLink>
           </div>
 
           {/* Avatar */}
           <div className='flex justify-center'>
-            <motion.div
+            <SmotionDiv
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               whileInView={{
@@ -162,12 +169,14 @@ const Intro = () => {
                         lg:w-80 lg:h-80
                         2xl:w-[21rem] 2xl:h-[21rem]`}
             >
-              <img
+              <Image
                 className='absolute inset-0 w-full h-full object-center object-cover rounded-full select-none'
-                src={'assets/avatars/profile_pic.png'}
+                src={'/assets/avatars/profile_pic.png'}
                 alt='quiet-node'
+                width={300}
+                height={300}
               />
-            </motion.div>
+            </SmotionDiv>
           </div>
         </div>
       </div>

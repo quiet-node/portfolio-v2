@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ImMail } from 'react-icons/im';
 import { SiDiscord, SiTiktok } from 'react-icons/si';

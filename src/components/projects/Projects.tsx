@@ -1,7 +1,9 @@
+'use client';
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ProjectTile } from '../utils';
 import { MdOpenInNew } from 'react-icons/md';
+import ProjectTile from './utils/ProjectTile';
 import { PROJECTS_LISTS, QUIET_NODE_GITHUB_LINK } from '../../utils/constants';
 
 const Projects = () => {
@@ -31,7 +33,7 @@ const Projects = () => {
       >
         {/* header */}
         <div>
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, x: -90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
@@ -39,7 +41,7 @@ const Projects = () => {
             className='text-3xl sm:text-4xl font-black text-[#9d5746]'
           >
             Projects.
-          </motion.h1>
+          </motion.h2>
           <motion.div
             initial={{ opacity: 0, x: 90 }}
             whileInView={{ opacity: 1, x: 0 }}

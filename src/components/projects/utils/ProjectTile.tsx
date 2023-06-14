@@ -1,8 +1,11 @@
+'use client';
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import useScreenSizes from '../../hooks/useWindowSize';
-import { VerticalCommonVariants } from '../../utils/framerVariants';
+import useScreenSizes from '@/hooks/useWindowSize';
+import { VerticalCommonVariants } from '@/utils/framerVariants';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
+import Image from 'next/image';
 
 interface PapgeProps {
   project: Project;
@@ -428,10 +431,12 @@ const ProjectTile = ({ project, flipped }: PapgeProps) => {
           } flex items-center justify-center
           ${(id === 5 || id === 6) && 'mt-9 mb-16 xmmd:mb-0'}`}
         >
-          <img
+          <Image
             src={`assets/project_thumbnails/${thumbnail}`}
             alt={title}
             className='border-22 border-black'
+            width={2000}
+            height={2000}
           />
         </motion.div>
       </div>

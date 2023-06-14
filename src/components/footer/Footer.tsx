@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 import { BsGithub } from 'react-icons/bs';
 import { VerticalCommonVariants } from '../../utils/framerVariants';
@@ -11,6 +12,7 @@ import {
   QUIET_NODE_PORTFOLIO_V2_GITHUB_LINK,
   FIGMA_LINK,
 } from '../../utils/constants';
+import { SmotionDiv, SmotionLink } from '@/libs/framer-motion';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,7 +23,7 @@ const Footer = () => {
       {/* wrapper */}
       <div>
         {/* Last */}
-        <motion.div
+        <SmotionDiv
           initial='hidden'
           whileInView='shown'
           variants={verticalVariants}
@@ -30,72 +32,79 @@ const Footer = () => {
                     xmmd:text-lg'
         >
           {/* technologies */}
-          <motion.div variants={verticalVariants}>
+          <SmotionDiv variants={verticalVariants}>
             Built with <br className='hidden xssm:block sm:hidden' />
             <span className='gap-1'>
-              <motion.a
+              <SmotionLink
+                inLine={true}
                 whileHover={{ y: -2 }}
                 className='inline hover:underline'
                 href={TS_LINK}
                 target='_blank'
               >
-                TypeScript,{' '}
-              </motion.a>
-              <motion.a
+                TypeScript,
+              </SmotionLink>{' '}
+              <SmotionLink
+                inLine={true}
                 whileHover={{ y: -2 }}
                 className='inline hover:underline'
                 href={REACT_LINK}
                 target='_blank'
               >
-                React.js,{' '}
-              </motion.a>
-              <motion.a
+                React.js,
+              </SmotionLink>{' '}
+              <SmotionLink
+                inLine={true}
                 whileHover={{ y: -2 }}
                 className='inline hover:underline'
                 href={VITE_LINK}
                 target='_blank'
               >
-                Vite.js,{' '}
-              </motion.a>
+                Vite.js,
+              </SmotionLink>{' '}
               <br className='xssm:hidden' />
-              <motion.a
+              <SmotionLink
+                inLine={true}
                 whileHover={{ y: -2 }}
                 className='inline hover:underline'
                 href={TAILWIND_LINK}
                 target='_blank'
               >
-                TailwindCSS,{' '}
-              </motion.a>
-              <motion.a
+                TailwindCSS,
+              </SmotionLink>{' '}
+              <SmotionLink
+                inLine={true}
                 whileHover={{ y: -2 }}
                 className='inline hover:underline'
                 href={FRAMER_LINK}
                 target='_blank'
               >
-                Framer Motion,{' '}
-              </motion.a>{' '}
-              <motion.a
+                Framer Motion,
+              </SmotionLink>{' '}
+              <SmotionLink
+                inLine={true}
                 whileHover={{ y: -2 }}
                 className='inline hover:underline'
                 href={FIGMA_LINK}
                 target='_blank'
               >
-                Figma,{' '}
-              </motion.a>{' '}
+                Figma,
+              </SmotionLink>{' '}
               and{' '}
-              <motion.a
+              <SmotionLink
+                inLine={true}
                 whileHover={{ y: -2 }}
                 className='inline hover:underline'
                 href={VERCEL_LINK}
                 target='_blank'
               >
                 Vercel.
-              </motion.a>
+              </SmotionLink>
             </span>
-          </motion.div>
+          </SmotionDiv>
           {/* Star this project */}
           <motion.div variants={verticalVariants}>
-            <motion.a
+            <SmotionLink
               href={QUIET_NODE_PORTFOLIO_V2_GITHUB_LINK}
               target='_blank'
             >
@@ -103,7 +112,7 @@ const Footer = () => {
                 Star this project on Github
                 <BsGithub />
               </div>
-            </motion.a>
+            </SmotionLink>
           </motion.div>
 
           {/* Copyright */}
@@ -123,7 +132,7 @@ const Footer = () => {
           >
             🇻🇳 Vietnamese 🇻🇳
           </motion.div>
-        </motion.div>
+        </SmotionDiv>
       </div>
     </div>
   );
