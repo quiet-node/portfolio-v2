@@ -97,3 +97,16 @@ export const SmotionLink = (props: PageProps) => {
     </motion.div>
   );
 };
+
+export const SmontionP = (props: PageProps) => {
+  return (
+    <motion.p
+      initial={props.initial}
+      whileInView={props.whileInView}
+      viewport={props.viewport}
+      className={props.className}
+    >
+      {props.children}
+    </motion.p>
+  );
+};
