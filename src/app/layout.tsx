@@ -1,15 +1,31 @@
 import '@/styles/globals.css';
 import { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import NunitoFonts from '@/utils/fonts';
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import {
   OFFICIAL_AUTHOR_URL,
   OFFICIAL_OG_IMAGE_URL,
   OFFICIAL_PLATOFORM_TWITTER_URL,
   OFFICIAL_TWITTER_IMAGE_URL,
 } from '@/utils/constants';
-import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 
-const inter = Inter({ subsets: ['latin'] });
+/** @dev initialize nunito font */
+const nunito = NunitoFonts;
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang='en'>
+      <body className={nunito.className}>
+        <GoogleAnalytics />
+        {children}
+      </body>
+    </html>
+  );
+}
 
 export const metadata: Metadata = {
   title: 'Quiet Node | Portfolio',
@@ -72,18 +88,3 @@ export const metadata: Metadata = {
     },
   },
 };
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang='en'>
-      <body className={inter.className}>
-        <GoogleAnalytics />
-        {children}
-      </body>
-    </html>
-  );
-}
