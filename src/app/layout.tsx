@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import { Metadata } from 'next';
 import NunitoFonts from '@/utils/fonts';
-import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
+import { GoogleAnalytics } from '@/components';
 import {
   OFFICIAL_AUTHOR_URL,
   OFFICIAL_OG_IMAGE_URL,
