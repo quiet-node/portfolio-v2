@@ -14,6 +14,7 @@ const useScreenSizes = () => {
     setIsMedium((windowSize.width as number) >= 768);
     setIsMdMedium((windowSize.width as number) >= 976);
   }, [windowSize]);
+
   return [isSmall, isMedium, IsMdMedium];
 };
 

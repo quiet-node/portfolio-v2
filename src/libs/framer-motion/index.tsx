@@ -65,7 +65,7 @@ export const SmotionSpan = (props: PageProps) => {
   return <motion.span animate={props.animate}>{props.children}</motion.span>;
 };
 
-export const SmontionDiv = (props: PageProps) => {
+export const SmotionDiv = (props: PageProps) => {
   return (
     <motion.div
       initial={props.initial}

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ImMail } from 'react-icons/im';
 import { VerticalCommonVariants } from '@/utils/framerVariants';
 import {
-  SmontionDiv,
+  SmotionDiv,
   SmotionLink,
   SmotionHeader,
   SmotionSpan,
@@ -74,23 +74,23 @@ const Intro = () => {
           </div>
 
           {/* Description */}
-          <SmontionDiv
+          <SmotionDiv
             initial='hidden'
             whileInView='shown'
             viewport={{ once: true }}
             variants={descriptionVariants}
             className='text-lg sm:text-xl font-bold drop-shadow-xl'
           >
-            <SmontionDiv variants={descriptionVariants}>
+            <SmotionDiv variants={descriptionVariants}>
               Full Stack Software Developer.
-            </SmontionDiv>
-            <SmontionDiv variants={descriptionVariants}>
+            </SmotionDiv>
+            <SmotionDiv variants={descriptionVariants}>
               Blockchain and Web 3.0 Enthusiast.
-            </SmontionDiv>
-            <SmontionDiv variants={descriptionVariants}>
+            </SmotionDiv>
+            <SmotionDiv variants={descriptionVariants}>
               Innovating technology for a brighter future.
-            </SmontionDiv>
-          </SmontionDiv>
+            </SmotionDiv>
+          </SmotionDiv>
         </div>
 
         {/* Social & Avatar */}
@@ -154,7 +154,7 @@ const Intro = () => {
 
           {/* Avatar */}
           <div className='flex justify-center'>
-            <SmontionDiv
+            <SmotionDiv
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               whileInView={{
@@ -176,7 +176,7 @@ const Intro = () => {
                 width={300}
                 height={300}
               />
-            </SmontionDiv>
+            </SmotionDiv>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import useScreenSizes from '@/hooks/useWindowSize';
 import { useAnimation, motion } from 'framer-motion';
 import SkillProficientBar from './utils/SkillProficientBar';
-import { SmontionDiv, SmotionHeader } from '@/libs/framer-motion';
+import { SmotionDiv, SmotionHeader } from '@/libs/framer-motion';
 import {
   MORE_SKILLS_LISTS,
   MAIN_LEFT_SKILLS_LISTS,
@@ -92,7 +92,7 @@ const Stats = () => {
           >
             Proficiency.
           </SmotionHeader>
-          <SmontionDiv
+          <SmotionDiv
             initial={{ opacity: 0, x: -90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.38 }}
@@ -100,7 +100,7 @@ const Stats = () => {
             className='flex justify-center -mt-0.5'
           >
             <hr className='bg-primary h-[0.2rem] w-20 sm:w-32 rounded-xl drop-shadow-2xl' />
-          </SmontionDiv>
+          </SmotionDiv>
         </div>
 
         {/* body - skill proficient bars */}
@@ -109,7 +109,7 @@ const Stats = () => {
           {!isSmall ? (
             <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
               {/* top skills */}
-              <SmontionDiv
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -123,38 +123,38 @@ const Stats = () => {
             use `isSmall` state as the value for `left` attribute*/}
                 {leftSkillsList.map((tech, key) => {
                   return (
-                    <SmontionDiv variants={verticalMainSkills} key={key}>
+                    <SmotionDiv variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value as number}
                         logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
-                    </SmontionDiv>
+                    </SmotionDiv>
                   );
                 })}
 
                 {/* bottom skills  */}
                 {rightSkillsList.map((tech, key) => {
                   return (
-                    <SmontionDiv variants={verticalMainSkills} key={key}>
+                    <SmotionDiv variants={verticalMainSkills} key={key}>
                       <SkillProficientBar
                         value={tech.value as number}
                         logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
-                    </SmontionDiv>
+                    </SmotionDiv>
                   );
                 })}
-              </SmontionDiv>
+              </SmotionDiv>
             </div>
           ) : (
             // @notice main skills for small and bigger screens
             <div className='flex flex-col gap-12 sm:flex-row sm:gap-9'>
               {/* left skills */}
               <div>
-                <SmontionDiv
+                <SmotionDiv
                   initial='hidden'
                   whileInView='shown'
                   viewport={{
@@ -168,7 +168,7 @@ const Stats = () => {
             use `isSmall` state as the value for `left` attribute*/}
                   {leftSkillsList.map((tech, key) => {
                     return (
-                      <SmontionDiv variants={leftVarientSkills} key={key}>
+                      <SmotionDiv variants={leftVarientSkills} key={key}>
                         <SkillProficientBar
                           value={tech.value as number}
                           logo={tech.technology}
@@ -176,14 +176,14 @@ const Stats = () => {
                           shouldShake={tech.shouldShake}
                           left={true}
                         />
-                      </SmontionDiv>
+                      </SmotionDiv>
                     );
                   })}
-                </SmontionDiv>
+                </SmotionDiv>
               </div>
 
               {/* right skills */}
-              <SmontionDiv
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -195,24 +195,24 @@ const Stats = () => {
               >
                 {rightSkillsList.map((tech, key) => {
                   return (
-                    <SmontionDiv key={key} variants={rightVarientSkills}>
+                    <SmotionDiv key={key} variants={rightVarientSkills}>
                       <SkillProficientBar
                         value={tech.value as number}
                         logo={tech.technology}
                         techLink={tech.techLink}
                         shouldShake={tech.shouldShake}
                       />
-                    </SmontionDiv>
+                    </SmotionDiv>
                   );
                 })}
-              </SmontionDiv>
+              </SmotionDiv>
             </div>
           )}
 
           {/* more skills */}
           <div className='flex flex-col gap-3'>
             {/* @notice medium or larger screens */}
-            <SmontionDiv
+            <SmotionDiv
               initial='hidden'
               whileInView='shown'
               viewport={{
@@ -248,11 +248,11 @@ const Stats = () => {
                     </motion.a>
                   );
                 })}
-            </SmontionDiv>
+            </SmotionDiv>
 
             {/* @notice small screens */}
             {!isMedium && (
-              <SmontionDiv
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -288,12 +288,12 @@ const Stats = () => {
                       </motion.a>
                     );
                   })}
-              </SmontionDiv>
+              </SmotionDiv>
             )}
 
             {/* @notice mobile screens */}
             {!isSmall && (
-              <SmontionDiv
+              <SmotionDiv
                 initial='hidden'
                 whileInView='shown'
                 viewport={{
@@ -327,7 +327,7 @@ const Stats = () => {
                     </motion.a>
                   );
                 })}
-              </SmontionDiv>
+              </SmotionDiv>
             )}
           </div>
         </div>

@@ -1,5 +1,5 @@
 import PS from './client/PS';
-import { SmontionDiv, SmotionHeader } from '@/libs/framer-motion';
+import { SmotionDiv, SmotionHeader } from '@/libs/framer-motion';
 
 const About = () => {
   return (
@@ -29,7 +29,7 @@ const About = () => {
           >
             About.
           </SmotionHeader>
-          <SmontionDiv
+          <SmotionDiv
             initial={{ opacity: 0, x: 90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.38 }}
@@ -37,11 +37,11 @@ const About = () => {
             className='flex justify-center -mt-0.5'
           >
             <hr className='bg-white h-[0.2rem] w-12 sm:w-16 rounded-xl' />
-          </SmontionDiv>
+          </SmotionDiv>
         </div>
 
         {/* body */}
-        <SmontionDiv
+        <SmotionDiv
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.5 }}
@@ -52,7 +52,7 @@ const About = () => {
                 lg:px-9'
         >
           {/* first sentence */}
-          <SmontionDiv>
+          <SmotionDiv>
             <p>
               An avid technology believer{' '}
               <br className='hidden xxsm:block xsm:hidden' /> who is{' '}
@@ -64,10 +64,10 @@ const About = () => {
               blockchain <br className='hidden xxsm:block xsm:hidden' /> and AI
               can revolutionize the future.
             </p>
-          </SmontionDiv>
+          </SmotionDiv>
 
           {/* @medium-device: second sentence */}
-          <SmontionDiv className='hidden sm:block'>
+          <SmotionDiv className='hidden sm:block'>
             <p>
               Through commitment to professionalism,{' '}
               <span className='sm:hidden md:inline'>and </span>
@@ -89,13 +89,13 @@ const About = () => {
                 all aspects of human life
               </span>
             </p>
-          </SmontionDiv>
+          </SmotionDiv>
 
           {/* third sentence */}
           <div className='mt-6 flex justify-center'>
             <PS />
           </div>
-        </SmontionDiv>
+        </SmotionDiv>
       </div>
     </section>
   );
