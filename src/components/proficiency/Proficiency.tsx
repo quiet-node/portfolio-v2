@@ -47,7 +47,7 @@ const Stats = () => {
     }, 2000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [leftSkillsList, moreSkillsList, rightSkillsList]);
 
   useEffect(() => {
     const intervalId = setInterval(async () => {
@@ -60,7 +60,7 @@ const Stats = () => {
     }, 5000);
 
     return () => clearInterval(intervalId);
-  }, [shakingAnimation]);
+  }, [shakingAnimation, isMedium]);
 
   useEffect(() => {
     setMounted(true);

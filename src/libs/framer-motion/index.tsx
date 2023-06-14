@@ -22,10 +22,11 @@ interface PageProps {
   className?: string;
   width?: number;
   height?: number;
-  target?: HTMLAttributeAnchorTarget | undefined;
   variants?: Variants;
   elementType?: string;
   children?: ReactNode;
+  inLine?: boolean;
+  target?: HTMLAttributeAnchorTarget | undefined;
   initial?: boolean | Target | VariantLabels;
   whileHover?: VariantLabels | TargetAndTransition;
   whileInView?: VariantLabels | TargetAndTransition;
@@ -91,7 +92,9 @@ export const SmotionLink = (props: PageProps) => {
       transition={props.transition}
       variants={props.variants}
       title={props.title}
-      className='flex justify-center items-center'
+      className={`flex justify-center items-center ${
+        props.inLine && `inline-flex`
+      }`}
     >
       <Link
         href={props.href as string}
