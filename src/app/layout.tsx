@@ -7,6 +7,7 @@ import {
   OFFICIAL_PLATOFORM_TWITTER_URL,
   OFFICIAL_TWITTER_IMAGE_URL,
 } from '@/utils/constants';
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -79,7 +80,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
