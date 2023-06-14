@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { SmontionP } from '@/libs/framer-motion';
+import { SmotionP } from '@/libs/framer-motion';
 
 const PS = () => {
   const ref = useRef(null);
@@ -10,7 +10,7 @@ const PS = () => {
   return (
     <div ref={ref} className=' w-fit'>
       {isInView ? (
-        <SmontionP
+        <SmotionP
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 'some', margin: '100% 0% -9% 0%' }}
@@ -21,12 +21,12 @@ const PS = () => {
           Leveraging technology to drive{' '}
           <span className='hidden sm:inline-block'>positive</span> changes and{' '}
           <br className='hidden xsm:block sm:hidden' /> improve the world.
-        </SmontionP>
+        </SmotionP>
       ) : (
         <></>
       )}
 
-      <SmontionP
+      <SmotionP
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, delay: 0.6 }}
@@ -37,7 +37,7 @@ const PS = () => {
         Leveraging technology to drive{' '}
         <span className='hidden sm:inline-block'>positive</span> changes and{' '}
         <br className='hidden xsm:block sm:hidden' /> improve the world.
-      </SmontionP>
+      </SmotionP>
     </div>
   );
 };

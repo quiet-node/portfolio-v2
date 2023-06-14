@@ -10,13 +10,18 @@ import {
   motion,
 } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface PageProps {
+  src?: string;
+  alt?: string;
   href?: string;
   title?: string;
   viewport?: any;
   transition?: any;
   className?: string;
+  width?: number;
+  height?: number;
   target?: HTMLAttributeAnchorTarget | undefined;
   variants?: Variants;
   elementType?: string;
@@ -84,6 +89,7 @@ export const SmotionLink = (props: PageProps) => {
       viewport={props.viewport}
       whileHover={props.whileHover}
       transition={props.transition}
+      variants={props.variants}
       title={props.title}
       className='flex justify-center items-center'
     >
@@ -98,7 +104,7 @@ export const SmotionLink = (props: PageProps) => {
   );
 };
 
-export const SmontionP = (props: PageProps) => {
+export const SmotionP = (props: PageProps) => {
   return (
     <motion.p
       initial={props.initial}

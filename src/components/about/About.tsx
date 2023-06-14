@@ -20,7 +20,7 @@ const About = () => {
         {/* header */}
         <div>
           <SmotionHeader
-            elementType='h1'
+            elementType='h2'
             initial={{ opacity: 0, x: -90 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
