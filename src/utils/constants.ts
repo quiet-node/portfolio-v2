@@ -37,7 +37,9 @@ export const NODE_LINK = 'https://nodejs.org/';
 export const DOCKER_LINK = 'https://docker.com/';
 export const JS_LINK = 'https://javascript.com/';
 export const ETHEREUM_LINK = 'https://ethereum.org/en/';
+export const HEDERA_LINK = 'https://hedera.com';
 export const OZ_LINK = 'https://www.openzeppelin.com/';
+export const ETHERSJS_LINK = 'https://docs.ethers.org/v6/';
 export const MOCHA_LINK = 'https://mochajs.org/';
 export const POSTGRES_LINK = 'https://www.postgresql.org/';
 export const AWS_LINK = 'https://aws.amazon.com/';
@@ -281,6 +283,70 @@ export const PROJECTS_LISTS: Project[] = [
   },
   {
     id: 1,
+    title: 'Hedera System Contract DApp Playground',
+    stacks: {
+      FE: [
+        {
+          technology: 'TypeScript',
+          techLink: TS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'NextJS',
+          techLink: NEXT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'ReactJS',
+          techLink: REACT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'TailwindCSS',
+          techLink: TAILWIND_LINK,
+          shouldShake: false,
+        },
+      ],
+      BC: [
+        {
+          technology: 'Hedera',
+          techLink: HEDERA_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Solidity',
+          techLink: SOL_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'Hardhat',
+          techLink: HARDHAT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'ethersjs',
+          techLink: ETHERSJS_LINK,
+          shouldShake: false,
+        },
+      ],
+      BE: [],
+      Mobile: [],
+    },
+    description:
+      'An intuitive low-code playground that eliminates the complexities, reduces learning curves, and allows developers to effortlessly interact with the Hedera’s powerful system contracts.',
+    repoLink:
+      'https://github.com/hashgraph/hedera-smart-contracts/tree/main/system-contract-dapp-playground',
+    liveLink: 'https://hedera-dapp-playground.vercel.app/',
+    demoLink: '',
+    thumbnail: 'hedera-dapp-playground/hedera-dapp-playground.svg',
+    cssWrapper: 'hedera-dapp-playground',
+    cssWrapperSm: 'hedera-dapp-playground-sm',
+    cssDesc: 'hedera-dapp-playground-desc',
+    cssBtn: 'hedera-dapp-playground-btn',
+    cssUnderline: 'hedera-dapp-playground-underline',
+  },
+  {
+    id: 2,
     title: 'Hashtology',
     stacks: {
       FE: [
@@ -349,7 +415,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'hashtology-underline',
   },
   {
-    id: 2,
+    id: 3,
     title: 'NFTir',
     stacks: {
       FE: [],
@@ -392,7 +458,7 @@ export const PROJECTS_LISTS: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: 'Calibrated Peer Review',
     stacks: {
       FE: [
@@ -440,7 +506,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'cpr-underline',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Meetup App',
     stacks: {
       FE: [
@@ -493,7 +559,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'meetup-underline',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Crew Talk',
     stacks: {
       FE: [],
@@ -535,7 +601,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'crew-talk-underline',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Omega Ecommerce',
     stacks: {
       FE: [],

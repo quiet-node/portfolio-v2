@@ -56,7 +56,7 @@ const Projects = () => {
         {/* body - projects */}
         <div className='flex flex-col w-full'>
           {/* First 4 projects */}
-          {PROJECTS_LISTS.slice(0, 4).map((project) => {
+          {PROJECTS_LISTS.slice(0, 5).map((project) => {
             return (
               <ProjectTile
                 key={project.id}
@@ -69,7 +69,7 @@ const Projects = () => {
           {showMore && (
             <>
               {/* rest projects */}
-              {PROJECTS_LISTS.slice(4).map((project) => {
+              {PROJECTS_LISTS.slice(5).map((project) => {
                 return (
                   <ProjectTile
                     key={project.id}
