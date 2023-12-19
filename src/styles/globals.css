@@ -96,25 +96,6 @@
     box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
   }
 
-  .hedera-dapp-playground {
-    background-image: linear-gradient(to left, #5b82b1, #213751);
-    color: #a5c6ef;
-  }
-  .hedera-dapp-playground-sm {
-    background-image: linear-gradient(to top, #5b82b1, #1a232e);
-    color: #03172f;
-  }
-  .hedera-dapp-playground-desc {
-    color: #b8d8ff;
-  }
-  .hedera-dapp-playground-btn {
-    color: #b8d8ff;
-  }
-  .hedera-dapp-playground-underline {
-    background-color: #b8d8ff;
-    border: none;
-  }
-
   .syns-platform {
     background-image: linear-gradient(to left, #efd8c9, #f8ad7b);
     color: #553932;
@@ -132,6 +113,44 @@
   }
   .syns-platform-underline {
     background-color: #942d3e;
+    border: none;
+  }
+
+  .hedro-ai {
+    background-image: linear-gradient(to left, #e0dcc8, #f2f1ea);
+    color: #27d0ba;
+  }
+  .hedro-ai-sm {
+    background-image: linear-gradient(to top, #d1cdb3, #f2f1ea);
+    color: #03172f;
+  }
+  .hedro-ai-desc {
+    color: #1bac99;
+  }
+  .hedro-ai-btn {
+    color: #13b29d;
+  }
+  .hedro-ai-underline {
+    background-color: #1c9484;
+    border: none;
+  }
+
+  .hedera-dapp-playground {
+    background-image: linear-gradient(to left, #5b82b1, #213751);
+    color: #a5c6ef;
+  }
+  .hedera-dapp-playground-sm {
+    background-image: linear-gradient(to top, #5b82b1, #1a232e);
+    color: #03172f;
+  }
+  .hedera-dapp-playground-desc {
+    color: #b8d8ff;
+  }
+  .hedera-dapp-playground-btn {
+    color: #b8d8ff;
+  }
+  .hedera-dapp-playground-underline {
+    background-color: #b8d8ff;
     border: none;
   }
 

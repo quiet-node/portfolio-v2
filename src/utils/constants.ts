@@ -24,6 +24,7 @@ export const QUIET_NODE_DISCORD_LINK =
 
 export const GO_LINK = 'https://go.dev/';
 export const TS_LINK = 'https://typescriptlang.org/';
+export const OPENAI_LINK = 'https://openai.com/';
 export const SOL_LINK = 'https://soliditylang.org/';
 export const JAVA_LINK = 'https://java.com/';
 export const MONGO_LINK = 'https://mongodb.com/';
@@ -140,8 +141,8 @@ export const MAIN_RIGHT_SKILLS_LISTS: Technology[] = [
 
 export const MORE_SKILLS_LISTS: Technology[] = [
   {
-    technology: 'Javascript',
-    techLink: JS_LINK,
+    technology: 'OpenAI',
+    techLink: OPENAI_LINK,
     shouldShake: false,
   },
   {
@@ -283,6 +284,54 @@ export const PROJECTS_LISTS: Project[] = [
   },
   {
     id: 1,
+    title: 'Hedro.ai',
+    stacks: {
+      FE: [
+        {
+          technology: 'TypeScript',
+          techLink: TS_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'NextJS',
+          techLink: NEXT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'ReactJS',
+          techLink: REACT_LINK,
+          shouldShake: false,
+        },
+        {
+          technology: 'TailwindCSS',
+          techLink: TAILWIND_LINK,
+          shouldShake: false,
+        },
+      ],
+      BC: [],
+      BE: [
+        {
+          technology: 'OpenAI',
+          techLink: OPENAI_LINK,
+          shouldShake: false,
+        },
+      ],
+      Mobile: [],
+    },
+    description:
+      'A helpful GPT-3.5-turbo-powered-assistant whose main goal is to guide users to explore the ecosystem of the Hedera network',
+    repoLink: 'https://github.com/quiet-node/hedro-ai',
+    liveLink: 'https://hedro-ai.vercel.app',
+    demoLink: '',
+    thumbnail: 'hedro-ai/hedro-ai.svg',
+    cssWrapper: 'hedro-ai',
+    cssWrapperSm: 'hedro-ai-sm',
+    cssDesc: 'hedro-ai-desc',
+    cssBtn: 'hedro-ai-btn',
+    cssUnderline: 'hedro-ai-underline',
+  },
+  {
+    id: 2,
     title: 'Hedera System Contract DApp Playground',
     stacks: {
       FE: [
@@ -346,7 +395,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'hedera-dapp-playground-underline',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Hashtology',
     stacks: {
       FE: [
@@ -415,7 +464,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'hashtology-underline',
   },
   {
-    id: 3,
+    id: 4,
     title: 'NFTir',
     stacks: {
       FE: [],
@@ -458,7 +507,7 @@ export const PROJECTS_LISTS: Project[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: 'Calibrated Peer Review',
     stacks: {
       FE: [
@@ -506,7 +555,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'cpr-underline',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Meetup App',
     stacks: {
       FE: [
@@ -559,7 +608,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'meetup-underline',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Crew Talk',
     stacks: {
       FE: [],
@@ -601,7 +650,7 @@ export const PROJECTS_LISTS: Project[] = [
     cssUnderline: 'crew-talk-underline',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Omega Ecommerce',
     stacks: {
       FE: [],
@@ -681,12 +730,5 @@ export const SOCIAL_FOOTER = [
     desc: "C'mon you just can't 'not' have a discord these days! No? nvm.",
     link: QUIET_NODE_DISCORD_LINK,
     bgClass: 'bg-discord',
-  },
-  {
-    id: 6,
-    title: 'TikTok',
-    desc: 'Follow me on TikTok where I post my dancing videos like a 5th grade little boy.',
-    link: 'sike',
-    bgClass: 'bg-tiktok',
   },
 ];
